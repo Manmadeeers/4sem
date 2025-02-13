@@ -12,9 +12,11 @@ namespace lab1
 {
     public partial class Form1 : Form
     {
+        public static Form1 Instance;
         public Form1()
         {
             InitializeComponent();
+            Instance= this;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,6 +30,9 @@ namespace lab1
             form2.ShowDialog();
             form2.Dispose();
 
+            
         }
+        
+        
     }
 }

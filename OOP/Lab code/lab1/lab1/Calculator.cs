@@ -28,13 +28,13 @@ namespace lab1
         private static readonly double oboi_roulet_width_feet = 3.28;
 
         
-        public static double CalculateOboi(double width, double length, double height)
+        public static double CalculateOboiMetres(double width, double length, double height)
         {
             double totalLength = 0;
+            totalLength = width + length + height;
 
 
-
-            return totalLength / 10;
+            return totalLength;
         }
     }
 }

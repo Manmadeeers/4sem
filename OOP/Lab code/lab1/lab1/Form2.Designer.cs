@@ -37,6 +37,10 @@
             this.metres_check = new System.Windows.Forms.RadioButton();
             this.feet_check = new System.Windows.Forms.RadioButton();
             this.calculate_button = new System.Windows.Forms.Button();
+            this.answer_label = new System.Windows.Forms.Label();
+            this.exit_button = new System.Windows.Forms.Button();
+            this.diplay_box = new System.Windows.Forms.TextBox();
+            this.display_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // length_label
@@ -117,7 +121,7 @@
             // calculate_button
             // 
             this.calculate_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.calculate_button.Location = new System.Drawing.Point(494, 190);
+            this.calculate_button.Location = new System.Drawing.Point(515, 190);
             this.calculate_button.Name = "calculate_button";
             this.calculate_button.Size = new System.Drawing.Size(158, 58);
             this.calculate_button.TabIndex = 8;
@@ -125,11 +129,51 @@
             this.calculate_button.UseVisualStyleBackColor = true;
             this.calculate_button.Click += new System.EventHandler(this.calculate_button_Click);
             // 
+            // answer_label
+            // 
+            this.answer_label.AutoSize = true;
+            this.answer_label.Location = new System.Drawing.Point(361, 356);
+            this.answer_label.Name = "answer_label";
+            this.answer_label.Size = new System.Drawing.Size(0, 16);
+            this.answer_label.TabIndex = 9;
+            // 
+            // exit_button
+            // 
+            this.exit_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exit_button.Location = new System.Drawing.Point(515, 281);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(158, 58);
+            this.exit_button.TabIndex = 10;
+            this.exit_button.Text = "Exit";
+            this.exit_button.UseVisualStyleBackColor = true;
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
+            // 
+            // diplay_box
+            // 
+            this.diplay_box.Location = new System.Drawing.Point(220, 385);
+            this.diplay_box.Name = "diplay_box";
+            this.diplay_box.Size = new System.Drawing.Size(531, 22);
+            this.diplay_box.TabIndex = 11;
+            // 
+            // display_label
+            // 
+            this.display_label.AutoSize = true;
+            this.display_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.display_label.Location = new System.Drawing.Point(70, 385);
+            this.display_label.Name = "display_label";
+            this.display_label.Size = new System.Drawing.Size(107, 25);
+            this.display_label.TabIndex = 12;
+            this.display_label.Text = "You need: ";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 463);
+            this.Controls.Add(this.display_label);
+            this.Controls.Add(this.diplay_box);
+            this.Controls.Add(this.exit_button);
+            this.Controls.Add(this.answer_label);
             this.Controls.Add(this.calculate_button);
             this.Controls.Add(this.feet_check);
             this.Controls.Add(this.metres_check);
@@ -157,5 +201,9 @@
         private System.Windows.Forms.RadioButton metres_check;
         private System.Windows.Forms.RadioButton feet_check;
         private System.Windows.Forms.Button calculate_button;
+        private System.Windows.Forms.Label answer_label;
+        private System.Windows.Forms.Button exit_button;
+        private System.Windows.Forms.TextBox diplay_box;
+        private System.Windows.Forms.Label display_label;
     }
 }
