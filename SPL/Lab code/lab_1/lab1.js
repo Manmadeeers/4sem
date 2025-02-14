@@ -64,13 +64,13 @@ var MedianCounter = /** @class */ (function () {
         if (result.length == 0) {
             return "null";
         }
-        if (result.length % 2 == 0) {
+        if (result.length % 2 != 0) {
             return result[result.length / 2];
         }
         else {
-            return result[0];
+            return (result[result.length / 2] + result[result.length / 2 - 1]) / 2;
         }
     };
     return MedianCounter;
 }());
-console.log(MedianCounter.CountMedian([1, 3], [2]));
+console.log(MedianCounter.CountMedian([1, 3], [2, 4]));

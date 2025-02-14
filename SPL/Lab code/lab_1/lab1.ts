@@ -69,12 +69,12 @@ class MedianCounter{
         if(result.length==0){
             return "null";
         }
-        if(result.length%2==0){
+        if(result.length%2!=0){
             return result[result.length/2];
             
         }
         else{
-            return result[0];
+            return (result[result.length/2]+result[result.length/2-1])/2;
         }
     }
 }
