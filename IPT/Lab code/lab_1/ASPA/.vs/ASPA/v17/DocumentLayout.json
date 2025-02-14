@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_1\\ASPA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9953ACB2-2354-4124-B1FB-52DD8B7B1774}|ASPA001\\ASPA001.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_1\\aspa\\aspa001\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9953ACB2-2354-4124-B1FB-52DD8B7B1774}|ASPA001\\ASPA001.csproj|solutionrelative:aspa001\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_1\\ASPA\\ASPA001\\Program.cs",
+              "RelativeDocumentMoniker": "ASPA001\\Program.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_1\\ASPA\\ASPA001\\Program.cs",
+              "RelativeToolTip": "ASPA001\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T14:44:01.217Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
