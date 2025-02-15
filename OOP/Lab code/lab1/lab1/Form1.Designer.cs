@@ -52,6 +52,7 @@
             this.square_calc_button.TabIndex = 2;
             this.square_calc_button.Text = "I have materials. Calculate!";
             this.square_calc_button.UseVisualStyleBackColor = true;
+            this.square_calc_button.Click += new System.EventHandler(this.square_calc_button_Click);
             // 
             // material_calc_button
             // 

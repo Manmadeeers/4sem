@@ -9,3 +9,4 @@ C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab1\lab1\obj\Debug\lab1.csproj.CoreC
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab1\lab1\obj\Debug\lab1.exe
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab1\lab1\obj\Debug\lab1.pdb
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab1\lab1\obj\Debug\lab1.Form2.resources
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab1\lab1\obj\Debug\lab1.Form3.resources

@@ -39,8 +39,8 @@
             this.calculate_button = new System.Windows.Forms.Button();
             this.answer_label = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
-            this.diplay_box = new System.Windows.Forms.TextBox();
             this.display_label = new System.Windows.Forms.Label();
+            this.display_box = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // length_label
@@ -148,30 +148,32 @@
             this.exit_button.UseVisualStyleBackColor = true;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
-            // diplay_box
-            // 
-            this.diplay_box.Location = new System.Drawing.Point(220, 385);
-            this.diplay_box.Name = "diplay_box";
-            this.diplay_box.Size = new System.Drawing.Size(531, 22);
-            this.diplay_box.TabIndex = 11;
-            // 
             // display_label
             // 
             this.display_label.AutoSize = true;
             this.display_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.display_label.Location = new System.Drawing.Point(70, 385);
+            this.display_label.Location = new System.Drawing.Point(12, 299);
             this.display_label.Name = "display_label";
             this.display_label.Size = new System.Drawing.Size(107, 25);
             this.display_label.TabIndex = 12;
             this.display_label.Text = "You need: ";
+            // 
+            // display_box
+            // 
+            this.display_box.Location = new System.Drawing.Point(170, 237);
+            this.display_box.Name = "display_box";
+            this.display_box.ReadOnly = true;
+            this.display_box.Size = new System.Drawing.Size(265, 167);
+            this.display_box.TabIndex = 13;
+            this.display_box.Text = "";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 463);
+            this.Controls.Add(this.display_box);
             this.Controls.Add(this.display_label);
-            this.Controls.Add(this.diplay_box);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.answer_label);
             this.Controls.Add(this.calculate_button);
@@ -203,7 +205,7 @@
         private System.Windows.Forms.Button calculate_button;
         private System.Windows.Forms.Label answer_label;
         private System.Windows.Forms.Button exit_button;
-        private System.Windows.Forms.TextBox diplay_box;
         private System.Windows.Forms.Label display_label;
+        private System.Windows.Forms.RichTextBox display_box;
     }
 }

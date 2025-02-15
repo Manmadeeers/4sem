@@ -32,7 +32,12 @@ namespace lab1
 
             
         }
-        
-        
+
+        private void square_calc_button_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
+            form3.Dispose();
+        }
     }
 }
