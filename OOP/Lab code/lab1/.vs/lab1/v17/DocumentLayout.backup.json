@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab1\\lab1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab1\\lab1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab1\\lab1\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab1\\lab1\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab1\\lab1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECB88BC0-CCD6-436F-8CDB-A67BB7246CC7}|lab1\\lab1.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -42,62 +50,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Form4.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form4.cs",
+              "RelativeDocumentMoniker": "lab1\\Form4.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form4.cs",
+              "RelativeToolTip": "lab1\\Form4.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:32:16.153Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form4.cs",
+              "RelativeDocumentMoniker": "lab1\\Form4.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab1\\Form4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:31:02.914Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form3.cs",
               "RelativeDocumentMoniker": "lab1\\Form3.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form3.cs",
               "RelativeToolTip": "lab1\\Form3.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAmwC4AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwDUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T05:42:59.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form3.cs",
               "RelativeDocumentMoniker": "lab1\\Form3.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "lab1\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T05:42:31.851Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-02-15T05:42:31.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Calculator.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Calculator.cs",
               "RelativeDocumentMoniker": "lab1\\Calculator.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Calculator.cs",
               "RelativeToolTip": "lab1\\Calculator.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAwwHEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwHEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T14:29:49.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form2.cs",
               "RelativeDocumentMoniker": "lab1\\Form2.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form2.cs",
               "RelativeToolTip": "lab1\\Form2.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBkAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAYwDYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T14:13:15.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form2.cs",
               "RelativeDocumentMoniker": "lab1\\Form2.cs",
@@ -109,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Program.cs",
               "RelativeDocumentMoniker": "lab1\\Program.cs",
@@ -121,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form1.cs",
               "RelativeDocumentMoniker": "lab1\\Form1.cs",
@@ -129,20 +162,18 @@
               "RelativeToolTip": "lab1\\Form1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T13:36:32.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T13:36:32.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form1.cs",
               "RelativeDocumentMoniker": "lab1\\Form1.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab1\\lab1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "lab1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T13:33:52.804Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-02-10T13:33:52.804Z"
             }
           ]
         }
