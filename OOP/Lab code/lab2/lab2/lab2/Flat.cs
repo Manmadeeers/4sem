@@ -91,6 +91,8 @@ namespace lab2
             {
                 totalCost *= 1.05;
             }
+            
+            totalCost += totalCost * Height * 0.1;
 
 
             return totalCost;

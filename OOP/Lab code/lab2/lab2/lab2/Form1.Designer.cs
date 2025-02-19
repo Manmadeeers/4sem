@@ -51,6 +51,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.exit_button = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +80,7 @@
             this.city_getter.Name = "city_getter";
             this.city_getter.Size = new System.Drawing.Size(226, 24);
             this.city_getter.TabIndex = 1;
+            this.city_getter.SelectedIndexChanged += new System.EventHandler(this.city_getter_SelectedIndexChanged);
             // 
             // city_name
             // 
@@ -101,6 +103,7 @@
             this.brick_checker.TabStop = true;
             this.brick_checker.Text = "Brick";
             this.brick_checker.UseVisualStyleBackColor = true;
+            this.brick_checker.CheckedChanged += new System.EventHandler(this.brick_checker_CheckedChanged);
             // 
             // concrete_checker
             // 
@@ -113,6 +116,7 @@
             this.concrete_checker.TabStop = true;
             this.concrete_checker.Text = "Concrete";
             this.concrete_checker.UseVisualStyleBackColor = true;
+            this.concrete_checker.CheckedChanged += new System.EventHandler(this.concrete_checker_CheckedChanged);
             // 
             // material_name
             // 
@@ -155,6 +159,7 @@
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // square_getter
             // 
@@ -162,6 +167,7 @@
             this.square_getter.Name = "square_getter";
             this.square_getter.Size = new System.Drawing.Size(100, 22);
             this.square_getter.TabIndex = 10;
+            this.square_getter.TextChanged += new System.EventHandler(this.square_getter_TextChanged);
             // 
             // square_name
             // 
@@ -225,6 +231,7 @@
             this.celing_getter.Name = "celing_getter";
             this.celing_getter.Size = new System.Drawing.Size(100, 22);
             this.celing_getter.TabIndex = 17;
+            this.celing_getter.TextChanged += new System.EventHandler(this.celing_getter_TextChanged);
             // 
             // celing_name
             // 
@@ -277,11 +284,19 @@
             this.exit_button.UseVisualStyleBackColor = true;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(212, 502);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(255, 23);
+            this.progressBar1.TabIndex = 23;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 702);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.other_rooms_name);
             this.Controls.Add(this.rooms_specifier);
@@ -304,6 +319,7 @@
             this.Controls.Add(this.greeting_label);
             this.Name = "Form1";
             this.Text = "Starting page";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -335,6 +351,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button exit_button;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
