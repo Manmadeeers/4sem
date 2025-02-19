@@ -37,19 +37,20 @@
             this.material_name = new System.Windows.Forms.Label();
             this.rooms_name = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.square_getter = new System.Windows.Forms.TextBox();
             this.square_name = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.result_box = new System.Windows.Forms.RichTextBox();
             this.cost_name = new System.Windows.Forms.Label();
             this.clacl_button = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.date_label = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.celing_getter = new System.Windows.Forms.TextBox();
             this.celing_name = new System.Windows.Forms.Label();
             this.rooms_specifier = new System.Windows.Forms.CheckedListBox();
             this.other_rooms_name = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.exit_button = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -155,12 +156,12 @@
             0,
             0});
             // 
-            // textBox1
+            // square_getter
             // 
-            this.textBox1.Location = new System.Drawing.Point(699, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 10;
+            this.square_getter.Location = new System.Drawing.Point(699, 79);
+            this.square_getter.Name = "square_getter";
+            this.square_getter.Size = new System.Drawing.Size(100, 22);
+            this.square_getter.TabIndex = 10;
             // 
             // square_name
             // 
@@ -172,14 +173,14 @@
             this.square_name.TabIndex = 11;
             this.square_name.Text = "Total square(m^2):";
             // 
-            // richTextBox1
+            // result_box
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(681, 361);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(383, 339);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
+            this.result_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.result_box.Location = new System.Drawing.Point(681, 361);
+            this.result_box.Name = "result_box";
+            this.result_box.Size = new System.Drawing.Size(383, 339);
+            this.result_box.TabIndex = 12;
+            this.result_box.Text = "";
             // 
             // cost_name
             // 
@@ -218,12 +219,12 @@
             this.date_label.TabIndex = 16;
             this.date_label.Text = "Date of construction:";
             // 
-            // textBox2
+            // celing_getter
             // 
-            this.textBox2.Location = new System.Drawing.Point(699, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 17;
+            this.celing_getter.Location = new System.Drawing.Point(699, 164);
+            this.celing_getter.Name = "celing_getter";
+            this.celing_getter.Size = new System.Drawing.Size(100, 22);
+            this.celing_getter.TabIndex = 17;
             // 
             // celing_name
             // 
@@ -285,14 +286,14 @@
             this.Controls.Add(this.other_rooms_name);
             this.Controls.Add(this.rooms_specifier);
             this.Controls.Add(this.celing_name);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.celing_getter);
             this.Controls.Add(this.date_label);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.clacl_button);
             this.Controls.Add(this.cost_name);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.result_box);
             this.Controls.Add(this.square_name);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.square_getter);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.rooms_name);
             this.Controls.Add(this.material_name);
@@ -320,19 +321,20 @@
         private System.Windows.Forms.Label material_name;
         private System.Windows.Forms.Label rooms_name;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox square_getter;
         private System.Windows.Forms.Label square_name;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox result_box;
         private System.Windows.Forms.Label cost_name;
         private System.Windows.Forms.Button clacl_button;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label date_label;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox celing_getter;
         private System.Windows.Forms.Label celing_name;
         private System.Windows.Forms.CheckedListBox rooms_specifier;
         private System.Windows.Forms.Label other_rooms_name;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button exit_button;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

@@ -12,9 +12,20 @@ namespace lab2
 {
     public partial class Error : Form
     {
-        public Error()
+        public Error(string message)
         {
             InitializeComponent();
+            this.error_box.Text = message;
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void exit_button_Click(object sender, EventArgs e)
+        {
+            Form1.instance.Close();
         }
     }
 }

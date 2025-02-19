@@ -2,10 +2,19 @@
 
 namespace lab2
 {
+    public enum Cities
+    {
+        Gomel = 1,
+        Mogilev,
+        Vitebsk,
+        Brest,
+        Grodno,
+        Minsk
+    }
     public class Address
     {
         private string _country;
-        private string _city;
+        private Cities _city;
         private string _district;
         private string _street;
         private string _building;
@@ -18,7 +27,7 @@ namespace lab2
             set { _country = value; }
         }
 
-        public string City
+        public Cities City
         {
             get { return _city; }
             set { _city = value; }

@@ -2,13 +2,18 @@
 
 namespace lab2
 {
+    public enum Materials
+    {
+        Brick = 1,
+        Concrete
+    }
     public class Flat
     {
         private double _square;
         private double _height;
         private int _rooms;
         private DateTime _construction_year;
-        private string _material_type;
+        private Materials _material_type;
         private int _floor;
         private string _side;//west, east, etc.
         private Address _address;
@@ -42,7 +47,7 @@ namespace lab2
             set { _construction_year = value; }
         }
 
-        public string MaterialType
+        public Materials MaterialType
         {
             get { return _material_type; }
             set { _material_type = value; }
@@ -58,6 +63,37 @@ namespace lab2
         {
             get { return _side; }
             set { _side = value; }
+        }
+
+        public Address Address 
+        { 
+            get { return _address; } 
+            set { _address = value; }
+        }
+
+
+        public double CalculateCost()
+        {
+            double totalCost = 0;
+
+            double sqMeterPrice = 45;
+            sqMeterPrice *= Convert.ToInt32(this._address.City) ;
+            totalCost += sqMeterPrice*this.Square;
+
+            double multiplierPerRoom = 1.5;
+            totalCost *= this.Rooms * multiplierPerRoom;
+
+            if(this.MaterialType == Materials.Brick)
+            {
+                totalCost *= 1.1;
+            }
+            else
+            {
+                totalCost *= 1.05;
+            }
+
+
+            return totalCost;
         }
 
     }
