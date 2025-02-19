@@ -3,48 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Lab 15(3sem)</title>
-    <style>
-        button {
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 13px;
-        }
-        label{
-            display:block;
-                width: 250px;
-                text-align: left;
-               
-                margin-bottom: 15px;
-                display: inline-block;      
-        }
-        input{
-            padding-right:10px;
-        }
-        
-        
-    </style>
 </head>
 <body>
-    <h3>Заполните форму</h3>
-    <form name="form">
-        <label>Фамилия:</label><input name="firstname" type="text"><br>
-        <label>Имя:</label><input name="name" type="text"><br>
-        <label>Email:</label><input name="mail" type="email"><br>
-        <label>Номер телефона</label><input name="number" type="number"><br>
-        <label>Город</label><input name="city" type="text" list="variants" placeholder="Выберите вариант"><br>
-        <datalist id="variants">
-            <option>Брест</option>
-            <option>Витебск</option>
-            <option>Гомель</option>
-            <option>Гродно</option>
-            <option>Минск</option>
-            <option>Могилев</option>
+    <h3>Fill the form below:</h3>
+    <form name="inf">
+        <label>Surename</label><input type="text" name="surename">
+        <label>Name</label><input type="text" name="name">
+        <label>E-Mail</label><input type="email" name="mail">
+        <label>Phone number(0xx)xxx-xx-xx</label><input type="tel" name="phone">
+        <lable>City</lable><input type="text" name="city" list="data">
+        <datalist id="data">
+            <option>Brest</option>
+            <option>Vitebsk</option>
+            <option>Gomel</option>
+            <option>Grodno</option>
+            <option>Mogilev</option>
+            <option></option>
         </datalist>
-        <label>Я учусь в БГТУ</label><input type="checkbox"><br>
-        <label>На каком курсе Вы учитесь?</label><input type="radio" >1 <input type="radio">2 <input type="radio">3  <input type="radio">4 <br>
-        <label>Расскажите о себе</label><textarea></textarea><br>
-        <button type="submit">Проверить</button>
     </form>
     
 </body>
