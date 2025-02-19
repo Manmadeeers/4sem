@@ -1,4 +1,32 @@
-form{
-    border:1px solid;
-    width: 50%;
+
+
+label {
+    width: 250px;
+    text-align: left;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+input {
+    padding-right: 10px;
+    /* background-color: rgb(194, 194, 194); */
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+select{
+    width: 165px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+textarea{
+    /* background-color: rgb(194, 194, 194); */
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 165px;
+}
+button{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
 }

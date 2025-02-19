@@ -9,19 +9,27 @@
 <body>
     <h3>Fill the form below:</h3>
     <form name="inf">
-        <label>Surename</label><input type="text" name="surename">
-        <label>Name</label><input type="text" name="name">
-        <label>E-Mail</label><input type="email" name="mail">
-        <label>Phone number(0xx)xxx-xx-xx</label><input type="tel" name="phone">
-        <lable>City</lable><input type="text" name="city" list="data">
-        <datalist id="data">
+        <label>Surename</label><input type="text" name="surename"><br>
+        <label>Name</label><input type="text" name="name"><br>
+        <label>E-Mail</label><input type="email" name="mail"><br>
+        <label>Phone number(0xx)xxx-xx-xx</label><input type="tel" name="phone"><br>
+        <label>City</label>
+        <select id="selection" name="cities">
             <option>Brest</option>
             <option>Vitebsk</option>
             <option>Gomel</option>
             <option>Grodno</option>
             <option>Mogilev</option>
-            <option></option>
-        </datalist>
+            <option>Minsk</option>
+            
+        </select>
+        <br>
+        <label>I am a BSTU student</label><input type="checkbox"><br>
+        <label>Which year are you?</label>1<input type="radio" name="first">
+        2<input type="radio" name="second" checked>3<input type="radio" name="third">4<input type="radio" name="fourth"><br>
+        <label>Tell about yourself</label><textarea></textarea><br>
+        <button name="submit-button">Submit</button>
+        
     </form>
     
 </body>
