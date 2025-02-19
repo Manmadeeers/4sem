@@ -30,3 +30,8 @@ button{
     width: 100px;
     cursor: pointer;
 }
+.error{
+    /* height: 20px; */
+    color: red;
+    text-align: left;
+}
