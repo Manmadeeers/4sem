@@ -1,4 +1,3 @@
-var _this = this;
 ;
 var array = [
     { id: 1, name: 'Vasya', group: 10 },
@@ -22,92 +21,86 @@ car2.model = "Equinox";
 var arrayCars = [{
         cars: [car1, car2]
     }];
-console.log(arrayCars);
+console.log(arrayCars[0].cars[0].manufacturer);
 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-var mark = {
-    subject: "Math",
-    mark: 10,
-    done: true,
-};
-var mark1 = {
-    subject: "Science",
-    mark: 8,
-    done: true,
-};
-var mark2 = {
-    subject: "History",
-    mark: 9,
-    done: true,
-};
-var mark3 = {
-    subject: "English",
-    done: true,
-    mark: 7,
-};
-var mark4 = {
-    done: true,
-    subject: "Physics",
-    mark: 6,
-};
-var mark5 = {
-    subject: "Chemistry",
-    mark: 8,
-    done: true,
-};
-var student1 = {
-    id: 1,
-    name: "Ivan",
-    group: 6,
-    marks: [mark, mark1, mark2, mark3, mark4],
-};
-var mark6 = {
-    subject: "Biology",
-    mark: 9,
-    done: true,
-};
-var mark7 = {
-    subject: "Geography",
-    mark: 7,
-    done: true,
-};
-var mark8 = {
-    subject: "Literature",
-    mark: 8,
-    done: true,
-};
-var mark9 = {
-    subject: "Computer Science",
-    mark: 6,
-    done: true,
-};
-var mark10 = {
-    subject: "Art",
-    mark: 9,
-    done: true,
-};
-var student2 = {
-    id: 2,
-    name: "Maria",
-    group: 7,
-    marks: [mark6, mark7, mark8, mark9, mark10],
-};
-var Goup = {
-    students: [student1, student2],
-    studentsFilter: function (groupNumber) {
-        return _this.students.filter(function (student) { return student.group === groupNumber; });
+var group = {
+    students: [
+        { id: 1, name: "Vaclov", group: 6, marks: [{ subject: "Math", mark: 10, done: true }, { subject: "History", mark: 5, done: false }, { subject: "Russian", mark: 2, done: false }] },
+        {
+            id: 2,
+            name: "Petr",
+            group: 6,
+            marks: [
+                { subject: "Math", mark: 8, done: true },
+                { subject: "History", mark: 7, done: true },
+                { subject: "Russian", mark: 9, done: true }
+            ]
+        },
+        {
+            id: 3,
+            name: "Gasan",
+            group: 6,
+            marks: [
+                { subject: "Math", mark: 6, done: false },
+                { subject: "History", mark: 8, done: true },
+                { subject: "Russian", mark: 7, done: false }
+            ]
+        },
+        {
+            id: 4,
+            name: "Jian-Yang",
+            group: 7,
+            marks: [
+                { subject: "Math", mark: 9, done: true },
+                { subject: "History", mark: 6, done: false },
+                { subject: "Russian", mark: 8, done: true }
+            ]
+        },
+        {
+            id: 5,
+            name: "Dinesh",
+            group: 8,
+            marks: [
+                { subject: "Math", mark: 7, done: false },
+                { subject: "History", mark: 9, done: true },
+                { subject: "Russian", mark: 6, done: true }
+            ]
+        },
+        {
+            id: 6,
+            name: "Gilfoyl",
+            group: 3,
+            marks: [
+                { subject: "Math", mark: 5, done: true },
+                { subject: "History", mark: 7, done: false },
+                { subject: "Russian", mark: 9, done: false }
+            ]
+        },
+    ],
+    studentsFilter: function (groupVal) {
+        return this.students.filter(function (student) { return student.group == groupVal; });
     },
-    marksFilter: function (markValue) {
-        return _this.students.filter(function (student) {
-            return student.marks.some(function (mark) { return mark.mark === markValue; });
-        });
+    marksFilter: function (markVal) {
+        return this.students.filter(function (student) { return student.marks.some(function (mark) { return mark.mark == markVal; }); });
     },
     deleteStudent: function (id) {
-        var index = _this.students.findIndex(function (student) { return student.id === id; });
-        if (index === -1)
+        var index = this.students.findIndex(function (student) { return student.id == id; });
+        if (index == -1) {
+            console.log("Fail");
             return;
-        _this.students.splice(index, 1);
+        }
+        this.students.splice(index, true);
+        console.log("".concat(id, " was deleted"));
     },
-    mark: 8,
-    group: 6
+    mark: 9,
+    group: 6,
 };
-console.log(Goup.studentsFilter(6));
+// console.log(group.studentsFilter(6));
+// console.log(group.students[0]);
+console.group("Filtered by group");
+console.log(group.studentsFilter(6));
+console.groupEnd();
+console.group("Filtered by mark");
+console.log(group.marksFilter(8));
+console.groupEnd();
+console.log(group.deleteStudent(15));

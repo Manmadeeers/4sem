@@ -15,7 +15,7 @@ console.log(transformToPhoneNum([]));
 
 //TASK 2
 class Chalenge{
-    static solution(input_number:number){
+    static solution(input_number:number):number{
         if(input_number<0){
             return 0;
         }
@@ -40,7 +40,7 @@ console.log(Chalenge.solution(72));
 //TASK 3
 
 class ArrayReshaper{
-    static ReshapeArray(numbers:number[],steps:number){
+    static ReshapeArray(numbers:number[],steps:number):string{
 
         let numbers_str:string = numbers.join('');
 
@@ -70,7 +70,7 @@ class MedianCounter{
             return "null";
         }
         if(result.length%2!=0){
-            return result[result.length/2];
+            return result[result.length/2-0.5];
             
         }
         else{
@@ -80,3 +80,4 @@ class MedianCounter{
 }
 
 console.log(MedianCounter.CountMedian([1,3],[2,4]));
+console.log(MedianCounter.CountMedian([1,3],[2]));

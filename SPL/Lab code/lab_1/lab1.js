@@ -65,7 +65,7 @@ var MedianCounter = /** @class */ (function () {
             return "null";
         }
         if (result.length % 2 != 0) {
-            return result[result.length / 2];
+            return result[result.length / 2 - 0.5];
         }
         else {
             return (result[result.length / 2] + result[result.length / 2 - 1]) / 2;
@@ -74,3 +74,4 @@ var MedianCounter = /** @class */ (function () {
     return MedianCounter;
 }());
 console.log(MedianCounter.CountMedian([1, 3], [2, 4]));
+console.log(MedianCounter.CountMedian([1, 3], [2]));
