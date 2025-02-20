@@ -22,7 +22,6 @@ var arrayCars = [{
         cars: [car1, car2]
     }];
 console.log(arrayCars[0].cars[0].manufacturer);
-1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 var group = {
     students: [
         { id: 1, name: "Vaclov", group: 6, marks: [{ subject: "Math", mark: 10, done: true }, { subject: "History", mark: 5, done: false }, { subject: "Russian", mark: 2, done: false }] },
@@ -89,7 +88,7 @@ var group = {
             console.log("Fail");
             return;
         }
-        this.students.splice(index, true);
+        this.students.splice(index, 1);
         console.log("".concat(id, " was deleted"));
     },
     mark: 9,
@@ -103,4 +102,4 @@ console.groupEnd();
 console.group("Filtered by mark");
 console.log(group.marksFilter(8));
 console.groupEnd();
-console.log(group.deleteStudent(15));
+console.log(group.deleteStudent(1));

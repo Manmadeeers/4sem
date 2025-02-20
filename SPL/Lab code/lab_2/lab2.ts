@@ -49,7 +49,7 @@ type MarkType = {
     done: DoneType,
 };
 
-type GroupFilterType = number; 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+type GroupFilterType =  1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 type StudentType = {
     id: number,
@@ -133,7 +133,7 @@ let group: GroupType = {
             console.log("Fail");
             return;
         }
-        this.students.splice(index,true);
+        this.students.splice(index,1);
         console.log(`${id} was deleted`);
     },
     mark: 9,
@@ -148,4 +148,4 @@ console.groupEnd();
 console.group("Filtered by mark");
 console.log(group.marksFilter(8));
 console.groupEnd();
-console.log(group.deleteStudent(15));
+console.log(group.deleteStudent(1));
