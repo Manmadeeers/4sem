@@ -1,0 +1,51 @@
+﻿Сборка начата 21.02.2025 16:41:04.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Обращение к "x64\Debug\lab_2.1.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt Kanpsack.cpp lab_2.1.cpp
+         Kanpsack.cpp
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(4,1): error C2144: синтаксическая ошибка: перед "int" требуется ","
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(5,1): error C2143: синтаксическая ошибка: отсутствие ")" перед "{"
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(7,25): error C2065: s: необъявленный идентификатор
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(7,44): error C2065: s: необъявленный идентификатор
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(34,13): error C3861: calcv: идентификатор не найден
+         lab_2.1.cpp
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(4,1): error C2144: синтаксическая ошибка: перед "int" требуется ","
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(5,1): error C2143: синтаксическая ошибка: отсутствие ")" перед "{"
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(7,9): error C2082: переопределение формального параметра "V"
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(8,9): error C2082: переопределение формального параметра "v"
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(9,9): error C2082: переопределение формального параметра "c"
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(10,11): error C2082: переопределение формального параметра "m"
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(12,17): error C2660: knapsack_s: функция не принимает 5 аргументов
+             C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Knapsack.h(4,7):
+              см. объявление "knapsack_s"
+             C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(12,17):
+             при попытке сопоставить список аргументов "(int, int, const int [], const int [], short [])"
+         
+         Создание кода...
+     1>Сборка проекта "C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(4,1): error C2144: синтаксическая ошибка: перед "int" требуется ","
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(5,1): error C2143: синтаксическая ошибка: отсутствие ")" перед "{"
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(7,25): error C2065: s: необъявленный идентификатор
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(7,44): error C2065: s: необъявленный идентификатор
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\Kanpsack.cpp(34,13): error C3861: calcv: идентификатор не найден
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(4,1): error C2144: синтаксическая ошибка: перед "int" требуется ","
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(5,1): error C2143: синтаксическая ошибка: отсутствие ")" перед "{"
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(7,9): error C2082: переопределение формального параметра "V"
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(8,9): error C2082: переопределение формального параметра "v"
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(9,9): error C2082: переопределение формального параметра "c"
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(10,11): error C2082: переопределение формального параметра "m"
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2.1\lab_2.1.cpp(12,17): error C2660: knapsack_s: функция не принимает 5 аргументов
+
+    Предупреждений: 0
+    Ошибок: 12
+
+Прошло времени 00:00:00.81

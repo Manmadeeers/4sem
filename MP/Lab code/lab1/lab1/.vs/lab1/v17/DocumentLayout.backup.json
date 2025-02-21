@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab1\\lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62D02FDF-A44C-4A1A-BCC0-6F4AD1E36136}|fibonacci\\fibonacci.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab1\\lab1\\fibonacci\\fibonacci.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{62D02FDF-A44C-4A1A-BCC0-6F4AD1E36136}|fibonacci\\fibonacci.vcxproj|solutionrelative:fibonacci\\fibonacci.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F9EA036-22EE-4DF6-9002-C29009A37CF8}|lab1\\lab1.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab1\\lab1\\lab1\\lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0F9EA036-22EE-4DF6-9002-C29009A37CF8}|lab1\\lab1.vcxproj|solutionrelative:lab1\\lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62D02FDF-A44C-4A1A-BCC0-6F4AD1E36136}|fibonacci\\fibonacci.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab1\\lab1\\fibonacci\\fibonacci.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{62D02FDF-A44C-4A1A-BCC0-6F4AD1E36136}|fibonacci\\fibonacci.vcxproj|solutionrelative:fibonacci\\fibonacci.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F9EA036-22EE-4DF6-9002-C29009A37CF8}|lab1\\lab1.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab1\\lab1\\lab1\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "fibonacci.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab1\\lab1\\fibonacci\\fibonacci.cpp",
               "RelativeDocumentMoniker": "fibonacci\\fibonacci.cpp",
@@ -103,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "lab1.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab1\\lab1\\lab1\\lab1.cpp",
               "RelativeDocumentMoniker": "lab1\\lab1.cpp",

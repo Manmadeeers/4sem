@@ -1,0 +1,34 @@
+﻿Сборка начата 21.02.2025 16:34:34.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2\lab_2.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+         Создание каталога "C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\x64\Debug\".
+         Создание каталога "x64\Debug\lab_2.tlog\".
+       InitializeBuildStatus:
+         Создание "x64\Debug\lab_2.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\lab_2.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt Combi.cpp lab_2.cpp
+         Combi.cpp
+     1>C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2\Combi.cpp(41,37): warning C4334: <<: результат 32-разрядного смещения неявно преобразуется в 64-разрядное значение (предполагалось 64-разрядное смещение?)
+         lab_2.cpp
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\x64\Debug\lab_2.exe" /INCREMENTAL /ILK:"x64\Debug\lab_2.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\x64\Debug\lab_2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\x64\Debug\lab_2.lib" /MACHINE:X64 x64\Debug\Combi.obj
+         x64\Debug\lab_2.obj
+         lab_2.vcxproj -> C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\x64\Debug\lab_2.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\lab_2.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\lab_2.tlog\lab_2.lastbuildstate".
+     1>Сборка проекта "C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2\lab_2.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2\lab_2.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\Manmade\Desktop\4sem\MP\Lab code\lab_2\lab_2\Combi.cpp(41,37): warning C4334: <<: результат 32-разрядного смещения неявно преобразуется в 64-разрядное значение (предполагалось 64-разрядное смещение?)
+
+    Предупреждений: 1
+    Ошибок: 0
+
+Прошло времени 00:00:01.82
