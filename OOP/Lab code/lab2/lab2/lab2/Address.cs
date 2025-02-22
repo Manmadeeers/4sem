@@ -17,8 +17,8 @@ namespace lab2
         private Cities _city;
         private string _district;
         private string _street;
-        private string _building;
-        private string _sub_building;
+        private int _building;
+        private string _sub_building = null;
         private int _flat_number;
 
         public string Country
@@ -45,7 +45,7 @@ namespace lab2
             set { _street = value; }
         }
 
-        public string Building
+        public int Building
         {
             get { return _building; }
             set { _building = value; }

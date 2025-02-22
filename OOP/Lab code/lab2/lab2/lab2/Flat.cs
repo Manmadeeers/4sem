@@ -7,6 +7,16 @@ namespace lab2
         Brick = 1,
         Concrete
     }
+
+    public enum AdditionalRooms
+    {
+        Bathroom = 1,
+        Toilet,
+        Kitchen,
+        Livingroom,
+        Balcony,
+        HomeOffice
+    }
     public class Flat
     {
         private double _square;
@@ -17,6 +27,7 @@ namespace lab2
         private int _floor;
         private string _side;//west, east, etc.
         private Address _address;
+        private int _additionals;
 
        public double Square
         {
@@ -71,6 +82,13 @@ namespace lab2
             set { _address = value; }
         }
 
+        public int Additionals
+        {
+            get { return _additionals; }
+            set { _additionals = value; }
+
+        }
+
 
         public double CalculateCost()
         {
@@ -93,6 +111,10 @@ namespace lab2
             }
             
             totalCost += totalCost * Height * 0.1;
+
+            double additional_multiplier = 1 + 0.1 * this.Additionals;
+
+            totalCost *= additional_multiplier;
 
 
             return totalCost;

@@ -28,7 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Government Buildings LLC.");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Soviet Stroy GP.");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Belarusian Shit Building Company");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Government company", new System.Windows.Forms.TreeNode[] {
+            treeNode17,
+            treeNode18,
+            treeNode19});
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("MAPID");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Build For Money Inc.");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Minsk Mir Shit Stroy Corp.");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Private Company", new System.Windows.Forms.TreeNode[] {
+            treeNode21,
+            treeNode22,
+            treeNode23});
             this.greeting_label = new System.Windows.Forms.Label();
             this.city_getter = new System.Windows.Forms.ComboBox();
             this.city_name = new System.Windows.Forms.Label();
@@ -42,18 +55,27 @@
             this.result_box = new System.Windows.Forms.RichTextBox();
             this.cost_name = new System.Windows.Forms.Label();
             this.clacl_button = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.date_label = new System.Windows.Forms.Label();
             this.celing_getter = new System.Windows.Forms.TextBox();
             this.celing_name = new System.Windows.Forms.Label();
             this.rooms_specifier = new System.Windows.Forms.CheckedListBox();
             this.other_rooms_name = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.exit_button = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.builder_getter = new System.Windows.Forms.TreeView();
+            this.builder_label = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.street_name = new System.Windows.Forms.Label();
+            this.street_getter = new System.Windows.Forms.TextBox();
+            this.house_name = new System.Windows.Forms.Label();
+            this.house_getter = new System.Windows.Forms.TextBox();
+            this.sub_getter = new System.Windows.Forms.NumericUpDown();
+            this.sub_name = new System.Windows.Forms.Label();
+            this.flat_getter = new System.Windows.Forms.NumericUpDown();
+            this.flat_name = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sub_getter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flat_getter)).BeginInit();
             this.SuspendLayout();
             // 
             // greeting_label
@@ -209,17 +231,11 @@
             this.clacl_button.UseVisualStyleBackColor = true;
             this.clacl_button.Click += new System.EventHandler(this.clacl_button_Click);
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(12, 174);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 15;
-            // 
             // date_label
             // 
             this.date_label.AutoSize = true;
             this.date_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.date_label.Location = new System.Drawing.Point(14, 140);
+            this.date_label.Location = new System.Drawing.Point(21, 333);
             this.date_label.Name = "date_label";
             this.date_label.Size = new System.Drawing.Size(190, 25);
             this.date_label.TabIndex = 16;
@@ -256,8 +272,9 @@
             "Home Office"});
             this.rooms_specifier.Location = new System.Drawing.Point(394, 164);
             this.rooms_specifier.Name = "rooms_specifier";
-            this.rooms_specifier.Size = new System.Drawing.Size(169, 114);
+            this.rooms_specifier.Size = new System.Drawing.Size(169, 136);
             this.rooms_specifier.TabIndex = 20;
+            this.rooms_specifier.SelectedIndexChanged += new System.EventHandler(this.rooms_specifier_SelectedIndexChanged);
             // 
             // other_rooms_name
             // 
@@ -268,10 +285,6 @@
             this.other_rooms_name.Size = new System.Drawing.Size(174, 25);
             this.other_rooms_name.TabIndex = 21;
             this.other_rooms_name.Text = "What else is there:";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // exit_button
             // 
@@ -286,16 +299,163 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(212, 502);
+            this.progressBar1.Location = new System.Drawing.Point(17, 667);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(255, 23);
+            this.progressBar1.Size = new System.Drawing.Size(484, 23);
             this.progressBar1.TabIndex = 23;
+            // 
+            // builder_getter
+            // 
+            this.builder_getter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.builder_getter.Location = new System.Drawing.Point(305, 361);
+            this.builder_getter.Name = "builder_getter";
+            treeNode17.Name = "Gov_1";
+            treeNode17.Text = "Government Buildings LLC.";
+            treeNode18.Name = "Gov_2";
+            treeNode18.Text = "Soviet Stroy GP.";
+            treeNode19.Name = "Gov_3";
+            treeNode19.Text = "Belarusian Shit Building Company";
+            treeNode20.Name = "Gov_node";
+            treeNode20.Text = "Government company";
+            treeNode21.Name = "Priv_1";
+            treeNode21.Text = "MAPID";
+            treeNode22.Name = "Priv_2";
+            treeNode22.Text = "Build For Money Inc.";
+            treeNode23.Name = "Priv_3";
+            treeNode23.Text = "Minsk Mir Shit Stroy Corp.";
+            treeNode24.Name = "Private_node";
+            treeNode24.Text = "Private Company";
+            this.builder_getter.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode20,
+            treeNode24});
+            this.builder_getter.Size = new System.Drawing.Size(325, 124);
+            this.builder_getter.TabIndex = 24;
+            // 
+            // builder_label
+            // 
+            this.builder_label.AutoSize = true;
+            this.builder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.builder_label.Location = new System.Drawing.Point(397, 333);
+            this.builder_label.Name = "builder_label";
+            this.builder_label.Size = new System.Drawing.Size(157, 25);
+            this.builder_label.TabIndex = 25;
+            this.builder_label.Text = "Who had built it?";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(26, 361);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 26;
+            // 
+            // street_name
+            // 
+            this.street_name.AutoSize = true;
+            this.street_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.street_name.Location = new System.Drawing.Point(12, 130);
+            this.street_name.Name = "street_name";
+            this.street_name.Size = new System.Drawing.Size(64, 25);
+            this.street_name.TabIndex = 27;
+            this.street_name.Text = "Street";
+            // 
+            // street_getter
+            // 
+            this.street_getter.Location = new System.Drawing.Point(12, 158);
+            this.street_getter.Name = "street_getter";
+            this.street_getter.Size = new System.Drawing.Size(226, 22);
+            this.street_getter.TabIndex = 28;
+            this.street_getter.TextChanged += new System.EventHandler(this.street_getter_TextChanged);
+            // 
+            // house_name
+            // 
+            this.house_name.AutoSize = true;
+            this.house_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.house_name.Location = new System.Drawing.Point(12, 204);
+            this.house_name.Name = "house_name";
+            this.house_name.Size = new System.Drawing.Size(69, 25);
+            this.house_name.TabIndex = 29;
+            this.house_name.Text = "House";
+            // 
+            // house_getter
+            // 
+            this.house_getter.Location = new System.Drawing.Point(15, 232);
+            this.house_getter.Name = "house_getter";
+            this.house_getter.Size = new System.Drawing.Size(223, 22);
+            this.house_getter.TabIndex = 30;
+            this.house_getter.TextChanged += new System.EventHandler(this.house_getter_TextChanged);
+            // 
+            // sub_getter
+            // 
+            this.sub_getter.Location = new System.Drawing.Point(17, 303);
+            this.sub_getter.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.sub_getter.Name = "sub_getter";
+            this.sub_getter.Size = new System.Drawing.Size(108, 22);
+            this.sub_getter.TabIndex = 31;
+            this.sub_getter.ValueChanged += new System.EventHandler(this.sub_getter_ValueChanged);
+            // 
+            // sub_name
+            // 
+            this.sub_name.AutoSize = true;
+            this.sub_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sub_name.Location = new System.Drawing.Point(12, 275);
+            this.sub_name.Name = "sub_name";
+            this.sub_name.Size = new System.Drawing.Size(122, 25);
+            this.sub_name.TabIndex = 32;
+            this.sub_name.Text = "Sub Building";
+            // 
+            // flat_getter
+            // 
+            this.flat_getter.Location = new System.Drawing.Point(230, 303);
+            this.flat_getter.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.flat_getter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.flat_getter.Name = "flat_getter";
+            this.flat_getter.Size = new System.Drawing.Size(120, 22);
+            this.flat_getter.TabIndex = 33;
+            this.flat_getter.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.flat_getter.ValueChanged += new System.EventHandler(this.flat_getter_ValueChanged);
+            // 
+            // flat_name
+            // 
+            this.flat_name.AutoSize = true;
+            this.flat_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.flat_name.Location = new System.Drawing.Point(225, 275);
+            this.flat_name.Name = "flat_name";
+            this.flat_name.Size = new System.Drawing.Size(115, 25);
+            this.flat_name.TabIndex = 34;
+            this.flat_name.Text = "Flat number";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 702);
+            this.Controls.Add(this.flat_name);
+            this.Controls.Add(this.flat_getter);
+            this.Controls.Add(this.sub_name);
+            this.Controls.Add(this.sub_getter);
+            this.Controls.Add(this.house_getter);
+            this.Controls.Add(this.house_name);
+            this.Controls.Add(this.street_getter);
+            this.Controls.Add(this.street_name);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.builder_label);
+            this.Controls.Add(this.builder_getter);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.other_rooms_name);
@@ -303,7 +463,6 @@
             this.Controls.Add(this.celing_name);
             this.Controls.Add(this.celing_getter);
             this.Controls.Add(this.date_label);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.clacl_button);
             this.Controls.Add(this.cost_name);
             this.Controls.Add(this.result_box);
@@ -319,9 +478,9 @@
             this.Controls.Add(this.greeting_label);
             this.Name = "Form1";
             this.Text = "Starting page";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sub_getter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flat_getter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,16 +501,24 @@
         private System.Windows.Forms.RichTextBox result_box;
         private System.Windows.Forms.Label cost_name;
         private System.Windows.Forms.Button clacl_button;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label date_label;
         private System.Windows.Forms.TextBox celing_getter;
         private System.Windows.Forms.Label celing_name;
         private System.Windows.Forms.CheckedListBox rooms_specifier;
         private System.Windows.Forms.Label other_rooms_name;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button exit_button;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TreeView builder_getter;
+        private System.Windows.Forms.Label builder_label;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label street_name;
+        private System.Windows.Forms.TextBox street_getter;
+        private System.Windows.Forms.Label house_name;
+        private System.Windows.Forms.TextBox house_getter;
+        private System.Windows.Forms.NumericUpDown sub_getter;
+        private System.Windows.Forms.Label sub_name;
+        private System.Windows.Forms.NumericUpDown flat_getter;
+        private System.Windows.Forms.Label flat_name;
     }
 }
 
