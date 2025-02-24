@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Government Buildings LLC.");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Soviet Stroy GP.");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Belarusian Shit Building Company");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Government company", new System.Windows.Forms.TreeNode[] {
-            treeNode17,
-            treeNode18,
-            treeNode19});
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("MAPID");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Build For Money Inc.");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Minsk Mir Shit Stroy Corp.");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Private Company", new System.Windows.Forms.TreeNode[] {
-            treeNode21,
-            treeNode22,
-            treeNode23});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Government Buildings LLC.");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Soviet Stroy GP.");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Belarusian Shit Building Company");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Government company", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("MAPID");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Build For Money Inc.");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Minsk Mir Shit Stroy Corp.");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Private Company", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7});
             this.greeting_label = new System.Windows.Forms.Label();
             this.city_getter = new System.Windows.Forms.ComboBox();
             this.city_name = new System.Windows.Forms.Label();
@@ -73,9 +73,15 @@
             this.sub_name = new System.Windows.Forms.Label();
             this.flat_getter = new System.Windows.Forms.NumericUpDown();
             this.flat_name = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.downloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sub_getter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flat_getter)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // greeting_label
@@ -309,25 +315,25 @@
             this.builder_getter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.builder_getter.Location = new System.Drawing.Point(305, 361);
             this.builder_getter.Name = "builder_getter";
-            treeNode17.Name = "Gov_1";
-            treeNode17.Text = "Government Buildings LLC.";
-            treeNode18.Name = "Gov_2";
-            treeNode18.Text = "Soviet Stroy GP.";
-            treeNode19.Name = "Gov_3";
-            treeNode19.Text = "Belarusian Shit Building Company";
-            treeNode20.Name = "Gov_node";
-            treeNode20.Text = "Government company";
-            treeNode21.Name = "Priv_1";
-            treeNode21.Text = "MAPID";
-            treeNode22.Name = "Priv_2";
-            treeNode22.Text = "Build For Money Inc.";
-            treeNode23.Name = "Priv_3";
-            treeNode23.Text = "Minsk Mir Shit Stroy Corp.";
-            treeNode24.Name = "Private_node";
-            treeNode24.Text = "Private Company";
+            treeNode1.Name = "Gov_1";
+            treeNode1.Text = "Government Buildings LLC.";
+            treeNode2.Name = "Gov_2";
+            treeNode2.Text = "Soviet Stroy GP.";
+            treeNode3.Name = "Gov_3";
+            treeNode3.Text = "Belarusian Shit Building Company";
+            treeNode4.Name = "Gov_node";
+            treeNode4.Text = "Government company";
+            treeNode5.Name = "Priv_1";
+            treeNode5.Text = "MAPID";
+            treeNode6.Name = "Priv_2";
+            treeNode6.Text = "Build For Money Inc.";
+            treeNode7.Name = "Priv_3";
+            treeNode7.Text = "Minsk Mir Shit Stroy Corp.";
+            treeNode8.Name = "Private_node";
+            treeNode8.Text = "Private Company";
             this.builder_getter.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode24});
+            treeNode4,
+            treeNode8});
             this.builder_getter.Size = new System.Drawing.Size(325, 124);
             this.builder_getter.TabIndex = 24;
             // 
@@ -440,6 +446,46 @@
             this.flat_name.TabIndex = 34;
             this.flat_name.Text = "Flat number";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1065, 28);
+            this.menuStrip1.TabIndex = 35;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveToolStripMenuItem,
+            this.downloadToolStripMenuItem,
+            this.showAllToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // downloadToolStripMenuItem
+            // 
+            this.downloadToolStripMenuItem.Name = "downloadToolStripMenuItem";
+            this.downloadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.downloadToolStripMenuItem.Text = "Download";
+            // 
+            // showAllToolStripMenuItem
+            // 
+            this.showAllToolStripMenuItem.Name = "showAllToolStripMenuItem";
+            this.showAllToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.showAllToolStripMenuItem.Text = "Show All";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -476,11 +522,15 @@
             this.Controls.Add(this.city_name);
             this.Controls.Add(this.city_getter);
             this.Controls.Add(this.greeting_label);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Starting page";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sub_getter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flat_getter)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,6 +569,11 @@
         private System.Windows.Forms.Label sub_name;
         private System.Windows.Forms.NumericUpDown flat_getter;
         private System.Windows.Forms.Label flat_name;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem downloadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showAllToolStripMenuItem;
     }
 }
 

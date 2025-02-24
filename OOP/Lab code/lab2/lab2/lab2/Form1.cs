@@ -251,5 +251,10 @@ namespace lab2
             }
             flat_counter++;
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
