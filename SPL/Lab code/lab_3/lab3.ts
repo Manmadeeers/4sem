@@ -47,3 +47,19 @@ console.log(admin.getPermissions());
 console.log(user.getRole());
 
 //TASK 2
+
+class Casche<T>{
+
+   Storage:Map<string,T>
+
+    public add(key:string, value:T, ttl:number):void{
+        
+        this.Storage.set(key,value);
+    }
+    public get(key:string){
+        return ;
+    }
+    public clearExpired():void{
+
+    }
+}
