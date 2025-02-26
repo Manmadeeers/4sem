@@ -69,6 +69,50 @@ var Admin = /** @class */ (function (_super) {
 var guest = new Guest(1, "Anon");
 var admin = new Admin(122, "Vova");
 var user = new User(4, "Vaclov");
+console.group("Users");
 console.log(guest.getPermissions());
 console.log(admin.getPermissions());
 console.log(user.getRole());
+console.groupEnd();
+//TASK 2
+var Casche = /** @class */ (function () {
+    function Casche() {
+        this.map = new Map();
+    }
+    Casche.prototype.add = function (key, value, ttl) {
+        if (value == null) {
+            throw new Error("Value was null");
+        }
+        this.map.set(key, { value: value, expire_time: ttl + Date.now() });
+    };
+    Casche.prototype.get = function (key) {
+        if (key == null) {
+            throw new Error("Key was null");
+        }
+        if (this.map.has(key)) {
+            var entry = this.map.get(key);
+            if (!entry || Date.now() > (entry === null || entry === void 0 ? void 0 : entry.expire_time)) {
+                this.map.delete(key);
+                return null;
+            }
+            return entry.value;
+        }
+        else {
+            return null;
+        }
+    };
+    Casche.prototype.clearExpired = function () {
+    };
+    return Casche;
+}());
+console.group("Cache");
+try {
+    var cache_1 = new Casche;
+    cache_1.add("Some number", 100, 6000);
+    console.log(cache_1.get("Some number"));
+    setTimeout(function () { return console.log(cache_1.get("Some number")); }, 6000);
+}
+catch (_a) {
+    console.log(Error.arguments);
+}
+console.groupEnd();
