@@ -53,7 +53,7 @@ console.groupEnd();
 interface IReport{
     title:string;
     content:string;
-    generate():string;
+    generate():string|object;
 }
 
 class HTMLReport implements IReport{
@@ -75,8 +75,8 @@ class JSONReport implements IReport{
         this.title = title;
         this.content = content;
     }
-    generate(): string {
-            return `{title:${this.title},content:${this.content}}`;
+    generate(): object {
+            return {title:this.title,content:this.content};
     }
 }
 
@@ -135,14 +135,14 @@ enum HTTPStatus{
     OK,//200
     Bad_Request,//400
     Unauthorized,//401
-    Internal_Server_Error//500
+    Internal_Server_Error,//500
 }
 type APIResponse<T> = {
     Response?:[status:HTTPStatus,data:T|null,error?:string];
 }
-function succsess<T>(T):APIResponse<T>{
-    let value_to_return:APIResponse<T> = {
-        Response:[HTTPStatus.OK,T],
+function succsess<K>(K):APIResponse<K>{
+    let value_to_return:APIResponse<K> = {
+        Response:[HTTPStatus.OK,K],
     }
     return value_to_return;
 }
