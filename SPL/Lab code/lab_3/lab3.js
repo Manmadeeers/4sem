@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -23,8 +22,6 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var inspector_1 = require("inspector");
 //TASK 1
 var BaseUser = /** @class */ (function () {
     function BaseUser(id, name) {
@@ -81,11 +78,11 @@ var Admin = /** @class */ (function (_super) {
 var guest = new Guest(1, "Anon");
 var admin = new Admin(122, "Vova");
 var user = new User(4, "Vaclov");
-inspector_1.console.group("Users");
-inspector_1.console.log(guest.getPermissions());
-inspector_1.console.log(admin.getPermissions());
-inspector_1.console.log(user.getRole());
-inspector_1.console.groupEnd();
+console.group("Users");
+console.log(guest.getPermissions());
+console.log(admin.getPermissions());
+console.log(user.getRole());
+console.groupEnd();
 var HTMLReport = /** @class */ (function () {
     function HTMLReport(title, content) {
         this.title = title;
@@ -106,12 +103,12 @@ var JSONReport = /** @class */ (function () {
     };
     return JSONReport;
 }());
-inspector_1.console.group("Interface implementation");
+console.group("Interface implementation");
 var first = new HTMLReport("First report", "REPORT");
-inspector_1.console.log(first.generate());
+console.log(first.generate());
 var second = new JSONReport("Second report", "REPORT");
-inspector_1.console.log(second.generate());
-inspector_1.console.groupEnd();
+console.log(second.generate());
+console.groupEnd();
 //TASK 4
 function createInstance(cls) {
     var args = [];
@@ -127,26 +124,50 @@ var Product = /** @class */ (function () {
     }
     return Product;
 }());
-var Prod = createInstance(Product, "Black people", 10);
-inspector_1.console.group("Generic function");
-inspector_1.console.log(Prod);
-inspector_1.console.groupEnd();
+var Prod = createInstance(Product, "BSTU FIT Student", 10);
+console.group("Generic function");
+console.log(Prod);
+console.groupEnd();
 //TASK 5
-// enum LogLevel{
-//     INFO,
-//     WARNING,
-//     ERROR
-// }
-// type logEntry = {
-//     entry:[date:Date,level:LogLevel,message:string];
-// }
-// function LogEvent(entry:logEntry){
-//   console.log(`[${entry[0]}]`)
-// }
-// console.group("Tuples");
-// let log:logEntry = {entry:[new Date(),LogLevel.INFO,"OK"]};
-// LogEvent(log);
-// console.groupEnd();
+var LogLevel;
+(function (LogLevel) {
+    LogLevel[LogLevel["INFO"] = 0] = "INFO";
+    LogLevel[LogLevel["WARNING"] = 1] = "WARNING";
+    LogLevel[LogLevel["ERROR"] = 2] = "ERROR";
+})(LogLevel || (LogLevel = {}));
+function LogEvent(entr) {
+    console.log("[".concat(entr.enty[0], ",").concat(entr.enty[1], ",").concat(entr.enty[2], "]"));
+}
+console.group("Tuples");
+var loggg = { enty: [new Date(), LogLevel.INFO, "OK"] };
+LogEvent(loggg);
+console.groupEnd();
+//TASK 6
+var HTTPStatus;
+(function (HTTPStatus) {
+    HTTPStatus[HTTPStatus["OK"] = 0] = "OK";
+    HTTPStatus[HTTPStatus["Bad_Request"] = 1] = "Bad_Request";
+    HTTPStatus[HTTPStatus["Unauthorized"] = 2] = "Unauthorized";
+    HTTPStatus[HTTPStatus["Internal_Server_Error"] = 3] = "Internal_Server_Error"; //500
+})(HTTPStatus || (HTTPStatus = {}));
+function succsess(T) {
+    var value_to_return = {
+        Response: [HTTPStatus.OK, T],
+    };
+    return value_to_return;
+}
+function error(message, status) {
+    var value_to_return = {
+        Response: [status, null, message],
+    };
+    return value_to_return;
+}
+var res1 = succsess({ user: "USERNAME" });
+var res2 = error("Internal Server Error", HTTPStatus.Internal_Server_Error);
+console.group("API Response");
+console.log(res1);
+console.log(res2);
+console.groupEnd();
 //TASK 3
 var Casche = /** @class */ (function () {
     function Casche() {
@@ -179,28 +200,28 @@ var Casche = /** @class */ (function () {
         }
     };
     Casche.prototype.viewAll = function () {
-        inspector_1.console.log(this.map.entries());
+        console.log(this.map.entries());
     };
     Casche.prototype.clearExpired = function () {
         var _this = this;
         this.map.forEach(function (value, key) {
             if (value.expire_time == -1) {
                 _this.map.delete(key);
-                inspector_1.console.log("Expired value deleted");
+                console.log("Expired value deleted");
             }
         });
     };
     return Casche;
 }());
-inspector_1.console.group("Cache");
+console.group("Cache");
 try {
     var cache_1 = new Casche;
     cache_1.add("Some number", 100, 2000);
-    inspector_1.console.log(cache_1.get("Some number"));
-    setTimeout(function () { return inspector_1.console.log(cache_1.get("Some number")); }, 2000);
+    console.log(cache_1.get("Some number"));
+    setTimeout(function () { return console.log(cache_1.get("Some number")); }, 2000);
     setTimeout(function () { cache_1.viewAll(); cache_1.clearExpired(); cache_1.viewAll(); }, 2500);
 }
 catch (_a) {
-    inspector_1.console.log(Error.arguments);
+    console.log(Error.arguments);
 }
-inspector_1.console.groupEnd();
+console.groupEnd();

@@ -1,4 +1,3 @@
-import { console } from "inspector";
 
 //TASK 1
 abstract class BaseUser {
@@ -104,7 +103,7 @@ class Product{
         this.price = price;
     }
 }
-const Prod = createInstance(Product,"Black people",10);
+const Prod = createInstance(Product,"BSTU FIT Student",10);
 
 console.group("Generic function");
 console.log(Prod);
@@ -112,23 +111,58 @@ console.groupEnd();
 
 
 //TASK 5
-// enum LogLevel{
-//     INFO,
-//     WARNING,
-//     ERROR
-// }
-// type logEntry = {
-//     entry:[date:Date,level:LogLevel,message:string];
-// }
+enum LogLevel{
+    INFO,
+    WARNING,
+    ERROR
+}
+type logEntry = {
+    enty:[date:Date,level:LogLevel,message:string];
+}
 
-// function LogEvent(entry:logEntry){
-//   console.log(`[${entry[0]}]`)
-// }
+function LogEvent(entr:logEntry){
+  console.log(`[${entr.enty[0]},${entr.enty[1]},${entr.enty[2]}]`)
+}
 
-// console.group("Tuples");
-// let log:logEntry = {entry:[new Date(),LogLevel.INFO,"OK"]};
-// LogEvent(log);
-// console.groupEnd();
+console.group("Tuples");
+let loggg:logEntry = {enty:[new Date(),LogLevel.INFO,"OK"]};
+LogEvent(loggg);
+console.groupEnd();
+
+//TASK 6
+
+enum HTTPStatus{
+    OK,//200
+    Bad_Request,//400
+    Unauthorized,//401
+    Internal_Server_Error//500
+}
+type APIResponse<T> = {
+    Response?:[status:HTTPStatus,data:T|null,error?:string];
+}
+function succsess<T>(T):APIResponse<T>{
+    let value_to_return:APIResponse<T> = {
+        Response:[HTTPStatus.OK,T],
+    }
+    return value_to_return;
+}
+function error<T>(message:string,status:HTTPStatus):APIResponse<null>{
+    let value_to_return:APIResponse<null> = {
+        Response:[status,null,message],
+    }
+    return value_to_return;
+}
+
+let res1 = succsess({user:"USERNAME"});
+let res2 = error("Internal Server Error",HTTPStatus.Internal_Server_Error);
+console.group("API Response");
+console.log(res1);
+console.log(res2);
+console.groupEnd();
+
+
+
+
 //TASK 3
 
 class Casche<T> {
