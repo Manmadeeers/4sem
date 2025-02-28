@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{F79D4E16-8B83-4EC3-A5C0-DE606D12C942}|ASPA_3\\ASPA_3.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_2\\aspa002_1\\aspa_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F79D4E16-8B83-4EC3-A5C0-DE606D12C942}|ASPA_3\\ASPA_3.csproj|solutionrelative:aspa_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B297CB4-9AAF-4314-875C-F350A65864A7}|ASPA_2\\ASPA_2.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_2\\aspa002_1\\aspa_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B297CB4-9AAF-4314-875C-F350A65864A7}|ASPA_2\\ASPA_2.csproj|solutionrelative:aspa_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +28,22 @@
               "RelativeDocumentMoniker": "ASPA_3\\Program.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA_3\\Program.cs",
               "RelativeToolTip": "ASPA_3\\Program.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAtwCMAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T16:06:54.203Z",
+              "WhenOpened": "2025-02-28T17:40:40.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA_2\\Program.cs",
+              "RelativeDocumentMoniker": "ASPA_2\\Program.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA_2\\Program.cs",
+              "RelativeToolTip": "ASPA_2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T17:37:18.94Z",
               "EditorCaption": ""
             }
           ]

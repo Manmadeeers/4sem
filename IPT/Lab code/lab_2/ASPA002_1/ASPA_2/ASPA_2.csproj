@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Picture\neuman.jpg" />
+    <None Remove="Pictures\neuman.jpg" />
+    <None Remove="wwwroot\Picture\neuman.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Picture\neuman.jpg">
+    <Content Include="Pictures\neuman.jpg">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
