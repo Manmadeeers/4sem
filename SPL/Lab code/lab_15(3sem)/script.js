@@ -10,6 +10,8 @@ let submit_button = document.getElementById('btn');
 
 let isValid = false;
 form.addEventListener('submit',(e)=>{
+
+
     e.preventDefault();
 
     let surename_input = surename.value.trim();
@@ -23,6 +25,18 @@ form.addEventListener('submit',(e)=>{
     else if(name_input.length>20){
         showException(2,"This field can't take more then 20 characters");
     }
+
+
+
+
+
+
+
+
+
+
+
+    
 })
 
 function showException(id,message){

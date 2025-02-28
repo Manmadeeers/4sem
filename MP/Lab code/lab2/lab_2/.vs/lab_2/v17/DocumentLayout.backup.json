@@ -1,38 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\",
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\lab2.5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\lab2.5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\lab2.5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Auxil.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{1C5D824A-AA71-42A0-8F67-026E64A8F0C0}|lab2.4\\lab2.4.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.4\\lab2.4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1C5D824A-AA71-42A0-8F67-026E64A8F0C0}|lab2.4\\lab2.4.vcxproj|solutionrelative:lab2.4\\lab2.4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5D824A-AA71-42A0-8F67-026E64A8F0C0}|lab2.4\\lab2.4.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.4\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1C5D824A-AA71-42A0-8F67-026E64A8F0C0}|lab2.4\\lab2.4.vcxproj|solutionrelative:lab2.4\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85EBD0-5F43-44D6-8164-88CDC6FD1E67}|lab2.3\\lab2.3.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.3\\Boat.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8D85EBD0-5F43-44D6-8164-88CDC6FD1E67}|lab2.3\\lab2.3.vcxproj|solutionrelative:lab2.3\\Boat.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85EBD0-5F43-44D6-8164-88CDC6FD1E67}|lab2.3\\lab2.3.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.3\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8D85EBD0-5F43-44D6-8164-88CDC6FD1E67}|lab2.3\\lab2.3.vcxproj|solutionrelative:lab2.3\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52FF14D5-02AE-4F2C-BB23-B4C7E1AF785F}|lab2.2\\lab2.2.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.2\\lab2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{52FF14D5-02AE-4F2C-BB23-B4C7E1AF785F}|lab2.2\\lab2.2.vcxproj|solutionrelative:lab2.2\\lab2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52FF14D5-02AE-4F2C-BB23-B4C7E1AF785F}|lab2.2\\lab2.2.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.2\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{52FF14D5-02AE-4F2C-BB23-B4C7E1AF785F}|lab2.2\\lab2.2.vcxproj|solutionrelative:lab2.2\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB20A4BE-A70F-432A-9C80-40B5E8E4FEC8}|lab2.1\\lab2.1.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.1\\Knapsack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AB20A4BE-A70F-432A-9C80-40B5E8E4FEC8}|lab2.1\\lab2.1.vcxproj|solutionrelative:lab2.1\\Knapsack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB20A4BE-A70F-432A-9C80-40B5E8E4FEC8}|lab2.1\\lab2.1.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.1\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AB20A4BE-A70F-432A-9C80-40B5E8E4FEC8}|lab2.1\\lab2.1.vcxproj|solutionrelative:lab2.1\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{684675C5-44E1-4B26-8EA5-5BB7FCB7C9B1}|lab_2\\lab_2.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab_2\\lab_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{684675C5-44E1-4B26-8EA5-5BB7FCB7C9B1}|lab_2\\lab_2.vcxproj|solutionrelative:lab_2\\lab_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{684675C5-44E1-4B26-8EA5-5BB7FCB7C9B1}|lab_2\\lab_2.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab_2\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{684675C5-44E1-4B26-8EA5-5BB7FCB7C9B1}|lab_2\\lab_2.vcxproj|solutionrelative:lab_2\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Auxil.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\Auxil.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Auxil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Auxil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\Auxil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Salesman.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Salesman.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\Salesman.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Combi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\Combi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Salesman.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\Salesman.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\Combi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Combi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\Combi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Salesman.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\Salesman.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{94440014-DAD7-4E78-8333-F148739B2153}|lab2.5\\lab2.5.vcxproj|solutionrelative:lab2.5\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,108 +82,231 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Auxil.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Auxil.cpp",
-              "RelativeDocumentMoniker": "lab2.5\\Auxil.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Auxil.cpp",
-              "RelativeToolTip": "lab2.5\\Auxil.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Title": "lab2.4.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.4\\lab2.4.cpp",
+              "RelativeDocumentMoniker": "lab2.4\\lab2.4.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.4\\lab2.4.cpp",
+              "RelativeToolTip": "lab2.4\\lab2.4.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-21T14:09:46.558Z",
+              "WhenOpened": "2025-02-28T13:46:44.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Auxil.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Auxil.h",
-              "RelativeDocumentMoniker": "lab2.5\\Auxil.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Auxil.h",
-              "RelativeToolTip": "lab2.5\\Auxil.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-21T14:09:32.334Z",
+              "Title": "Combi.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.4\\Combi.cpp",
+              "RelativeDocumentMoniker": "lab2.4\\Combi.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.4\\Combi.cpp",
+              "RelativeToolTip": "lab2.4\\Combi.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:46:35.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Salesman.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Salesman.cpp",
-              "RelativeDocumentMoniker": "lab2.5\\Salesman.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Salesman.cpp",
-              "RelativeToolTip": "lab2.5\\Salesman.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Title": "Boat.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.3\\Boat.cpp",
+              "RelativeDocumentMoniker": "lab2.3\\Boat.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.3\\Boat.cpp",
+              "RelativeToolTip": "lab2.3\\Boat.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-21T14:07:25.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "stdafx.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\stdafx.h",
-              "RelativeDocumentMoniker": "lab2.5\\stdafx.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\stdafx.h",
-              "RelativeToolTip": "lab2.5\\stdafx.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-21T14:06:56.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Combi.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Combi.cpp",
-              "RelativeDocumentMoniker": "lab2.5\\Combi.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Combi.cpp",
-              "RelativeToolTip": "lab2.5\\Combi.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-21T14:06:36.29Z",
+              "WhenOpened": "2025-02-28T13:46:22.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Combi.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Combi.h",
-              "RelativeDocumentMoniker": "lab2.5\\Combi.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Combi.h",
-              "RelativeToolTip": "lab2.5\\Combi.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-21T14:06:16.915Z",
+              "Title": "Combi.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.3\\Combi.cpp",
+              "RelativeDocumentMoniker": "lab2.3\\Combi.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.3\\Combi.cpp",
+              "RelativeToolTip": "lab2.3\\Combi.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:46:20.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "lab2.2.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.2\\lab2.2.cpp",
+              "RelativeDocumentMoniker": "lab2.2\\lab2.2.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.2\\lab2.2.cpp",
+              "RelativeToolTip": "lab2.2\\lab2.2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:46:11.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Combi.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.2\\Combi.cpp",
+              "RelativeDocumentMoniker": "lab2.2\\Combi.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.2\\Combi.cpp",
+              "RelativeToolTip": "lab2.2\\Combi.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:46:02.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Knapsack.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.1\\Knapsack.cpp",
+              "RelativeDocumentMoniker": "lab2.1\\Knapsack.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.1\\Knapsack.cpp",
+              "RelativeToolTip": "lab2.1\\Knapsack.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:45:39.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Combi.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.1\\Combi.cpp",
+              "RelativeDocumentMoniker": "lab2.1\\Combi.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.1\\Combi.cpp",
+              "RelativeToolTip": "lab2.1\\Combi.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:45:36.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "lab_2.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab_2\\lab_2.cpp",
+              "RelativeDocumentMoniker": "lab_2\\lab_2.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab_2\\lab_2.cpp",
+              "RelativeToolTip": "lab_2\\lab_2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:45:08.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Combi.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab_2\\Combi.cpp",
+              "RelativeDocumentMoniker": "lab_2\\Combi.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab_2\\Combi.cpp",
+              "RelativeToolTip": "lab_2\\Combi.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:45:02.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Auxil.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Auxil.cpp",
+              "RelativeDocumentMoniker": "lab2.5\\Auxil.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Auxil.cpp",
+              "RelativeToolTip": "lab2.5\\Auxil.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-21T14:09:46.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Auxil.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Auxil.h",
+              "RelativeDocumentMoniker": "lab2.5\\Auxil.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Auxil.h",
+              "RelativeToolTip": "lab2.5\\Auxil.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-21T14:09:32.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Salesman.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Salesman.cpp",
+              "RelativeDocumentMoniker": "lab2.5\\Salesman.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Salesman.cpp",
+              "RelativeToolTip": "lab2.5\\Salesman.cpp",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-21T14:07:25.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\stdafx.h",
+              "RelativeDocumentMoniker": "lab2.5\\stdafx.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\stdafx.h",
+              "RelativeToolTip": "lab2.5\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-21T14:06:56.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Combi.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Combi.cpp",
+              "RelativeDocumentMoniker": "lab2.5\\Combi.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Combi.cpp",
+              "RelativeToolTip": "lab2.5\\Combi.cpp",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-21T14:06:36.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Combi.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Combi.h",
+              "RelativeDocumentMoniker": "lab2.5\\Combi.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Combi.h",
+              "RelativeToolTip": "lab2.5\\Combi.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-21T14:06:16.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Salesman.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Salesman.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Salesman.h",
               "RelativeDocumentMoniker": "lab2.5\\Salesman.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\Salesman.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\Salesman.h",
               "RelativeToolTip": "lab2.5\\Salesman.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-21T14:05:57.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T14:05:57.707Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "lab2.5.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\lab2.5.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\lab2.5.cpp",
               "RelativeDocumentMoniker": "lab2.5\\lab2.5.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab_2\\lab2.5\\lab2.5.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\MP\\Lab code\\lab2\\lab_2\\lab2.5\\lab2.5.cpp",
               "RelativeToolTip": "lab2.5\\lab2.5.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-21T14:05:36.48Z",
               "EditorCaption": ""
