@@ -24,3 +24,4 @@ C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_2\ASPA002_1\ASPA\obj\Debug\net8.0
 C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_2\ASPA002_1\ASPA\obj\Debug\net8.0\ASPA.pdb
 C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_2\ASPA002_1\ASPA\obj\Debug\net8.0\ASPA.genruntimeconfig.cache
 C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_2\ASPA002_1\ASPA\obj\Debug\net8.0\ref\ASPA.dll
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_2\ASPA002_1\ASPA\bin\Debug\net8.0\ASPA.staticwebassets.runtime.json

@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{055ABBEA-FA62-41B6-9A1C-4FA1CCBEA2F1}|ASPA\\ASPA.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_2\\aspa002_1\\aspa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{055ABBEA-FA62-41B6-9A1C-4FA1CCBEA2F1}|ASPA\\ASPA.csproj|solutionrelative:aspa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{055ABBEA-FA62-41B6-9A1C-4FA1CCBEA2F1}|ASPA\\ASPA.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_2\\aspa002_1\\aspa\\welcome\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{055ABBEA-FA62-41B6-9A1C-4FA1CCBEA2F1}|ASPA\\ASPA.csproj|solutionrelative:aspa\\welcome\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F79D4E16-8B83-4EC3-A5C0-DE606D12C942}|ASPA_3\\ASPA_3.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_2\\aspa002_1\\aspa_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79D4E16-8B83-4EC3-A5C0-DE606D12C942}|ASPA_3\\ASPA_3.csproj|solutionrelative:aspa_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA\\welcome\\index.html",
-              "RelativeDocumentMoniker": "ASPA\\welcome\\index.html",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA\\welcome\\index.html",
-              "RelativeToolTip": "ASPA\\welcome\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-02-28T14:27:37.584Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA\\Program.cs",
-              "RelativeDocumentMoniker": "ASPA\\Program.cs",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA\\Program.cs",
-              "RelativeToolTip": "ASPA\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA_3\\Program.cs",
+              "RelativeDocumentMoniker": "ASPA_3\\Program.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA_3\\Program.cs",
+              "RelativeToolTip": "ASPA_3\\Program.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAtwCMAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T14:03:09.777Z",
+              "WhenOpened": "2025-02-28T16:06:54.203Z",
               "EditorCaption": ""
             }
           ]

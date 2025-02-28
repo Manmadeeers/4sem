@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA\\wwwroot\\jpg\\neuman.jpg",
+      "PackagePath": "staticwebassets\\jpg\\neuman.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_2\\ASPA002_1\\ASPA\\wwwroot\\js\\Calc.js",
+      "PackagePath": "staticwebassets\\js\\Calc.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ASPA.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ASPA.props",
+      "PackagePath": "build\\ASPA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ASPA.props",
+      "PackagePath": "buildMultiTargeting\\ASPA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ASPA.props",
+      "PackagePath": "buildTransitive\\ASPA.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
