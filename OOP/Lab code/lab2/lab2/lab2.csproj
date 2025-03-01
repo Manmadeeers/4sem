@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="Company.cs" />
     <Compile Include="Flat.cs" />
+    <Compile Include="Formatter.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
