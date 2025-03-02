@@ -21,12 +21,35 @@ namespace lab2
     public class Flat
     {
         private double _square;
+        public double Square
+        {
+            get
+            {
+                return _square;
+            }
+            set
+            {
+                _square = value;
+            }
+        }
         private int _rooms;
-        private DateTime _build_date;
-        private Materials _material;
-        private int _floor;
+        public int Rooms
+        {
+            get
+            {
+                return _rooms;
+            }
+            set
+            {
+                _rooms = value;
+            }
+        }
+        private DateTime _build_date { get; set; }
+        private Materials _material { get; set; }
+        private int _floor { get; set; }
         private List<Rooms> _room_options = new List<Rooms>();
-        private Address _address;
+        private Address _address { get; set; }
+        private Company _company { get; set; }
 
 
         public double CalculateCost()
