@@ -11,6 +11,9 @@ namespace lab2
         private bool _materials_changed = false;
         private bool _additionals_changed = false;
         private bool _floor_changed = false;
+        private bool _address_pressed = false;
+        private bool _company_pressed = false;
+
 
         private Flat flat = new Flat();
         public Flat FLAT
@@ -141,9 +144,34 @@ namespace lab2
 
         private void address_transfer_button_Click(object sender, System.EventArgs e)
         {
+            if (!_address_pressed)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _address_pressed = true;
+            }
             Address_Form address_Form = new Address_Form();
             address_Form.ShowDialog();
             address_Form.Dispose();
+        }
+
+        private void company_button_Click(object sender, EventArgs e)
+        {
+            if (!_company_pressed)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _company_pressed = true;
+            }
+
+            Company_form comp_form = new Company_form();
+            comp_form.ShowDialog();
+            comp_form.Dispose();
+            this.calculate_button.Enabled = true;
+
+        }
+
+        private void calculate_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

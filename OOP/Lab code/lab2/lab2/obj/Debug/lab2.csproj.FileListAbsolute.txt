@@ -10,3 +10,4 @@ C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\obj\Debug\lab2.exe
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\obj\Debug\lab2.pdb
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\obj\Debug\lab2.Address_Form.resources
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\obj\Debug\lab2.Error.resources
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\obj\Debug\lab2.Company_form.resources

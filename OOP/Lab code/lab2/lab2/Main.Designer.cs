@@ -55,6 +55,7 @@
             this.floor_name = new System.Windows.Forms.Label();
             this.floor_getter = new System.Windows.Forms.NumericUpDown();
             this.address_transfer_button = new System.Windows.Forms.Button();
+            this.company_button = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rooms_getter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floor_getter)).BeginInit();
@@ -217,6 +218,7 @@
             this.calculate_button.TabIndex = 10;
             this.calculate_button.Text = "Calculate!";
             this.calculate_button.UseVisualStyleBackColor = true;
+            this.calculate_button.Click += new System.EventHandler(this.calculate_button_Click);
             // 
             // dateTimePicker1
             // 
@@ -343,11 +345,23 @@
             this.address_transfer_button.UseVisualStyleBackColor = true;
             this.address_transfer_button.Click += new System.EventHandler(this.address_transfer_button_Click);
             // 
+            // company_button
+            // 
+            this.company_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.company_button.Location = new System.Drawing.Point(331, 505);
+            this.company_button.Name = "company_button";
+            this.company_button.Size = new System.Drawing.Size(156, 55);
+            this.company_button.TabIndex = 22;
+            this.company_button.Text = "Fill in the company";
+            this.company_button.UseVisualStyleBackColor = true;
+            this.company_button.Click += new System.EventHandler(this.company_button_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 706);
+            this.Controls.Add(this.company_button);
             this.Controls.Add(this.address_transfer_button);
             this.Controls.Add(this.floor_getter);
             this.Controls.Add(this.floor_name);
@@ -409,6 +423,7 @@
         private System.Windows.Forms.Label floor_name;
         private System.Windows.Forms.NumericUpDown floor_getter;
         private System.Windows.Forms.Button address_transfer_button;
+        private System.Windows.Forms.Button company_button;
     }
 }
 

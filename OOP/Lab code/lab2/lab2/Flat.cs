@@ -48,7 +48,7 @@ namespace lab2
         private Materials _material { get; set; }
         private int _floor { get; set; }
         private List<Rooms> _room_options = new List<Rooms>();
-        private Address _address;
+        private Address _address = new Address();
         public Address Address
         {
             get
@@ -60,7 +60,18 @@ namespace lab2
                 _address = value;
             }
         }
-        private Company _company { get; set; }
+        private Company _company = new Company();
+        public Company Company
+        {
+            get
+            {
+                return _company;
+            }
+            set
+            {
+                _company = value; 
+            }
+        }
 
 
         public double CalculateCost()

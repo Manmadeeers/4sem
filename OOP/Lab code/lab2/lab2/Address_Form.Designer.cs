@@ -48,6 +48,7 @@
             this.subbuilding_name = new System.Windows.Forms.Label();
             this.apartment_getter = new System.Windows.Forms.NumericUpDown();
             this.apartment_name = new System.Windows.Forms.Label();
+            this.continue_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.building_getter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sub_getter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apartment_getter)).BeginInit();
@@ -150,6 +151,7 @@
             this.city_getter.Name = "city_getter";
             this.city_getter.Size = new System.Drawing.Size(155, 22);
             this.city_getter.TabIndex = 9;
+            this.city_getter.TextChanged += new System.EventHandler(this.city_getter_TextChanged);
             // 
             // street_name
             // 
@@ -167,6 +169,7 @@
             this.street_getter.Name = "street_getter";
             this.street_getter.Size = new System.Drawing.Size(163, 22);
             this.street_getter.TabIndex = 11;
+            this.street_getter.TextChanged += new System.EventHandler(this.street_getter_TextChanged);
             // 
             // building_getter
             // 
@@ -189,6 +192,7 @@
             0,
             0,
             0});
+            this.building_getter.ValueChanged += new System.EventHandler(this.building_getter_ValueChanged);
             // 
             // building_name
             // 
@@ -233,6 +237,7 @@
             this.sub_getter.Name = "sub_getter";
             this.sub_getter.Size = new System.Drawing.Size(120, 22);
             this.sub_getter.TabIndex = 16;
+            this.sub_getter.ValueChanged += new System.EventHandler(this.sub_getter_ValueChanged);
             // 
             // subbuilding_name
             // 
@@ -250,6 +255,7 @@
             this.apartment_getter.Name = "apartment_getter";
             this.apartment_getter.Size = new System.Drawing.Size(120, 22);
             this.apartment_getter.TabIndex = 18;
+            this.apartment_getter.ValueChanged += new System.EventHandler(this.apartment_getter_ValueChanged);
             // 
             // apartment_name
             // 
@@ -261,11 +267,23 @@
             this.apartment_name.TabIndex = 19;
             this.apartment_name.Text = "Apartment number:";
             // 
+            // continue_button
+            // 
+            this.continue_button.Location = new System.Drawing.Point(626, 434);
+            this.continue_button.Name = "continue_button";
+            this.continue_button.Size = new System.Drawing.Size(138, 51);
+            this.continue_button.TabIndex = 20;
+            this.continue_button.Text = "Continue";
+            this.continue_button.UseVisualStyleBackColor = true;
+            this.continue_button.Visible = false;
+            this.continue_button.Click += new System.EventHandler(this.continue_button_Click);
+            // 
             // Address_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 602);
+            this.Controls.Add(this.continue_button);
             this.Controls.Add(this.apartment_name);
             this.Controls.Add(this.apartment_getter);
             this.Controls.Add(this.subbuilding_name);
@@ -318,5 +336,6 @@
         private System.Windows.Forms.Label subbuilding_name;
         private System.Windows.Forms.NumericUpDown apartment_getter;
         private System.Windows.Forms.Label apartment_name;
+        private System.Windows.Forms.Button continue_button;
     }
 }

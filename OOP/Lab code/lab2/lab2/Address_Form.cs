@@ -1,18 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace lab2
 {
     public partial class Address_Form : Form
     {
         private bool _country_changed = false;
+        private bool _city_changed = false;
+        private bool _street_changed = false;
+        private bool _building_changed = false;
+        private bool _sub_checker_changed = false;
+        private bool _apartment_changed = false;
+        public bool _sub_changed = false;
+
         public Address_Form()
         {
             InitializeComponent();
@@ -25,28 +26,153 @@ namespace lab2
 
         private void done_button_Click(object sender, EventArgs e)
         {
-            
-            this.Close();
+            this.info_box.Text = Main.instance.FLAT.Address.ToString();
+            this.continue_button.Visible = true;
+            this.progressBar1.Value += 100 - this.progressBar1.Value;
         }
 
         private void has_sub_CheckedChanged(object sender, EventArgs e)
         {
+            if (!_sub_checker_changed)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _sub_checker_changed |= true;
+            }
             this.sub_getter.Enabled = true;
         }
 
         private void no_sub_CheckedChanged(object sender, EventArgs e)
         {
+            if (!_sub_checker_changed)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _sub_checker_changed |= true;
+            }
             this.sub_getter.Enabled = false;
         }
 
         private void country_getter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Main.instance.FLAT.Address
+            try
+            {
+                Main.instance.FLAT.Address.Country = this.country_getter.SelectedItem.ToString();
+            }
+            catch(Exception ex)
+            {
+                Error err_form = new Error(ex.Message, "Country getter field");
+                err_form.ShowDialog();
+                err_form.Dispose();
+            }
+          
             if (_country_changed == false)
             {
                 this.progressBar1.Value += this.progressBar1.Step;
                 _country_changed = true;
             }
+        }
+
+        private void city_getter_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Main.instance.FLAT.Address.City = this.city_getter.Text.ToString();
+            }
+            catch(Exception ex)
+            {
+                Error err_form = new Error(ex.Message, "City getter field");
+                err_form.ShowDialog();
+                err_form.Dispose();
+            }
+           
+            if (_city_changed == false)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _city_changed = true;
+            }
+        }
+
+        private void street_getter_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Main.instance.FLAT.Address.Street = this.street_getter.Text.ToString();
+            }
+            catch(Exception ex)
+            {
+                Error err_form = new Error(ex.Message, "Street getter field");
+                err_form.ShowDialog();
+                err_form.Dispose();
+            }
+           
+            if (_street_changed == false)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _street_changed = true;
+            }
+        }
+
+        private void building_getter_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Main.instance.FLAT.Address.Building = Convert.ToInt32(this.building_getter.Value.ToString());
+            }
+            catch(Exception ex)
+            {
+                Error err_form = new Error(ex.Message, "Buildong number filed");
+                err_form.ShowDialog();
+                err_form.Dispose();
+            }
+           
+            if (!_building_changed)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _building_changed = true;
+            }
+        }
+
+        private void apartment_getter_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Main.instance.FLAT.Address.Apartment_number = Convert.ToInt32(this.apartment_getter.Value.ToString());
+            }
+            catch(Exception ex)
+            {
+                Error err_form = new Error(ex.Message, "Apartment getter field");
+                err_form.ShowDialog();
+                err_form.Dispose();
+            }
+            if (!_apartment_changed)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _apartment_changed = true;
+            }
+        }
+
+        private void sub_getter_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Main.instance.FLAT.Address.Sub_building = Convert.ToInt32(this.sub_getter.Value.ToString());
+            }
+            catch(Exception ex)
+            {
+                Error err_form = new Error(ex.Message,"Subbuilding getter field");
+                err_form.ShowDialog();
+                err_form.Dispose();
+            }
+           
+            if (!_sub_changed)
+            {
+                this.progressBar1.Value += this.progressBar1.Step;
+                _sub_changed = true;
+            }
+        }
+
+        private void continue_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
