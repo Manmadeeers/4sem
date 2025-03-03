@@ -13,6 +13,17 @@ namespace lab2
         private bool _floor_changed = false;
 
         private Flat flat = new Flat();
+        public Flat FLAT
+        {
+            get
+            {
+                return flat;
+            }
+            set
+            {
+                flat = value;
+            }
+        }
         public static Main instance;
 
 

@@ -48,7 +48,18 @@ namespace lab2
         private Materials _material { get; set; }
         private int _floor { get; set; }
         private List<Rooms> _room_options = new List<Rooms>();
-        private Address _address { get; set; }
+        private Address _address;
+        public Address Address
+        {
+            get
+            {
+                return this._address;
+            }
+            set
+            {
+                _address = value;
+            }
+        }
         private Company _company { get; set; }
 
 
