@@ -124,6 +124,7 @@ namespace lab2
             }
             catch(Exception ex)
             {
+                                                                                                
                 Error err_form = new Error(ex.Message, "Check empty fields");
                 err_form.ShowDialog();
                 err_form.Dispose();

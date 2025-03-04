@@ -31,7 +31,6 @@
             this.name_label = new System.Windows.Forms.Label();
             this.error_text_field = new System.Windows.Forms.RichTextBox();
             this.back_button = new System.Windows.Forms.Button();
-            this.close_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // name_label
@@ -54,7 +53,7 @@
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(226, 272);
+            this.back_button.Location = new System.Drawing.Point(307, 272);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(136, 52);
             this.back_button.TabIndex = 2;
@@ -62,22 +61,11 @@
             this.back_button.UseVisualStyleBackColor = true;
             this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
-            // close_button
-            // 
-            this.close_button.Location = new System.Drawing.Point(404, 272);
-            this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(136, 52);
-            this.close_button.TabIndex = 3;
-            this.close_button.Text = "Close";
-            this.close_button.UseVisualStyleBackColor = true;
-            this.close_button.Click += new System.EventHandler(this.close_button_Click);
-            // 
             // Error
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 353);
-            this.Controls.Add(this.close_button);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.error_text_field);
             this.Controls.Add(this.name_label);
@@ -93,6 +81,5 @@
         private System.Windows.Forms.Label name_label;
         private System.Windows.Forms.RichTextBox error_text_field;
         private System.Windows.Forms.Button back_button;
-        private System.Windows.Forms.Button close_button;
     }
 }

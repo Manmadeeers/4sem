@@ -32,13 +32,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eraseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eraseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.total_name = new System.Windows.Forms.Label();
             this.metres_name = new System.Windows.Forms.Label();
             this.square_getter = new System.Windows.Forms.TextBox();
             this.rooms_name = new System.Windows.Forms.Label();
@@ -86,9 +83,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveToolStripMenuItem,
-            this.showAllToolStripMenuItem,
-            this.eraseToolStripMenuItem});
+            this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
@@ -96,20 +91,9 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveToolStripMenuItem.Text = "Save";
-            // 
-            // showAllToolStripMenuItem
-            // 
-            this.showAllToolStripMenuItem.Name = "showAllToolStripMenuItem";
-            this.showAllToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
-            this.showAllToolStripMenuItem.Text = "Show All";
-            // 
-            // eraseToolStripMenuItem
-            // 
-            this.eraseToolStripMenuItem.Name = "eraseToolStripMenuItem";
-            this.eraseToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
-            this.eraseToolStripMenuItem.Text = "Erase";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // historyToolStripMenuItem
             // 
@@ -123,14 +107,16 @@
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.showToolStripMenuItem.Text = "Show";
+            this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // eraseToolStripMenuItem1
             // 
             this.eraseToolStripMenuItem1.Name = "eraseToolStripMenuItem1";
-            this.eraseToolStripMenuItem1.Size = new System.Drawing.Size(128, 26);
+            this.eraseToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.eraseToolStripMenuItem1.Text = "Erase";
+            this.eraseToolStripMenuItem1.Click += new System.EventHandler(this.eraseToolStripMenuItem1_Click);
             // 
             // richTextBox1
             // 
@@ -139,16 +125,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(363, 587);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
-            // 
-            // total_name
-            // 
-            this.total_name.AutoSize = true;
-            this.total_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.total_name.Location = new System.Drawing.Point(753, 75);
-            this.total_name.Name = "total_name";
-            this.total_name.Size = new System.Drawing.Size(118, 29);
-            this.total_name.TabIndex = 3;
-            this.total_name.Text = "Total cost";
             // 
             // metres_name
             // 
@@ -378,7 +354,6 @@
             this.Controls.Add(this.rooms_name);
             this.Controls.Add(this.square_getter);
             this.Controls.Add(this.metres_name);
-            this.Controls.Add(this.total_name);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Form_name_label);
             this.Controls.Add(this.menuStrip1);
@@ -400,13 +375,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showAllToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eraseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eraseToolStripMenuItem1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label total_name;
         private System.Windows.Forms.Label metres_name;
         private System.Windows.Forms.TextBox square_getter;
         private System.Windows.Forms.Label rooms_name;
