@@ -6,6 +6,22 @@ namespace lab2
 {
     public partial class Main : Form
     {
+        private double _version = 2.1;
+        public double Version
+        {
+            get
+            {
+                return _version;
+            }
+        }
+        private string _developer = "Ilia Filipiuk";
+        public string Developer
+        {
+            get
+            {
+                return _developer;
+            }
+        }
         private bool _square_changed = false;
         private bool _rooms_changed = false;
         private bool _date_changed = false;
@@ -255,6 +271,7 @@ namespace lab2
                 }
                 History.Add(flat);
 
+
             }
             catch(Exception ex)
             {
@@ -262,7 +279,10 @@ namespace lab2
                 err_form.ShowDialog();
                 err_form.Dispose();
             }
-            this.richTextBox1.Text = flat.CalculateCost().ToString();
+            this.flat.Price = flat.CalculateCost();
+            this.richTextBox1.Text =flat.ToString();
+            this.progressBar1.Value += 100 - this.progressBar1.Value;
+
         }
 
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
@@ -299,6 +319,13 @@ namespace lab2
                 err_form.ShowDialog();
                 err_form.Dispose();
             }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+            about.Dispose();
         }
     }
 }

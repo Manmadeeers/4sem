@@ -156,6 +156,7 @@ namespace lab2
                 totalCost *= 0.9;
             }
             totalCost *= 1 + (double)RoomOptions / 10;
+
             return totalCost;
         }
 
@@ -163,7 +164,7 @@ namespace lab2
         {
             return $"{this.Address.Country}-{this.Address.City}-{this.Address.Street}-{this.Address.Sub_building}-{this.Address.Building}-{this.Address.Apartment_number}\n" +
                 $"{this.Square} square metres; {this.Rooms} rooms; was built {this.BuildDate}; Made out of {this.Material}\n" +
-                $"Built by {this.Company.Name}; {this.Company.Company_number}; {this.Company.Off_address}; {this.Company.Type}\n" +
+                $"Built by {this.Company.Name}  {this.Company.Type}; {this.Company.Company_number}; {this.Company.Off_address}; \n" +
                 $"Costs:{this.Price}\n" +
                 $"<-------------------->";
         }
