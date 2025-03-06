@@ -1,6 +1,6 @@
-import { rejects } from "assert";
-import { Console } from "console";
-import { resolve } from "path";
+// import { rejects } from "assert";
+// import { Console } from "console";
+// import { resolve } from "path";
 
 //TASK 1
 
@@ -20,9 +20,10 @@ function previousWithDelay(delay) {
 
 //TASK 3
 
-let pr = new Promise((res, rej) => {
-    rej('ku');
+let pr = new Promise((resolve, reject) => {
+    reject('ku');
 });
+
 
 
 
@@ -31,6 +32,22 @@ let prm = new Promise((resolve, reject) => {
     setTimeout(() => resolve(21), 1000);
 });
 
+
+console.group("Task 3");
+pr.then(()=>console.log(1)).catch(()=>console.log(2)).catch(()=>console.log(3)).then(()=>console.log(4)).then(()=>console.log(5));
+console.groupEnd();
+
+//TASK 5
+async function TwentyOnePrinter(){
+    const first_result = await prm;
+    console.group("Task 5");
+    console.log(first_result);
+    if(typeof(first_result)=='number'){
+        console.log(first_result*2);
+    }
+    console.groupEnd();
+   
+}
 
 
 async function Executer() {
@@ -49,16 +66,6 @@ async function Executer() {
     }
     );
 
-    const result3 = await pr
-    .catch(()=>console.log(0))
-    .then(() => console.log(1))
-    .catch(() => console.log(2))
-    .catch(() => console.log(3))
-    .then(() => console.log(4))
-    .then(() => console.log(5))
-
-
-
     const result4 = await prm.then(function (result: unknown) {
         console.group("Task 4");
         console.log(result);
@@ -71,5 +78,8 @@ async function Executer() {
         console.log(result);
         console.groupEnd();
     })
+
+    const result5 = await TwentyOnePrinter();
+   
 }
 Executer();

@@ -1,4 +1,6 @@
-"use strict";
+// import { rejects } from "assert";
+// import { Console } from "console";
+// import { resolve } from "path";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,7 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 //TASK 1
 var prom = new Promise(function (resolve, reject) {
     setTimeout(function () { return resolve((Math.random() * 100).toFixed(0)); }, 1000);
@@ -48,16 +49,39 @@ function previousWithDelay(delay) {
     });
 }
 //TASK 3
-var pr = new Promise(function (res, rej) {
-    rej('ku');
+var pr = new Promise(function (resolve, reject) {
+    reject('ku');
 });
 //TASK 4
 var prm = new Promise(function (resolve, reject) {
     setTimeout(function () { return resolve(21); }, 1000);
 });
+console.group("Task 3");
+pr.then(function () { return console.log(1); }).catch(function () { return console.log(2); }).catch(function () { return console.log(3); }).then(function () { return console.log(4); }).then(function () { return console.log(5); });
+console.groupEnd();
+//TASK 5
+function TwentyOnePrinter() {
+    return __awaiter(this, void 0, void 0, function () {
+        var first_result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, prm];
+                case 1:
+                    first_result = _a.sent();
+                    console.group("Task 5");
+                    console.log(first_result);
+                    if (typeof (first_result) == 'number') {
+                        console.log(first_result * 2);
+                    }
+                    console.groupEnd();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
 function Executer() {
     return __awaiter(this, void 0, void 0, function () {
-        var result1, result2, result3, result4;
+        var result1, result2, result4, result5;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, prom.then(function (result) {
@@ -74,15 +98,6 @@ function Executer() {
                         })];
                 case 2:
                     result2 = _a.sent();
-                    return [4 /*yield*/, pr
-                            .catch(function () { return console.log(0); })
-                            .then(function () { return console.log(1); })
-                            .catch(function () { return console.log(2); })
-                            .catch(function () { return console.log(3); })
-                            .then(function () { return console.log(4); })
-                            .then(function () { return console.log(5); })];
-                case 3:
-                    result3 = _a.sent();
                     return [4 /*yield*/, prm.then(function (result) {
                             console.group("Task 4");
                             console.log(result);
@@ -94,8 +109,11 @@ function Executer() {
                             console.log(result);
                             console.groupEnd();
                         })];
-                case 4:
+                case 3:
                     result4 = _a.sent();
+                    return [4 /*yield*/, TwentyOnePrinter()];
+                case 4:
+                    result5 = _a.sent();
                     return [2 /*return*/];
             }
         });
