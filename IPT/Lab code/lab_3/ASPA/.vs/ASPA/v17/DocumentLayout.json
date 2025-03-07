@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_3\\ASPA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8EF30F9-B4BE-45E2-80EB-E8137414AE2E}|DAL003\\DAL003.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_3\\aspa\\dal003\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8EF30F9-B4BE-45E2-80EB-E8137414AE2E}|DAL003\\DAL003.csproj|solutionrelative:dal003\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8EF30F9-B4BE-45E2-80EB-E8137414AE2E}|DAL003\\DAL003.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_3\\aspa\\dal003\\repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8EF30F9-B4BE-45E2-80EB-E8137414AE2E}|DAL003\\DAL003.csproj|solutionrelative:dal003\\repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_3\\ASPA\\DAL003\\Class1.cs",
-              "RelativeDocumentMoniker": "DAL003\\Class1.cs",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_3\\ASPA\\DAL003\\Class1.cs",
-              "RelativeToolTip": "DAL003\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Title": "Repo.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_3\\ASPA\\DAL003\\Repo.cs",
+              "RelativeDocumentMoniker": "DAL003\\Repo.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_3\\ASPA\\DAL003\\Repo.cs",
+              "RelativeToolTip": "DAL003\\Repo.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T15:48:24.74Z",
               "EditorCaption": ""
