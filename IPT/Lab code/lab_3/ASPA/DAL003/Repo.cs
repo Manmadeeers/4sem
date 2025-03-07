@@ -1,5 +1,4 @@
 ﻿using System.Text.Json;
-
 namespace DAL003
 {
     public interface IRepository : IDisposable
@@ -14,17 +13,10 @@ namespace DAL003
 
     public class Repository : IRepository
     {
-        public static string JSONFileName = "Celebs.json";
+        public static string JSONFileName = "Celebrities.json";
         public string BasePath { get; }
-        public readonly string filePath;
-        private List<Celebrity> _celebrities;
-        public List<Celebrity> Celebrities
-        {
-            get
-            {
-                return _celebrities;
-            }
-        }
+        public  string filePath { get; }
+        public List<Celebrity> _celebrities;
 
         public Repository(string dirPath)
         {
@@ -36,7 +28,7 @@ namespace DAL003
             }
             if (!File.Exists(this.filePath))
             {
-                File.WriteAllText(this.filePath,"[]");
+                File.WriteAllText(this.filePath, "[]");
             }
             LoadData();
         }
