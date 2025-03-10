@@ -50,6 +50,7 @@ namespace lab2
             }
             catch(Exception ex)
             {
+                this.type_getter.Text = "";
                 Error err_form = new Error(ex.Message, "Type getter field");
                 err_form.ShowDialog();
                 err_form.Dispose(); 

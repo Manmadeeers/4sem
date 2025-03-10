@@ -6,8 +6,8 @@ namespace lab2
 {
     public partial class Main : Form
     {
-        private double _version = 2.1;
-        public double Version
+        private string _version = Application.ProductVersion;
+        public string Version
         {
             get
             {
@@ -117,6 +117,7 @@ namespace lab2
             }
             catch(Exception ex)
             {
+                this.square_getter.Text = "";
                 Error err_form = new Error(ex.Message,"Square Getter Field");
                 err_form.ShowDialog();
                 err_form.Dispose();

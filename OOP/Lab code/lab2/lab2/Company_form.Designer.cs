@@ -39,7 +39,6 @@
             this.address_getter = new System.Windows.Forms.RichTextBox();
             this.id_name = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.done_button = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
             this.continue_button = new System.Windows.Forms.Button();
@@ -152,13 +151,6 @@
             this.textBox1.TabIndex = 10;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(7, 603);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(293, 23);
-            this.progressBar1.TabIndex = 11;
-            // 
             // done_button
             // 
             this.done_button.Location = new System.Drawing.Point(363, 575);
@@ -198,7 +190,6 @@
             this.Controls.Add(this.continue_button);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.done_button);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.id_name);
             this.Controls.Add(this.address_getter);
@@ -230,7 +221,6 @@
         private System.Windows.Forms.RichTextBox address_getter;
         private System.Windows.Forms.Label id_name;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button done_button;
         private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.Button continue_button;
