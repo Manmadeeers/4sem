@@ -1,5 +1,14 @@
 ﻿namespace lab2
 {
+    public enum Countries
+    {
+        Belarus=0,
+        Poland,
+        Lithuania,
+        Latvia,
+        Estonia,
+        Germany
+    }
     public class Address
     {
 

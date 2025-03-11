@@ -14,9 +14,12 @@ namespace lab2
         private bool _apartment_changed = false;
         public bool _sub_changed = false;
 
+        private bool isValidForm = true;
+
         public Address_Form()
         {
             InitializeComponent();
+            //this.country_getter.
         }
 
         private void exit_button_Click(object sender, EventArgs e)
@@ -26,16 +29,51 @@ namespace lab2
 
         private void done_button_Click(object sender, EventArgs e)
         {
-            this.info_box.Text = Main.instance.FLAT.Address.ToString();
-            this.continue_button.Visible = true;
-            this.progressBar1.Value += 100 - this.progressBar1.Value;
+            try
+            {
+                isValidForm = true;
+                if (this.country_getter.SelectedItem==null)
+                {
+                    throw new ArgumentNullException("Country was not selected");
+                }
+                if (this.city_getter.Text.ToString() == "")
+                {
+                    throw new ArgumentNullException("City was not selected");
+                }
+                if (this.street_getter.Text.ToString() == "")
+                {
+                    throw new ArgumentNullException("Street was not selected");
+                }
+                if (!this.has_sub.Checked && !this.no_sub.Checked)
+                {
+                    throw new ArgumentNullException("Sub building checkers were not checked");
+                }
+
+            }
+            catch(Exception ex)
+            {
+                isValidForm = false;
+                Error err_form = new Error(ex.Message, "");
+                err_form.ShowDialog();
+                err_form.Dispose();
+            }
+            if (isValidForm)
+            {
+                if (this.sub_getter.Value == null)
+                {
+                    Main.instance.FLAT.Address.Sub_building = null;
+                }
+                this.info_box.Text = Main.instance.FLAT.Address.ToString();
+                this.continue_button.Visible = true;
+            }
+
         }
 
         private void has_sub_CheckedChanged(object sender, EventArgs e)
         {
             if (!_sub_checker_changed)
             {
-                this.progressBar1.Value += this.progressBar1.Step;
+                
                 _sub_checker_changed |= true;
             }
             this.sub_getter.Enabled = true;
@@ -45,7 +83,7 @@ namespace lab2
         {
             if (!_sub_checker_changed)
             {
-                this.progressBar1.Value += this.progressBar1.Step;
+               
                 _sub_checker_changed |= true;
             }
             this.sub_getter.Enabled = false;
@@ -55,10 +93,24 @@ namespace lab2
         {
             try
             {
+                bool isValidCountry = false;
+                foreach(string country in Enum.GetNames(typeof(Countries)))
+                {
+                    if (this.country_getter.SelectedItem.ToString() == country)
+                    {
+                        isValidCountry = true;
+                        break;
+                    }
+                }
+                if (!isValidCountry)
+                {
+                    throw new ArgumentException("Country entered incorrectly.\nCountry Getter Field");
+                }
                 Main.instance.FLAT.Address.Country = this.country_getter.SelectedItem.ToString();
             }
             catch(Exception ex)
             {
+                this.country_getter.Text = "";
                 Error err_form = new Error(ex.Message, "Country getter field");
                 err_form.ShowDialog();
                 err_form.Dispose();
@@ -66,7 +118,7 @@ namespace lab2
           
             if (_country_changed == false)
             {
-                this.progressBar1.Value += this.progressBar1.Step;
+               
                 _country_changed = true;
             }
         }
@@ -84,11 +136,7 @@ namespace lab2
                 err_form.Dispose();
             }
            
-            if (_city_changed == false)
-            {
-                this.progressBar1.Value += this.progressBar1.Step;
-                _city_changed = true;
-            }
+           
         }
 
         private void street_getter_TextChanged(object sender, EventArgs e)
@@ -106,7 +154,7 @@ namespace lab2
            
             if (_street_changed == false)
             {
-                this.progressBar1.Value += this.progressBar1.Step;
+                
                 _street_changed = true;
             }
         }
@@ -126,7 +174,7 @@ namespace lab2
            
             if (!_building_changed)
             {
-                this.progressBar1.Value += this.progressBar1.Step;
+                
                 _building_changed = true;
             }
         }
@@ -145,7 +193,7 @@ namespace lab2
             }
             if (!_apartment_changed)
             {
-                this.progressBar1.Value += this.progressBar1.Step;
+               
                 _apartment_changed = true;
             }
         }
@@ -165,7 +213,7 @@ namespace lab2
            
             if (!_sub_changed)
             {
-                this.progressBar1.Value += this.progressBar1.Step;
+               
                 _sub_changed = true;
             }
         }

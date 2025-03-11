@@ -30,6 +30,7 @@ namespace lab2
         private bool _floor_changed = false;
         private bool _address_pressed = false;
         private bool _company_pressed = false;
+        private bool _isValidForm = true;
         private Flat flat = new Flat();
         public Flat FLAT
         {
@@ -327,6 +328,42 @@ namespace lab2
             About about = new About();
             about.ShowDialog();
             about.Dispose();
+        }
+
+        private void Form_name_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearFieldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Text = "";
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _isValidForm = true;
+                if(this._history.Count == 0)
+                {
+                    throw new Exception("Impossible to search through an empty history");
+                }
+            }
+            catch (Exception ex)
+            {
+                _isValidForm= false;
+                Error err_form = new Error(ex.Message, "History is empty");
+                err_form.ShowDialog();
+                err_form.Dispose();
+            }
+            if (_isValidForm)
+            {
+                Search search_form = new Search();
+                search_form.ShowDialog();
+                search_form.Dispose();
+            }
+          
         }
     }
 }

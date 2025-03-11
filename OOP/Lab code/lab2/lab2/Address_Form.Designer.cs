@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.form_name = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.done_button = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
             this.info_box = new System.Windows.Forms.RichTextBox();
@@ -63,13 +62,6 @@
             this.form_name.Size = new System.Drawing.Size(386, 32);
             this.form_name.TabIndex = 0;
             this.form_name.Text = "Fill in the address information";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 567);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(252, 23);
-            this.progressBar1.TabIndex = 1;
             // 
             // done_button
             // 
@@ -234,9 +226,19 @@
             // 
             this.sub_getter.Enabled = false;
             this.sub_getter.Location = new System.Drawing.Point(17, 390);
+            this.sub_getter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.sub_getter.Name = "sub_getter";
             this.sub_getter.Size = new System.Drawing.Size(120, 22);
             this.sub_getter.TabIndex = 16;
+            this.sub_getter.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.sub_getter.ValueChanged += new System.EventHandler(this.sub_getter_ValueChanged);
             // 
             // subbuilding_name
@@ -252,9 +254,19 @@
             // apartment_getter
             // 
             this.apartment_getter.Location = new System.Drawing.Point(256, 390);
+            this.apartment_getter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.apartment_getter.Name = "apartment_getter";
             this.apartment_getter.Size = new System.Drawing.Size(120, 22);
             this.apartment_getter.TabIndex = 18;
+            this.apartment_getter.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.apartment_getter.ValueChanged += new System.EventHandler(this.apartment_getter_ValueChanged);
             // 
             // apartment_name
@@ -302,7 +314,6 @@
             this.Controls.Add(this.info_box);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.done_button);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.form_name);
             this.Name = "Address_Form";
             this.Text = "Address_Form";
@@ -317,7 +328,6 @@
         #endregion
 
         private System.Windows.Forms.Label form_name;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button done_button;
         private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.RichTextBox info_box;

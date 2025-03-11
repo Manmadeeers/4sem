@@ -13,10 +13,8 @@ namespace lab2
 {
     public partial class Company_form : Form
     {
-        private bool _name_changed = false;
-        private bool _type_changed = false;
-        private bool _address_changed = false;
-        private bool _id_changed = false;
+       
+        private bool isValidForm = true;
         public Company_form()
         {
             InitializeComponent();
@@ -34,12 +32,6 @@ namespace lab2
                 err_form.ShowDialog();
                 err_form.Dispose();
             }
-
-            if(!_name_changed)
-            {
-                this.progressBar1.Value += this.progressBar1.Step;
-                _name_changed=true;
-            }
         }
 
         private void type_getter_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,11 +48,6 @@ namespace lab2
                 err_form.Dispose(); 
             }
            
-            if (!_type_changed)
-            {
-                this.progressBar1.Value += this.progressBar1.Step;
-                _type_changed=true;
-            }
         }
 
         private void address_getter_TextChanged(object sender, EventArgs e)
@@ -74,11 +61,6 @@ namespace lab2
                 Error err_form = new Error(ex.Message, "address getter field");
                 err_form.ShowDialog();
                 err_form.Dispose();
-            }
-            if (!_address_changed)
-            {
-                this.progressBar1.Value += this.progressBar1.Step;
-                _address_changed=true;
             }
         }
 
@@ -95,17 +77,13 @@ namespace lab2
                 err_form.ShowDialog();
                 err_form.Dispose();
             }
-            if (!_id_changed)
-            {
-                this.progressBar1.Value += this.progressBar1.Step;
-                _id_changed=true;
-            }
         }
 
         private void done_button_Click(object sender, EventArgs e)
         {
             try
             {
+                isValidForm = true;
                 if (this.name_getter.Text.ToString()=="")
                 {
                     throw new ArgumentException("Name getter field was null");
@@ -122,17 +100,25 @@ namespace lab2
                 {
                     throw new ArgumentException("Id getter was null");
                 }
+                if (this.type_getter.SelectedItem == null)
+                {
+                    throw new ArgumentNullException("Company type was not selected");
+                }
             }
             catch(Exception ex)
             {
-                                                                                                
+                isValidForm = false;                                                                          
                 Error err_form = new Error(ex.Message, "Check empty fields");
                 err_form.ShowDialog();
                 err_form.Dispose();
             }
-            this.progressBar1.Value += 100 - this.progressBar1.Value;
-            this.info_box.Text = Main.instance.FLAT.Company.ToString();
-            this.continue_button.Visible = true;
+
+            if (isValidForm)
+            {
+                this.info_box.Text = Main.instance.FLAT.Company.ToString();
+                this.continue_button.Visible = true;
+            }
+          
         }
 
         private void exit_button_Click(object sender, EventArgs e)
