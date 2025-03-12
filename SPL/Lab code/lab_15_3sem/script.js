@@ -17,6 +17,8 @@ let fourth_year = form.elements.fourth;
 
 form.addEventListener('submit',(e)=>{
 
+    clearErrors();
+
     let isValid = true;
     e.preventDefault();
 
@@ -122,6 +124,6 @@ function showException(id,message){
 function clearErrors(){
     let errors = document.querySelectorAll('.error');
     errors.forEach(error=>{
-        error.textContent ="<p></p>";
+        error.textContent ="";
     })
 }

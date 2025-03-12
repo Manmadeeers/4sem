@@ -8,7 +8,7 @@ CREATE TABLE Client(
 	Phone varchar(15) not null,
 	Email nvarchar(50) not null,
 	Has_Discount bit not null
-);
+)on FG1;
 
 CREATE TABLE Products(
 Product_id nvarchar(20) primary key,
