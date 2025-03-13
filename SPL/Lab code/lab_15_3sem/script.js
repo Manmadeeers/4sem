@@ -1,4 +1,4 @@
-//basic checks
+
 let form = document.forms.inf;
 let surename = form.elements.surename;
 let name = form.elements.name;
@@ -18,7 +18,6 @@ let fourth_year = form.elements.fourth;
 form.addEventListener('submit',(e)=>{
 
     clearErrors();
-
     let isValid = true;
     e.preventDefault();
 
@@ -31,7 +30,7 @@ form.addEventListener('submit',(e)=>{
         isValid=false;
         showException(1,"This field can't take more then 20 characters");
     }
-    else if(!/^[a-zA-Zа-яА-Я]+$/i.test(surename_input)){
+    else if(!/^[Ёёa-zA-Zа-яА-Я]+$/i.test(surename_input)){
         isValid=false;
         showException(1,"This field can contain only English or Russian letters");
     }
@@ -44,7 +43,7 @@ form.addEventListener('submit',(e)=>{
         isValid=false;
         showException(2,"This field can't take more then 20 characters");
     }
-    else if(!/^[a-zA-Zа-яА-Я]+$/i.test(name_input)){
+    else if(!/^[ёЁa-zA-Zа-яА-Я]+$/i.test(name_input)){
         isValid=false;
         showException(2,"This field can contain only English or Russian letters");
     }
@@ -88,22 +87,19 @@ form.addEventListener('submit',(e)=>{
         showException(6,"This field is obligatory");
     }
 
-   if(document.querySelector('input[name:course]:checked').value==null){
-    showException(7,"This field is obligatory");
-   }
-
-    if(isValid==true){
+    let opinionChanged = true;
+    if(isValid){
+        console.log("OK");
         clearErrors();
-        //form.submit();
         let selected_city = city.value;
-        let course = document.querySelector('input[name=course]:checked')?.value;
+        let course = document.getElementById('3crss');
         let bstu_checked = document.getElementById('bstu').checked;
 
         let opinion_changer = [];
         if(selected_city!=="Minsk"){
             opinion_changer.push("City should be Minsk. Change your opinion");
         }
-        if(course!=3){
+        if(course){
             opinion_changer.push("Course should be three. Change your opinion");
         }
         if(!bstu_checked){
@@ -111,8 +107,13 @@ form.addEventListener('submit',(e)=>{
         }
 
         if(opinion_changer.length>0){
-            alert(opinion_changer);
+            opinionChanged = false;
+            alert(opinion_changer.toString());
         }
+        if(opinionChanged){
+            form.submit();
+        }
+        
     }
 })
 
@@ -121,9 +122,9 @@ function showException(id,message){
     err_div.innerHTML = `<span>${message}</span>`
 }
 
-function clearErrors(){
+async function clearErrors(){
     let errors = document.querySelectorAll('.error');
-    errors.forEach(error=>{
+    await errors.forEach(error=>{
         error.textContent ="";
     })
 }
