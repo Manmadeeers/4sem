@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_4\\ASPA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B0B175D-0845-4E21-AA20-7C2AE2A65CAB}|DAL004\\DAL004.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_4\\aspa\\dal004\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B0B175D-0845-4E21-AA20-7C2AE2A65CAB}|DAL004\\DAL004.csproj|solutionrelative:dal004\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B0B175D-0845-4E21-AA20-7C2AE2A65CAB}|DAL004\\DAL004.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_4\\aspa\\dal004\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B0B175D-0845-4E21-AA20-7C2AE2A65CAB}|DAL004\\DAL004.csproj|solutionrelative:dal004\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC177020-4F28-40C6-A06F-CEC49F5C2263}|Test_DAL004\\Test_DAL004.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_4\\aspa\\test_dal004\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC177020-4F28-40C6-A06F-CEC49F5C2263}|Test_DAL004\\Test_DAL004.csproj|solutionrelative:test_dal004\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_4\\ASPA\\Test_DAL004\\Program.cs",
+              "RelativeDocumentMoniker": "Test_DAL004\\Program.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_4\\ASPA\\Test_DAL004\\Program.cs",
+              "RelativeToolTip": "Test_DAL004\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T17:47:22.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_4\\ASPA\\DAL004\\Class1.cs",
-              "RelativeDocumentMoniker": "DAL004\\Class1.cs",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_4\\ASPA\\DAL004\\Class1.cs",
-              "RelativeToolTip": "DAL004\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_4\\ASPA\\DAL004\\Repository.cs",
+              "RelativeDocumentMoniker": "DAL004\\Repository.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_4\\ASPA\\DAL004\\Repository.cs",
+              "RelativeToolTip": "DAL004\\Repository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T16:57:38.738Z",
               "EditorCaption": ""
