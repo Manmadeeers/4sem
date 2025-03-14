@@ -62,9 +62,17 @@ internal class Program
                 Console.WriteLine($"Id = {celebr.Id},First name = {celebr.Firstname}, " +
                     $"Surename = {celebr.Surname}, Photopath = {celebr.PhotoPath}");
             }
-            //Console.WriteLine($"PhotoPathById = {repository.GetPhotoPathById(4)}");
-            //Console.WriteLine($"PhotoPathByID = {repository.GetPhotoPathById(6)}");
-            //Console.WriteLine($"PhotoPathById = {repository.GetPhotoPathById(222)}");
+            Console.WriteLine($"PhotoPathById = {repository.GetPhotoPathById(4)}");
+            Console.WriteLine($"PhotoPathByID = {repository.GetPhotoPathById(6)}");
+            try
+            {
+                string? requiredPath = repository.GetPhotoPathById(222);
+                Console.WriteLine($"PhotoPathByID = {requiredPath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("PhotoPathByID = ");
+            }
         }
     }
 }

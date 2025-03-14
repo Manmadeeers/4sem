@@ -56,13 +56,14 @@ namespace DAL003
 
         public string? GetPhotoPathById(int id)
         {
-            return GetCelebrityById(id).PhotoPath;
+            return GetCelebrityById(id)?.PhotoPath;
         }
 
         public static Repository Create(string dir)
         {
             return new Repository(dir);
         }
-        public void Dispose() { }
+        public void Dispose() {
+        }
     }
 }
