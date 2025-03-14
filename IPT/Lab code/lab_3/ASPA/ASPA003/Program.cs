@@ -13,12 +13,13 @@ internal class Program
             app.UseStaticFiles(new StaticFileOptions()
             {
                 FileProvider = new PhysicalFileProvider(repository.BasePath),
-                RequestPath = new PathString("/Celebrities/Photos")
+                RequestPath = new PathString("/Celebrities/Photo")
             });
+
             app.UseStaticFiles(new StaticFileOptions()
             {
                 FileProvider = new PhysicalFileProvider(repository.BasePath),
-                RequestPath = new PathString("/Celebrities/download"),
+                RequestPath = new PathString("/Celebrities/downloads"),
                 
                 OnPrepareResponse = ctx =>
                 {
@@ -28,7 +29,7 @@ internal class Program
             app.UseDirectoryBrowser(new DirectoryBrowserOptions()
             {
                 FileProvider = new PhysicalFileProvider(repository.BasePath),
-                RequestPath = "/Celebrities/download",
+                RequestPath = "/Celebrities/downloads",
                
             });
             app.MapGet("/Celebrities", () => repository.GetAllCelebrities());
