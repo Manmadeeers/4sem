@@ -1,0 +1,17 @@
+use UNIVER;
+
+select STUDENT.NAME as student,  FACULTY.FACULTY as facult, PULPIT.PULPIT as dept, PROFESSION.PROFESSION as spec, SUBJECT.SUBJECT as subj,
+	case
+		when PROGRESS.NOTE = 6 then 'six'
+		when PROGRESS.NOTE = 7 then 'seven'
+		when PROGRESS.NOTE = 8 then 'eight'
+		else 'another'
+	end as marks
+from STUDENT inner join PROGRESS on STUDENT.IDSTUDENT = PROGRESS.IDSTUDENT
+inner join GROUPS on STUDENT.IDGROUP = GROUPS.IDGROUP
+inner join FACULTY on GROUPS.FACULTY = FACULTY.FACULTY
+inner join PULPIT on FACULTY.FACULTY = PULPIT.FACULTY
+inner join PROFESSION on FACULTY.FACULTY = PROFESSION.FACULTY
+inner join SUBJECT on PULPIT.PULPIT = SUBJECT.PULPIT
+where PROGRESS.NOTE between 6 and 8
+order by PROGRESS.NOTE desc;
