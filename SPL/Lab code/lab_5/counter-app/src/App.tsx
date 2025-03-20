@@ -1,10 +1,12 @@
 import ButtonComponent from "./Button";
-
+import { useState } from "react";
 
 function App(){
-    return <div>
-        <div id="buttons"></div>
+    return <div id="root">
+        <div id="buttons">
+          <ButtonComponent/>
+        </div>
     </div>
 }
 
-export default App;
+export default App; 
