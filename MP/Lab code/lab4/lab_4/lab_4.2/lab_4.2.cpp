@@ -15,8 +15,8 @@ const int length2 = 20;
 int levensteinDistanceDP(const string& str1, const string& str2, int len1, int len2) {
 	vector<vector<int>>dp(len1 + 1, vector<int>(len2 + 1, 0));
 
-	for (int i = 0; i < len1; ++i) {
-		for (int j = 0; j < len2; ++j) {
+	for (int i = 1; i <= len1; i++) {
+		for (int j = 1; j <= len2; j++) {
 			if (i == 0) {
 				dp[i][j] = j;
 			}
