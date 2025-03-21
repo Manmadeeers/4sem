@@ -7,10 +7,10 @@
 using namespace std;
 
 
-const string string1 = "twwadtuuud";
-const string string2 = "gzhfrqagfrzusnmjdtft";
-const int length1 = 10;
-const int length2 = 20;
+const string string1 = "Раб";
+const string string2 = "Барка";
+const int length1 = 3;
+const int length2 = 5;
 
 int levensteinDistanceDP(const string& str1, const string& str2, int len1, int len2) {
 	vector<vector<int>>dp(len1 + 1, vector<int>(len2 + 1, 0));
