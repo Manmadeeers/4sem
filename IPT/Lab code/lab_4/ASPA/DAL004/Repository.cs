@@ -1,8 +1,9 @@
-﻿using System.Text.Json;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Text.Json;
 
 namespace DAL004
 {
-    interface IRepository:IDisposable
+    public interface IRepository:IDisposable
     {
         string BasePath { get; }
         Celebrity[] GetAllCelebrities();
@@ -17,94 +18,133 @@ namespace DAL004
     }
 
     public record Celebrity(int Id, string Firstname, string Surname, string PhotoPath);
+    //public class Celebrity
+    //{
+    //    private int id;
+    //    public int Id
+    //    private string Firstname'
+    //    private string Surname { get; set; }
+    //    private string PhotoPath { get; set; }
+    //    public Celebrity(int Id, string Firstname, string Surname, string PhotoPath)
+    //    {
+
+    //    }
+    //}
     public class Repository:IRepository
     {
-
-        public string JSONFileName = "Celebrities.json";
-        public string BasePath { get; }//path to directory where json file is located
-        public string FullFilePath { get; }//full path to json file with celebrities
-        public List<Celebrity> celebrities;
+        private int _lastId = 7;
+        public static string JSONFileName = "Celebrities.json";
+        public string BasePath { get; }
+        public string filePath { get; }
+        public List<Celebrity> _celebrities;
 
         public Repository(string dirPath)
         {
             this.BasePath = Path.Combine(Directory.GetCurrentDirectory(), dirPath);
-            this.FullFilePath = Path.Combine(BasePath,JSONFileName);
-            try
+            this.filePath = Path.Combine(BasePath, JSONFileName);
+            if (!Directory.Exists(this.BasePath))
             {
-                var jsonString = File.ReadAllText(this.FullFilePath);
-                celebrities = JsonSerializer.Deserialize<List<Celebrity>>(jsonString) ?? new List<Celebrity>();
+                Directory.CreateDirectory(this.BasePath);
             }
-            catch(Exception ex)
+            if (!File.Exists(this.filePath))
             {
-                Console.WriteLine(ex.Message);
-
+                File.WriteAllText(this.filePath, "[]");
             }
-
-
+            LoadData();
         }
 
+        private void LoadData()
+        {
+            var json = File.ReadAllText(filePath);
+            _celebrities = JsonSerializer.Deserialize<List<Celebrity>>(json) ?? new List<Celebrity>();
+        }
 
         public Celebrity[] GetAllCelebrities()
         {
-            return this.celebrities.ToArray();
+            return _celebrities.ToArray();
         }
 
         public Celebrity? GetCelebrityById(int id)
         {
-            return this.celebrities.FirstOrDefault(c=>c.Id == id);
+            return _celebrities.FirstOrDefault(c => c.Id == id);
         }
 
         public Celebrity[] GetCelebritiesBySurename(string surename)
         {
-            return this.celebrities.Where(c=>c.Surname== surename).ToArray();
+            return _celebrities.Where(c => c.Surname.Equals(surename, StringComparison.OrdinalIgnoreCase)).ToArray();
         }
 
         public string? GetPhotoPathById(int id)
         {
-            return this.GetCelebrityById(id)?.PhotoPath;
+            return GetCelebrityById(id)?.PhotoPath;
         }
 
+        public static Repository Create(string dir)
+        {
+            return new Repository(dir);
+        }
         public int? addCelebrity(Celebrity celeb)
         {
-            this.celebrities.Add(celeb);
-            return celeb.Id;
+            if (this._celebrities.Find(c => c.Id == celeb.Id) != null||celeb.Id==0)
+            {
+                celeb = new Celebrity(++_lastId,celeb.Firstname,celeb.Surname,celeb.PhotoPath);
+                this._celebrities.Add(celeb);
+                return celeb.Id;
+            }
+            else
+            {
+                this._celebrities.Add(celeb);
+                return celeb.Id;
+            }
+            
         }
 
         public bool delCelebrity(int id)
         {
-            if(celebrities.Find(c => c.Id == id) == null)
+            if(this._celebrities.Find(c=>c.Id == id) != null)
             {
-                return false;
+                this._celebrities.RemoveAt(this._celebrities.FindIndex(c => c.Id == id));
+                return true;
             }
             else
             {
-                this.celebrities.RemoveAt(this.celebrities.FindIndex(c => c.Id == id));
-                return true;
+                return false;
             }
         }
 
         public int? updCelebrityById(int id, Celebrity celeb)
         {
-            if (this.celebrities.Find(c => c.Id == id) == null)
+
+            if (this._celebrities.Find(c => c.Id == id) != null)
             {
-                return -1;
+                if (celeb.Id == 0)
+                {
+                    celeb = new Celebrity(++_lastId, celeb.Firstname, celeb.Surname, celeb.PhotoPath);
+                    this._celebrities[this._celebrities.FindIndex(c => c.Id == id)] = celeb;
+                    return celeb.Id;
+                }
+
+                this._celebrities[this._celebrities.FindIndex(c => c.Id == id)] = celeb;
+                return celeb.Id;
             }
             else
             {
-                this.celebrities[this.celebrities.FindIndex(c=>c.Id==id)] = celeb;
-                return id;
+                return -1;
             }
+            
+          
         }
 
         public int saveChanges()
         {
-            int beforeUpdLength = File.ReadAllText(this.FullFilePath).Length;
-            var updatedJsonString = JsonSerializer.Serialize(this.celebrities);
-            File.WriteAllText(this.FullFilePath, updatedJsonString);
-            int afterUpdLength = File.ReadAllText(this.FullFilePath).Length;
+            int beforeUpdLength = File.ReadAllText(this.filePath).Length;
+            var updatedJsonString = JsonSerializer.Serialize(this._celebrities);
+            File.WriteAllText(this.filePath, updatedJsonString);
+            int afterUpdLength = File.ReadAllText(this.filePath).Length;
 
             return afterUpdLength - beforeUpdLength;
         }
+       
 
         public void Dispose()
         {
