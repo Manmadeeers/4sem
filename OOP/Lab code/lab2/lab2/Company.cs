@@ -1,5 +1,7 @@
 ﻿
 
+using System.ComponentModel.DataAnnotations;
+
 namespace lab2
 {
     public enum CompanyType
@@ -12,6 +14,7 @@ namespace lab2
     public class Company
     {
         private string _name;
+        [Required(ErrorMessage="Name is required")]
         public string Name
         {
             get
@@ -36,7 +39,9 @@ namespace lab2
             }
         }
 
+       
         private string _off_address;
+        [Required(ErrorMessage = "Address is required")]
         public string Off_address
         {
             get
@@ -50,6 +55,9 @@ namespace lab2
         }
 
         private string _company_number;
+        [Required(ErrorMessage ="Company number is required")]
+        [RegularExpression(@"[A-Za-Z0-9]")]
+
         public string Company_number
         {
             get

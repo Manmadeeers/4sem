@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace lab2
@@ -94,7 +96,7 @@ namespace lab2
             flat2.Address.Building = 42;
             flat2.Address.Sub_building = 3;
             flat2.Address.Apartment_number = 234;
-            flat2.Floor = 10;
+            flat2.Floor = 2;
             flat2.Square = 120;
             flat2.Rooms = 4;
             flat2.RoomOptions = 3;
@@ -226,6 +228,7 @@ namespace lab2
                 this.progressBar1.Value += this.progressBar1.Step;
                 _floor_changed = true;
             }
+            this.flat.Floor = Convert.ToInt32(this.floor_getter.Value);
         }
 
         private void address_transfer_button_Click(object sender, System.EventArgs e)
@@ -282,8 +285,21 @@ namespace lab2
                 err_form.Dispose();
             }
             this.flat.Price = flat.CalculateCost();
-            this.richTextBox1.Text =flat.ToString();
-            this.progressBar1.Value += 100 - this.progressBar1.Value;
+            var validationContext = new ValidationContext(flat);
+            var voidationResults = new List<ValidationResult>();
+            bool isValid = Validator.TryValidateObject(flat, validationContext, voidationResults, true);
+            if (voidationResults.Count!=0)
+            {
+                Error err_from = new Error(voidationResults[0].ErrorMessage, "");
+                err_from.ShowDialog(); err_from.Dispose();
+            }
+            else
+            {
+                this.richTextBox1.Text = flat.ToString();
+                this.progressBar1.Value += 100 - this.progressBar1.Value;
+            }
+           
+           
 
         }
 
@@ -364,6 +380,31 @@ namespace lab2
                 search_form.Dispose();
             }
           
+        }
+
+        private void sortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void byPriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sortedByPrice = this.History.OrderBy(h => h.Price);
+            this.richTextBox1.Text = "";
+            foreach(var elem in sortedByPrice)
+            {
+                this.richTextBox1.Text+= elem.ToString();
+            }
+        }
+
+        private void byFloorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sortedByFloor = this.History.OrderBy(h => h.Floor);
+            this.richTextBox1.Text = "";
+            foreach (var elem in sortedByFloor)
+            {
+                this.richTextBox1.Text += elem.ToString();
+            }
         }
     }
 }

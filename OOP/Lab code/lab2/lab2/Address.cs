@@ -1,4 +1,6 @@
-﻿namespace lab2
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace lab2
 {
     public enum Countries
     {
@@ -15,6 +17,8 @@
         public Address() { }
 
         private string _country;
+
+        [Required(ErrorMessage ="Country is required")]
         public string Country
         {
             get
@@ -27,6 +31,7 @@
             }
         }
         private string _city;
+        [Required(ErrorMessage = "City is required")]
         public string City
         {
             get
@@ -40,6 +45,7 @@
         }
         private string _district { get; set; }
         private string _street;
+        [Required(ErrorMessage ="Street is required")]
         public string Street
         {
             get
@@ -53,6 +59,8 @@
         }
 
         private int _building;
+
+        [Required(ErrorMessage="Building is required")]
         public int Building
         {
             get
@@ -76,7 +84,10 @@
                 _sub_building = value;
             }
         }
+
+
         private int _apartment_number;
+        [Required(ErrorMessage ="Apartment number is required")]
         public int Apartment_number
         {
             get

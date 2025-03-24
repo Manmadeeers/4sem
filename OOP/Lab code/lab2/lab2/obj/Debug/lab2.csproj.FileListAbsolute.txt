@@ -34,3 +34,4 @@ C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\bin\Debug\System.ValueTuple
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\obj\Debug\lab2.csproj.Up2Date
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\obj\Debug\lab2.About.resources
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\obj\Debug\lab2.Search.resources
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab2\lab2\bin\Debug\System.ComponentModel.Annotations.dll

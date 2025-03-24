@@ -37,6 +37,7 @@
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eraseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearFieldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metres_name = new System.Windows.Forms.Label();
@@ -56,7 +57,8 @@
             this.floor_getter = new System.Windows.Forms.NumericUpDown();
             this.address_transfer_button = new System.Windows.Forms.Button();
             this.company_button = new System.Windows.Forms.Button();
-            this.clearFieldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byFloorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rooms_getter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floor_getter)).BeginInit();
@@ -99,7 +101,7 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -112,9 +114,13 @@
             // 
             // sortToolStripMenuItem
             // 
+            this.sortToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.byPriceToolStripMenuItem,
+            this.byFloorToolStripMenuItem});
             this.sortToolStripMenuItem.Name = "sortToolStripMenuItem";
-            this.sortToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.sortToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sortToolStripMenuItem.Text = "Sort";
+            this.sortToolStripMenuItem.Click += new System.EventHandler(this.sortToolStripMenuItem_Click);
             // 
             // historyToolStripMenuItem
             // 
@@ -129,16 +135,23 @@
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.showToolStripMenuItem.Text = "Show";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // eraseToolStripMenuItem1
             // 
             this.eraseToolStripMenuItem1.Name = "eraseToolStripMenuItem1";
-            this.eraseToolStripMenuItem1.Size = new System.Drawing.Size(128, 26);
+            this.eraseToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
             this.eraseToolStripMenuItem1.Text = "Erase";
             this.eraseToolStripMenuItem1.Click += new System.EventHandler(this.eraseToolStripMenuItem1_Click);
+            // 
+            // clearFieldToolStripMenuItem
+            // 
+            this.clearFieldToolStripMenuItem.Name = "clearFieldToolStripMenuItem";
+            this.clearFieldToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.clearFieldToolStripMenuItem.Text = "Clear Field";
+            this.clearFieldToolStripMenuItem.Click += new System.EventHandler(this.clearFieldToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -361,12 +374,19 @@
             this.company_button.UseVisualStyleBackColor = true;
             this.company_button.Click += new System.EventHandler(this.company_button_Click);
             // 
-            // clearFieldToolStripMenuItem
+            // byPriceToolStripMenuItem
             // 
-            this.clearFieldToolStripMenuItem.Name = "clearFieldToolStripMenuItem";
-            this.clearFieldToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.clearFieldToolStripMenuItem.Text = "Clear Field";
-            this.clearFieldToolStripMenuItem.Click += new System.EventHandler(this.clearFieldToolStripMenuItem_Click);
+            this.byPriceToolStripMenuItem.Name = "byPriceToolStripMenuItem";
+            this.byPriceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.byPriceToolStripMenuItem.Text = "By Price";
+            this.byPriceToolStripMenuItem.Click += new System.EventHandler(this.byPriceToolStripMenuItem_Click);
+            // 
+            // byFloorToolStripMenuItem
+            // 
+            this.byFloorToolStripMenuItem.Name = "byFloorToolStripMenuItem";
+            this.byFloorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.byFloorToolStripMenuItem.Text = "By floor";
+            this.byFloorToolStripMenuItem.Click += new System.EventHandler(this.byFloorToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -436,6 +456,8 @@
         private System.Windows.Forms.ToolStripMenuItem sortToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearFieldToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem byPriceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem byFloorToolStripMenuItem;
     }
 }
 

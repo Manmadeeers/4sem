@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace lab2
 {
@@ -20,19 +21,20 @@ namespace lab2
     }
     public class Flat
     {
+        
         private double _square;
+
+        [Required(ErrorMessage = "Square is a required field")]
+        [Range(0.0,500.0,ErrorMessage ="Wrong square meter range")]
+        [RegularExpression(@"^\d+(\.\d{1,2})?$", ErrorMessage ="Square getter: not more then 2 digits after comma alowed")]
         public double Square
         {
-            get
-            {
-                return _square;
-            }
-            set
-            {
-                _square = value;
-            }
+            get; set;
         }
         private int _rooms;
+
+        [Required(ErrorMessage ="Rooms field is required")]
+        [Range(1.0,15.0,ErrorMessage ="Rooms:wrong rang")]
         public int Rooms
         {
             get
@@ -69,6 +71,8 @@ namespace lab2
             }
         }
         private int _floor;
+
+        [Required(ErrorMessage ="Floor is a required field")]
         public int Floor
         {
             get
@@ -163,7 +167,7 @@ namespace lab2
         public override string ToString()
         {
             return $"{this.Address.Country}-{this.Address.City}-{this.Address.Street}-{this.Address.Sub_building}-{this.Address.Building}-{this.Address.Apartment_number}\n" +
-                $"{this.Square} square metres; {this.Rooms} rooms; was built {this.BuildDate}; Made out of {this.Material}\n" +
+                $"Floor: {this.Floor}; {this.Square} square metres; {this.Rooms} rooms; was built {this.BuildDate}; Made out of {this.Material}\n" +
                 $"Built by {this.Company.Name}  {this.Company.Type}; {this.Company.Company_number}; {this.Company.Off_address}; \n" +
                 $"Costs:{this.Price}\n" +
                 $"<-------------------->";
