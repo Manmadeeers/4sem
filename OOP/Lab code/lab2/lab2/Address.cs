@@ -21,41 +21,26 @@ namespace lab2
         [Required(ErrorMessage ="Country is required")]
         public string Country
         {
-            get
-            {
-                return _country;
-            }
-            set
-            {
-                _country = value;
-            }
+            get;set;
         }
+
         private string _city;
+
         [Required(ErrorMessage = "City is required")]
+        [RegularExpression(@"[a-zA-Z]+$",ErrorMessage ="City name field can take only letters")]
         public string City
         {
-            get
-            {
-                return _city;
-            }
-            set
-            {
-                _city = value;
-            }
+            get;set;
         }
         private string _district { get; set; }
+
         private string _street;
+
         [Required(ErrorMessage ="Street is required")]
+        [RegularExpression(@"[a-zA-Z0-9]+$",ErrorMessage ="Street name field can take only letters and numbers")]
         public string Street
         {
-            get
-            {
-                return _street;
-            }
-            set
-            {
-                _street = value;
-            }
+            get;set;
         }
 
         private int _building;
@@ -63,14 +48,7 @@ namespace lab2
         [Required(ErrorMessage="Building is required")]
         public int Building
         {
-            get
-            {
-                return _building;
-            }
-            set
-            {
-                _building = value;
-            }
+            get;set;
         }
         private int? _sub_building;
         public int? Sub_building
@@ -87,17 +65,11 @@ namespace lab2
 
 
         private int _apartment_number;
+
         [Required(ErrorMessage ="Apartment number is required")]
         public int Apartment_number
         {
-            get
-            {
-                return _apartment_number;
-            }
-            set
-            {
-                _apartment_number = value;
-            }
+            get;set;
         }
 
         public override string ToString()

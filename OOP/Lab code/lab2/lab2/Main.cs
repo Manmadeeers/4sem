@@ -71,6 +71,9 @@ namespace lab2
         private void fillHistoryonStart()
         {
             Flat flat1 = new Flat();
+            Address adr1 = new Address();
+            Company company1 = new Company();
+
             flat1.Address.Country = "Belarus";
             flat1.Address.City = "Minsk";
             flat1.Address.Street = "Kirova";
@@ -83,13 +86,16 @@ namespace lab2
             flat1.RoomOptions = 4;
             flat1.BuildDate = new DateTime(2006,3,20);
             flat1.Material = Materials.Concrete;
-            flat1.Company.Name = "MAPID";
-            flat1.Company.Company_number = "JOFFODO1281245";
-            flat1.Company.Off_address = "Sukharavskaya 38";
+            company1.Name = "MAPID";
+            company1.Company_number = "JOFFODO1281245";
+            company1.Off_address = "Sukharavskaya 38";
+            flat1.Company = company1;
             flat1.Price = flat1.CalculateCost();
             History.Add(flat1);
 
             Flat flat2 = new Flat();
+            Address adr2 = new Address();
+            Company company2 = new Company();
             flat2.Address.Country = "Poland";
             flat2.Address.City = "Warsaw";
             flat2.Address.Street = "Kastushki";
@@ -102,9 +108,10 @@ namespace lab2
             flat2.RoomOptions = 3;
             flat2.BuildDate = new DateTime(2008, 5, 15);
             flat2.Material = Materials.Brick;
-            flat2.Company.Name = "POLISHSTROY";
-            flat2.Company.Company_number = "KROFFODO123456";
-            flat2.Company.Off_address = "Centralna 19";
+            company2.Name = "POLISHSTROY";
+            company2.Company_number = "KROFFODO123456";
+            company2.Off_address = "Centralna 19";
+            flat2.Company = company2;
             flat2.Price = flat2.CalculateCost();
             History.Add(flat2);
         }

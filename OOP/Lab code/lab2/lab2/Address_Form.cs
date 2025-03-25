@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
@@ -48,6 +50,15 @@ namespace lab2
                 {
                     throw new ArgumentNullException("Sub building checkers were not checked");
                 }
+                var validationContext = new ValidationContext(Main.instance.FLAT.Address);
+                var validationResults = new List<ValidationResult>();
+
+                bool isValid = Validator.TryValidateObject(Main.instance.FLAT.Address, validationContext, validationResults);
+                if (validationResults.Count != 0)
+                {
+                    throw new Exception(validationResults[0].ErrorMessage.ToString());
+                }
+
 
             }
             catch(Exception ex)
@@ -57,6 +68,7 @@ namespace lab2
                 err_form.ShowDialog();
                 err_form.Dispose();
             }
+
             if (isValidForm)
             {
                 if (this.sub_getter.Value == null)

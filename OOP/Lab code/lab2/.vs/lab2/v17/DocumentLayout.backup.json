@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab2\\lab2\\company_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\company_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\flat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\flat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab2\\lab2\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab2\\lab2\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab2\\lab2\\address_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\address_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab2\\lab2\\company_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\company_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab2\\lab2\\address_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\address_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{104C1A60-FDDC-4CC3-B948-AA1A59456A3A}|lab2\\lab2.csproj|solutionrelative:lab2\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,32 +59,108 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Company_form.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Company_form.cs",
+              "RelativeDocumentMoniker": "lab2\\Company_form.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Company_form.cs",
+              "RelativeToolTip": "lab2\\Company_form.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T13:05:05.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Company_form.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Company_form.cs",
+              "RelativeDocumentMoniker": "lab2\\Company_form.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Company_form.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab2\\Company_form.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T13:05:04.095Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Address_Form.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Address_Form.cs",
+              "RelativeDocumentMoniker": "lab2\\Address_Form.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Address_Form.cs",
+              "RelativeToolTip": "lab2\\Address_Form.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAYwEEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T12:56:20.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Address_Form.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Address_Form.cs",
+              "RelativeDocumentMoniker": "lab2\\Address_Form.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Address_Form.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab2\\Address_Form.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T12:56:18.025Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Company.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Company.cs",
+              "RelativeDocumentMoniker": "lab2\\Company.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Company.cs",
+              "RelativeToolTip": "lab2\\Company.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwCQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T14:40:46.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Address.cs",
+              "RelativeDocumentMoniker": "lab2\\Address.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Address.cs",
+              "RelativeToolTip": "lab2\\Address.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T14:38:06.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Flat.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Flat.cs",
               "RelativeDocumentMoniker": "lab2\\Flat.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Flat.cs",
               "RelativeToolTip": "lab2\\Flat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowGIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T13:32:08.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Search.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Search.cs",
               "RelativeDocumentMoniker": "lab2\\Search.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Search.cs",
               "RelativeToolTip": "lab2\\Search.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAADgv7IAAADJAAAAAAAAAA==",
+              "ViewState": "AgIAAMEAAAAAAAAAAADgv7IAAADJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T15:35:15.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Search.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Search.cs",
               "RelativeDocumentMoniker": "lab2\\Search.cs",
@@ -72,20 +172,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Main.cs",
               "RelativeDocumentMoniker": "lab2\\Main.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Main.cs",
               "RelativeToolTip": "lab2\\Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUBAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAqwHEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T14:27:05.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Main.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab2\\lab2\\Main.cs",
               "RelativeDocumentMoniker": "lab2\\Main.cs",

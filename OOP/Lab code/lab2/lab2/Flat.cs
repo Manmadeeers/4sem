@@ -31,20 +31,14 @@ namespace lab2
         {
             get; set;
         }
+         
         private int _rooms;
 
         [Required(ErrorMessage ="Rooms field is required")]
-        [Range(1.0,15.0,ErrorMessage ="Rooms:wrong rang")]
+        [Range(1.0,15.0,ErrorMessage ="Rooms:wrong range")]
         public int Rooms
         {
-            get
-            {
-                return _rooms;
-            }
-            set
-            {
-                _rooms = value;
-            }
+            get;set;
         }
         private DateTime _build_date;
         public DateTime BuildDate
@@ -75,14 +69,7 @@ namespace lab2
         [Required(ErrorMessage ="Floor is a required field")]
         public int Floor
         {
-            get
-            {
-                return _floor;
-            }
-            set
-            {
-                _floor = value;
-            }
+            get;set;
         }
         private int _room_options;
         public int RoomOptions
@@ -111,14 +98,7 @@ namespace lab2
         private Company _company = new Company();
         public Company Company
         {
-            get
-            {
-                return _company;
-            }
-            set
-            {
-                _company = value; 
-            }
+            get;set;
         }
         private double _price;
         public double Price

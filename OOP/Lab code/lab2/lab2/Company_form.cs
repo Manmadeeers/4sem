@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace lab2
     {
        
         private bool isValidForm = true;
+        public Company company = new Company();
         public Company_form()
         {
             InitializeComponent();
@@ -24,7 +26,8 @@ namespace lab2
         {
             try
             {
-                Main.instance.FLAT.Company.Name = this.name_getter.Text.ToString();
+                company.Name = this.name_getter.Text.ToString();
+                //Main.instance.FLAT.Company.Name = this.name_getter.Text.ToString();
             }
             catch(Exception ex)
             {
@@ -38,7 +41,8 @@ namespace lab2
         {
             try
             {
-                Main.instance.FLAT.Company.Type = (CompanyType)this.type_getter.SelectedIndex;
+                company.Type = (CompanyType)this.type_getter.SelectedIndex;
+                //Main.instance.FLAT.Company.Type = (CompanyType)this.type_getter.SelectedIndex;
             }
             catch(Exception ex)
             {
@@ -54,7 +58,8 @@ namespace lab2
         {
             try
             {
-                Main.instance.FLAT.Company.Off_address = this.address_getter.Text.ToString();
+                company.Off_address = this.address_getter.Text.ToString();
+                //Main.instance.FLAT.Company.Off_address = this.address_getter.Text.ToString();
             }
             catch(Exception ex)
             {
@@ -68,7 +73,8 @@ namespace lab2
         {
             try
             {
-               Main.instance.FLAT.Company.Company_number = this.textBox1.Text.ToString();
+                company.Company_number = this.textBox1.Text.ToString();
+                //Main.instance.FLAT.Company.Company_number = this.textBox1.Text.ToString();
 
             }
             catch(Exception ex)
@@ -104,6 +110,16 @@ namespace lab2
                 {
                     throw new ArgumentNullException("Company type was not selected");
                 }
+
+                var validationcontext = new ValidationContext(company);
+                var validationResults = new List<ValidationResult>();
+
+                bool isValid = Validator.TryValidateObject(company, validationcontext, validationResults);
+
+                if (validationResults.Count != 0)
+                {
+                    throw new Exception(validationResults[0].ErrorMessage);
+                }
             }
             catch(Exception ex)
             {
@@ -115,6 +131,7 @@ namespace lab2
 
             if (isValidForm)
             {
+                Main.instance.FLAT.Company = company;
                 this.info_box.Text = Main.instance.FLAT.Company.ToString();
                 this.continue_button.Visible = true;
             }
