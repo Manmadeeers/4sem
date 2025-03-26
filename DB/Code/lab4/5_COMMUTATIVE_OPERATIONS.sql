@@ -1,5 +1,5 @@
 use UNIVER
-create table tableA(
+/*create table tableA(
 	ID int,
 	IDValue nvarchar(20)
 );
@@ -11,7 +11,12 @@ create table tableB(
 	IDValue nvarchar(20)
 );
 insert into tableB(ID, IDValue)
-values (2, 'X'), (3, 'Y'), (4, 'Z');
+values (2, 'X'), (3, 'Y'), (4, 'Z');*/
+
+
+select * from tableA
+
+select * from tableB
 
 select *
 from tableA full outer join tableB
