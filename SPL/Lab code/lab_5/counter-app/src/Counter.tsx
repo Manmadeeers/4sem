@@ -11,9 +11,10 @@ function Counter(){
         setCount(0);
     }
 
+    
     return(
         <div className="counterComponent">
-            <h1>{count}</h1>
+            <h1 style={{color:count>5?'red': ''}}>{count}</h1>
             <div className="buttons">
                 <ButtonComponent name="Increase" callback={handleIncreaseClick}/>
                 <ButtonComponent name="Reset" callback={handleResetClick}/>
