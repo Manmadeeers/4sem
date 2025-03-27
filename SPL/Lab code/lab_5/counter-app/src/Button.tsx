@@ -1,12 +1,8 @@
-import { useState } from "react";
 
-function ButtonComponent(){
-    const [count, setCount] = useState(0);
-    function handleClick(){
-        setCount(count+1);
-    }
+
+function ButtonComponent(props:any){
     return(
-        <button onClick={handleClick}>Clicked {count} times</button>
+        <button onClick={props.onClick}>{props.message}</button>
     )
 }
 
