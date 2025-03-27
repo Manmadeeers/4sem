@@ -4,9 +4,26 @@
   padding: 2rem;
   text-align: center;
 }
-#buttons{
-  width: 100%;
-  
+
+.counterComponent{
+  display:  flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 50px;
+}
+.counterComponent h1{
+  flex:1 1 100%;
+}
+.buttons{
+  flex:1 1 100%;
+}
+.buttons #but-comp{
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .logo {

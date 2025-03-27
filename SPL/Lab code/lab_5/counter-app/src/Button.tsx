@@ -1,8 +1,11 @@
+interface buttonProperty{
+    name:string;
+    callback:()=>void;
+}
 
-
-function ButtonComponent(props:any){
+function ButtonComponent(props:buttonProperty){
     return(
-        <button onClick={props.onClick}>{props.message}</button>
+        <button onClick={props.callback} id="but-comp">{props.name}</button>
     )
 }
 
