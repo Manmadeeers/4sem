@@ -16,7 +16,11 @@ namespace lab2
                 return _version;
             }
         }
+
+        //CHANGE IF NEEDED
         private string _developer = "Ilia Filipiuk";
+        //---
+
         public string Developer
         {
             get
@@ -333,10 +337,8 @@ namespace lab2
                 {
                     throw new ArgumentNullException("History was null. Could not save to file");
                 }
-                foreach(var item in this.History)
-                {
-                    Formatter.ToJsonFile<Flat>(item);
-                }
+              
+                Formatter.ToJsonFile<List<Flat>>(this.History);
             }
             catch(Exception ex)
             {

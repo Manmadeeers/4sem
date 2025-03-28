@@ -7,8 +7,8 @@ namespace lab2
     {
         public static void ToJsonFile<T>(T instance)
         {
-
-            var serializedString = JsonSerializer.Serialize(instance);
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            var serializedString = JsonSerializer.Serialize(instance,options);
             
             File.WriteAllText("/Users/Manmade/Desktop/History.json", serializedString);
         }
