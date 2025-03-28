@@ -37,15 +37,15 @@ internal class Program
                 {
                     throw new AddCelebrityException("/Celebrities error, id was null");
                 }
-                //if (!File.Exists(celebrity.PhotoPath.Substring(6)))
-                //{
-                //    throw new Exception($"Could not find file: {repository.BasePath}");
-                //}
-
-                if (!celebrity.PhotoPath.ToLower().Contains(celebrity.Surname.ToLower()))
+                if (!File.Exists(celebrity.PhotoPath.Substring(6)))
                 {
-                    throw new Exception($"Panic");
+                    throw new Exception($"Could not find file: {repository.BasePath}");
                 }
+
+                //if (!celebrity.PhotoPath.ToLower().Contains(celebrity.Surname.ToLower()))
+                //{
+                //    throw new Exception($"Panic");
+                //}
 
                 if (repository.saveChanges() <= 0)
                 {

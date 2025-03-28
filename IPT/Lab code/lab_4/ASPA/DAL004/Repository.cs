@@ -1,4 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿
 using System.Text.Json;
 
 namespace DAL004
@@ -25,6 +25,7 @@ namespace DAL004
         public static string JSONFileName = "Celebrities.json";
         public string BasePath { get; }
         public string filePath { get; }
+
         public List<Celebrity> _celebrities;
 
         public Repository(string dirPath)
@@ -74,6 +75,10 @@ namespace DAL004
         }
         public int? addCelebrity(Celebrity celeb)
         {
+            if (celeb.Id == 0)
+            {
+                return null;
+            }
             bool foundSimillarId = false;
             foreach(var cel in _celebrities)
             {
