@@ -37,15 +37,15 @@ internal class Program
                 {
                     throw new AddCelebrityException("/Celebrities error, id was null");
                 }
-                if (!File.Exists(celebrity.PhotoPath.Substring(6)))
-                {
-                    throw new Exception($"Could not find file: {repository.BasePath}");
-                }
-
-                //if (!celebrity.PhotoPath.Contains(celebrity.Surname))
+                //if (!File.Exists(celebrity.PhotoPath.Substring(6)))
                 //{
                 //    throw new Exception($"Could not find file: {repository.BasePath}");
                 //}
+
+                if (!celebrity.PhotoPath.ToLower().Contains(celebrity.Surname.ToLower()))
+                {
+                    throw new Exception($"Could not find file: {repository.BasePath}");
+                }
 
                 if (repository.saveChanges() <= 0)
                 {
@@ -61,6 +61,8 @@ internal class Program
                 {
                     throw new DeletionException($"Could not delete celebrity with id {id}");
                 }
+
+                return $"Celebrity with id {id} was deleted\n";
 
             });
 

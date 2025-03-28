@@ -85,9 +85,17 @@ namespace DAL004
         }
         public int? addCelebrity(Celebrity celeb)
         {
-            if (this._celebrities.Find(c => c.Id == celeb.Id) != null||celeb.Id==0)
+            bool foundSimillarId = false;
+            foreach(var cel in _celebrities)
             {
-                celeb = new Celebrity(++_lastId,celeb.Firstname,celeb.Surname,celeb.PhotoPath);
+                if(cel.Id == celeb.Id)
+                {
+                    foundSimillarId = true;
+                }
+            }
+            if (foundSimillarId||celeb.Id==0)
+            {
+                celeb = new Celebrity(++_lastId, celeb.Firstname, celeb.Surname, celeb.PhotoPath);
                 this._celebrities.Add(celeb);
                 return celeb.Id;
             }
@@ -96,6 +104,17 @@ namespace DAL004
                 this._celebrities.Add(celeb);
                 return celeb.Id;
             }
+            //if (this._celebrities.Find(c => c.Id == celeb.Id) != null||celeb.Id==0)
+            //{
+            //    celeb = new Celebrity(++_lastId,celeb.Firstname,celeb.Surname,celeb.PhotoPath);
+            //    this._celebrities.Add(celeb);
+            //    return celeb.Id;
+            //}
+            //else
+            //{
+            //    this._celebrities.Add(celeb);
+            //    return celeb.Id;
+            //}
             
         }
 
@@ -142,7 +161,7 @@ namespace DAL004
             File.WriteAllText(this.filePath, updatedJsonString);
             int afterUpdLength = File.ReadAllText(this.filePath).Length;
 
-            return afterUpdLength - beforeUpdLength;
+            return Math.Abs(afterUpdLength - beforeUpdLength);
         }
        
 

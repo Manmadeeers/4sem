@@ -99,8 +99,10 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain"
+        ],
         "StatusCode": 200
       }
     ]

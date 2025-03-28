@@ -28,3 +28,4 @@ C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_4\ASPA\ASPA_004_2\obj\Release\net
 C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_4\ASPA\ASPA_004_2\obj\Release\net8.0\ASPA_004_2.pdb
 C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_4\ASPA\ASPA_004_2\obj\Release\net8.0\ASPA_004_2.genruntimeconfig.cache
 C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_4\ASPA\ASPA_004_2\obj\Release\net8.0\ref\ASPA_004_2.dll
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_4\ASPA\ASPA_004_2\bin\Release\net8.0\Celebrities\Celebrities.json
