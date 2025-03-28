@@ -18,18 +18,7 @@ namespace DAL004
     }
 
     public record Celebrity(int Id, string Firstname, string Surname, string PhotoPath);
-    //public class Celebrity
-    //{
-    //    private int id;
-    //    public int Id
-    //    private string Firstname'
-    //    private string Surname { get; set; }
-    //    private string PhotoPath { get; set; }
-    //    public Celebrity(int Id, string Firstname, string Surname, string PhotoPath)
-    //    {
-
-    //    }
-    //}
+   
     public class Repository:IRepository
     {
         private int _lastId = 7;
@@ -91,6 +80,7 @@ namespace DAL004
                 if(cel.Id == celeb.Id)
                 {
                     foundSimillarId = true;
+                    break;
                 }
             }
             if (foundSimillarId||celeb.Id==0)
@@ -104,17 +94,7 @@ namespace DAL004
                 this._celebrities.Add(celeb);
                 return celeb.Id;
             }
-            //if (this._celebrities.Find(c => c.Id == celeb.Id) != null||celeb.Id==0)
-            //{
-            //    celeb = new Celebrity(++_lastId,celeb.Firstname,celeb.Surname,celeb.PhotoPath);
-            //    this._celebrities.Add(celeb);
-            //    return celeb.Id;
-            //}
-            //else
-            //{
-            //    this._celebrities.Add(celeb);
-            //    return celeb.Id;
-            //}
+          
             
         }
 
@@ -133,23 +113,28 @@ namespace DAL004
 
         public int? updCelebrityById(int id, Celebrity celeb)
         {
-
-            if (this._celebrities.Find(c => c.Id == id) != null)
+           
+            if (id == 0)
             {
-                if (celeb.Id == 0)
-                {
-                    celeb = new Celebrity(++_lastId, celeb.Firstname, celeb.Surname, celeb.PhotoPath);
-                    this._celebrities[this._celebrities.FindIndex(c => c.Id == id)] = celeb;
-                    return celeb.Id;
-                }
+                return -1;
+            }
 
-                this._celebrities[this._celebrities.FindIndex(c => c.Id == id)] = celeb;
+            int foundIndex = _celebrities.FindIndex(c=>c.Id == id);
+            if (celeb.Id!=id)
+            {
+                celeb = new Celebrity(id, celeb.Firstname, celeb.Surname, celeb.PhotoPath);
+            }
+            if (foundIndex != -1)
+            {
+                _celebrities[foundIndex] = celeb;
                 return celeb.Id;
             }
             else
             {
-                return -1;
+                return foundIndex;
             }
+            
+            
             
           
         }
