@@ -37,6 +37,16 @@ internal class Program
                 {
                     throw new AddCelebrityException("/Celebrities error, id was null");
                 }
+                if (!File.Exists(celebrity.PhotoPath.Substring(6)))
+                {
+                    throw new Exception($"Could not find file: {repository.BasePath}");
+                }
+
+                //if (!celebrity.PhotoPath.Contains(celebrity.Surname))
+                //{
+                //    throw new Exception($"Could not find file: {repository.BasePath}");
+                //}
+
                 if (repository.saveChanges() <= 0)
                 {
                     throw new SaveException("/Celebrities error, SaveChanges() < 0");
@@ -49,7 +59,7 @@ internal class Program
             app.Map("/Celebrities/Error", (HttpContext ctx) =>
             {
                 Exception? ex = ctx.Features.Get<IExceptionHandlerFeature>()?.Error;
-                IResult rc = Results.Problem(detail: "Panic", instance: app.Environment.EnvironmentName, title: "ASPA004", statusCode: 500);
+                IResult rc = Results.Problem(detail: ex.Message, instance: app.Environment.EnvironmentName, title: "ASPA004", statusCode: 500);
                 if (ex != null)
                 {
                     if(ex is FoundByIdException)
