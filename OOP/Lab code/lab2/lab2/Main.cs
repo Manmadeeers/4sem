@@ -273,10 +273,10 @@ namespace lab2
         {
             try
             {
-                if (this.square_getter.Text.ToString() == "")
-                {
-                    throw new ArgumentNullException("Square getter field was null");
-                }
+                //if (this.square_getter.Text.ToString() == "")
+                //{
+                //    throw new ArgumentNullException("Square getter field was null");
+                //}
                 if (!this.brick_checker.Checked && !this.concrete_checker.Checked)
                 {
                     throw new ArgumentException("Material checker was not checked");
@@ -284,6 +284,13 @@ namespace lab2
                 if (this.additionals_checker.CheckedItems.Count == 0)
                 {
                     throw new ArgumentNullException("Additionals were not checked");
+                }
+                var validationContext = new ValidationContext(flat);
+                var voidationResults = new List<ValidationResult>();
+                bool isValid = Validator.TryValidateObject(flat, validationContext, voidationResults, true);
+                if (voidationResults.Count != 0)
+                {
+                    throw new Exception(voidationResults[0].ErrorMessage.ToString());
                 }
                 History.Add(flat);
 
@@ -295,22 +302,24 @@ namespace lab2
                 err_form.ShowDialog();
                 err_form.Dispose();
             }
+
             this.flat.Price = flat.CalculateCost();
-            var validationContext = new ValidationContext(flat);
-            var voidationResults = new List<ValidationResult>();
-            bool isValid = Validator.TryValidateObject(flat, validationContext, voidationResults, true);
-            if (voidationResults.Count!=0)
-            {
-                Error err_from = new Error(voidationResults[0].ErrorMessage, "");
-                err_from.ShowDialog(); err_from.Dispose();
-            }
-            else
-            {
-                this.richTextBox1.Text = flat.ToString();
-                this.progressBar1.Value += 100 - this.progressBar1.Value;
-            }
-           
-           
+
+            this.richTextBox1.Text = flat.ToString();
+            this.progressBar1.Value += 100 - this.progressBar1.Value;
+
+
+            //if (voidationResults.Count!=0)
+            //{
+            //    Error err_from = new Error(voidationResults[0].ErrorMessage, "");
+            //    err_from.ShowDialog(); err_from.Dispose();
+            //}
+            //else
+            //{
+            //    
+            //}
+
+
 
         }
 

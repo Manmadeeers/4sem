@@ -38,10 +38,10 @@ namespace lab2
                 {
                     throw new ArgumentNullException("Country was not selected");
                 }
-                if (this.city_getter.Text.ToString() == "")
-                {
-                    throw new ArgumentNullException("City was not selected");
-                }
+                //if (this.city_getter.Text.ToString() == "")
+                //{
+                //    throw new ArgumentNullException("City was not selected");
+                //}
                 if (this.street_getter.Text.ToString() == "")
                 {
                     throw new ArgumentNullException("Street was not selected");
