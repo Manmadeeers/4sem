@@ -34,6 +34,8 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byFloorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eraseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +59,9 @@
             this.floor_getter = new System.Windows.Forms.NumericUpDown();
             this.address_transfer_button = new System.Windows.Forms.Button();
             this.company_button = new System.Windows.Forms.Button();
-            this.byPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.byFloorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Forth_button = new System.Windows.Forms.Button();
+            this.Back_button = new System.Windows.Forms.Button();
+            this.test_label = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rooms_getter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floor_getter)).BeginInit();
@@ -84,7 +87,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(991, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(991, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,7 +98,7 @@
             this.searchToolStripMenuItem,
             this.sortToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveToolStripMenuItem
@@ -122,6 +125,20 @@
             this.sortToolStripMenuItem.Text = "Sort";
             this.sortToolStripMenuItem.Click += new System.EventHandler(this.sortToolStripMenuItem_Click);
             // 
+            // byPriceToolStripMenuItem
+            // 
+            this.byPriceToolStripMenuItem.Name = "byPriceToolStripMenuItem";
+            this.byPriceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.byPriceToolStripMenuItem.Text = "By Price";
+            this.byPriceToolStripMenuItem.Click += new System.EventHandler(this.byPriceToolStripMenuItem_Click);
+            // 
+            // byFloorToolStripMenuItem
+            // 
+            this.byFloorToolStripMenuItem.Name = "byFloorToolStripMenuItem";
+            this.byFloorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.byFloorToolStripMenuItem.Text = "By floor";
+            this.byFloorToolStripMenuItem.Click += new System.EventHandler(this.byFloorToolStripMenuItem_Click);
+            // 
             // historyToolStripMenuItem
             // 
             this.historyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -129,34 +146,34 @@
             this.eraseToolStripMenuItem1,
             this.clearFieldToolStripMenuItem});
             this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
-            this.historyToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.historyToolStripMenuItem.Text = "History";
             // 
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.showToolStripMenuItem.Text = "Show";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // eraseToolStripMenuItem1
             // 
             this.eraseToolStripMenuItem1.Name = "eraseToolStripMenuItem1";
-            this.eraseToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
+            this.eraseToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.eraseToolStripMenuItem1.Text = "Erase";
             this.eraseToolStripMenuItem1.Click += new System.EventHandler(this.eraseToolStripMenuItem1_Click);
             // 
             // clearFieldToolStripMenuItem
             // 
             this.clearFieldToolStripMenuItem.Name = "clearFieldToolStripMenuItem";
-            this.clearFieldToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.clearFieldToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.clearFieldToolStripMenuItem.Text = "Clear Field";
             this.clearFieldToolStripMenuItem.Click += new System.EventHandler(this.clearFieldToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -221,7 +238,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 671);
+            this.progressBar1.Location = new System.Drawing.Point(17, 639);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(278, 23);
             this.progressBar1.TabIndex = 9;
@@ -374,25 +391,43 @@
             this.company_button.UseVisualStyleBackColor = true;
             this.company_button.Click += new System.EventHandler(this.company_button_Click);
             // 
-            // byPriceToolStripMenuItem
+            // Forth_button
             // 
-            this.byPriceToolStripMenuItem.Name = "byPriceToolStripMenuItem";
-            this.byPriceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.byPriceToolStripMenuItem.Text = "By Price";
-            this.byPriceToolStripMenuItem.Click += new System.EventHandler(this.byPriceToolStripMenuItem_Click);
+            this.Forth_button.Location = new System.Drawing.Point(916, 5);
+            this.Forth_button.Name = "Forth_button";
+            this.Forth_button.Size = new System.Drawing.Size(75, 23);
+            this.Forth_button.TabIndex = 24;
+            this.Forth_button.Text = "Forth";
+            this.Forth_button.UseVisualStyleBackColor = true;
+            this.Forth_button.Click += new System.EventHandler(this.Forth_button_Click);
             // 
-            // byFloorToolStripMenuItem
+            // Back_button
             // 
-            this.byFloorToolStripMenuItem.Name = "byFloorToolStripMenuItem";
-            this.byFloorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.byFloorToolStripMenuItem.Text = "By floor";
-            this.byFloorToolStripMenuItem.Click += new System.EventHandler(this.byFloorToolStripMenuItem_Click);
+            this.Back_button.Location = new System.Drawing.Point(816, 5);
+            this.Back_button.Name = "Back_button";
+            this.Back_button.Size = new System.Drawing.Size(75, 23);
+            this.Back_button.TabIndex = 25;
+            this.Back_button.Text = "Back";
+            this.Back_button.UseVisualStyleBackColor = true;
+            this.Back_button.Click += new System.EventHandler(this.Back_button_Click);
+            // 
+            // test_label
+            // 
+            this.test_label.AutoSize = true;
+            this.test_label.Location = new System.Drawing.Point(14, 702);
+            this.test_label.Name = "test_label";
+            this.test_label.Size = new System.Drawing.Size(11, 16);
+            this.test_label.TabIndex = 26;
+            this.test_label.Text = "-";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 706);
+            this.ClientSize = new System.Drawing.Size(991, 761);
+            this.Controls.Add(this.test_label);
+            this.Controls.Add(this.Back_button);
+            this.Controls.Add(this.Forth_button);
             this.Controls.Add(this.company_button);
             this.Controls.Add(this.address_transfer_button);
             this.Controls.Add(this.floor_getter);
@@ -416,6 +451,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Main page";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rooms_getter)).EndInit();
@@ -458,6 +494,9 @@
         private System.Windows.Forms.ToolStripMenuItem clearFieldToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem byPriceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem byFloorToolStripMenuItem;
+        private System.Windows.Forms.Button Forth_button;
+        private System.Windows.Forms.Button Back_button;
+        private System.Windows.Forms.Label test_label;
     }
 }
 

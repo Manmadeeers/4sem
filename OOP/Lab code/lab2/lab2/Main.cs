@@ -8,6 +8,7 @@ namespace lab2
 {
     public partial class Main : Form
     {
+        //private static readonly 
         private string _version = Application.ProductVersion;
         public string Version
         {
@@ -16,6 +17,10 @@ namespace lab2
                 return _version;
             }
         }
+
+        private List<List<Flat>> _states = new List<List<Flat>>();
+
+        private int _current_state = 0;
 
         //CHANGE IF NEEDED
         private string _developer = "Ilia Filipiuk";
@@ -69,7 +74,20 @@ namespace lab2
         {
             InitializeComponent();
             instance = this;
+           
+            //_states.Add(this.History);
+            //_current_state++;
             fillHistoryonStart();
+            List<Flat> _first = new List<Flat>();
+            _first.Add(this._history[0]);
+            List<Flat> _second = new List<Flat>();
+            _second.Add(this._history[0]);
+            _second.Add(_history[1]);
+            this._states.Add(_first);
+            _current_state++;
+            this._states.Add(_second);
+            _current_state++;
+            this.test_label.Text = $"History contains {History.Count} elements.";
         }
 
         private void fillHistoryonStart()
@@ -96,6 +114,7 @@ namespace lab2
             flat1.Company = company1;
             flat1.Price = flat1.CalculateCost();
             History.Add(flat1);
+          
 
             Flat flat2 = new Flat();
             Address adr2 = new Address();
@@ -118,7 +137,9 @@ namespace lab2
             flat2.Company = company2;
             flat2.Price = flat2.CalculateCost();
             History.Add(flat2);
+           
         }
+
 
         private void square_getter_TextChanged(object sender, System.EventArgs e)
         {
@@ -292,7 +313,19 @@ namespace lab2
                 {
                     throw new Exception(voidationResults[0].ErrorMessage.ToString());
                 }
+                List<Flat> _NEU = new List<Flat>();
+                foreach (var item in History)
+                {
+                    _NEU.Add(item);
+                }
+                _NEU.Add(flat);
+
+                this._states.Add(_NEU);
+                _current_state++;
+
                 History.Add(flat);
+              
+              
 
 
             }
@@ -308,7 +341,7 @@ namespace lab2
             this.richTextBox1.Text = flat.ToString();
             this.progressBar1.Value += 100 - this.progressBar1.Value;
 
-
+    
             //if (voidationResults.Count!=0)
             //{
             //    Error err_from = new Error(voidationResults[0].ErrorMessage, "");
@@ -423,6 +456,64 @@ namespace lab2
             {
                 this.richTextBox1.Text += elem.ToString();
             }
+        }
+
+        private void Back_button_Click(object sender, EventArgs e)
+        {
+
+            
+            if (_current_state != 0)
+            {
+                _current_state--;
+                this.History = this._states[_current_state];
+                
+                this.richTextBox1.Text = $"State {_current_state}\n";
+                foreach(var item in History)
+                {
+                    this.richTextBox1.Text+=(item.ToString());
+                }
+                this.test_label.Text = $"History contains {History.Count} elements.";
+            }
+            else
+            {
+
+                this.richTextBox1.Text = "You've reached the oldest state!\n";
+                foreach(var item in History)
+                {
+                    this.richTextBox1.Text += item.ToString();
+                }
+                this.test_label.Text = $"History contains {History.Count} elements.";
+            }
+            
+        }
+
+        private void Forth_button_Click(object sender, EventArgs e)
+        {
+            if (_current_state != this._states.Count - 1)
+            {
+                _current_state++;
+                this.History = this._states[this._current_state];
+                this.richTextBox1.Text = $"State {_current_state}\n";
+                foreach(var item in History)
+                {
+                    this.richTextBox1.Text+= item.ToString();
+                }
+                this.test_label.Text = $"History contains {History.Count} elements.";
+            }
+            else
+            {
+                this.richTextBox1.Text = "You've reached the latest state!\n";
+                foreach(var item in History)
+                {
+                    this.richTextBox1.Text += item.ToString();
+                }
+                this.test_label.Text = $"History contains {History.Count} elements.";
+            }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
