@@ -75,10 +75,10 @@ namespace DAL004
         }
         public int? addCelebrity(Celebrity celeb)
         {
-            if (celeb.Id == 0)
-            {
-                return null;
-            }
+            //if (celeb.Id == 0)
+            //{
+            //    return null;
+            //}
             bool foundSimillarId = false;
             foreach(var cel in _celebrities)
             {
