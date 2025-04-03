@@ -4,6 +4,7 @@ import './App.css';
 
 function Counter(){
     const[count,setCount] = useState<number>(0);
+
     const handleIncreaseClick=()=>{
         setCount(prev=>prev+1);
     }
@@ -11,6 +12,10 @@ function Counter(){
         setCount(0);
     }
 
+
+    function FUCK(){
+        alert('FUCK');
+    }
     
     return(
         
@@ -19,6 +24,7 @@ function Counter(){
             <div className="buttons">
                 <ButtonComponent name="Increase" callback={handleIncreaseClick}/>
                 <ButtonComponent name="Reset" callback={handleResetClick}/>
+                <ButtonComponent name="FUCK" callback={FUCK}/>
             </div>
         </div>
     )
