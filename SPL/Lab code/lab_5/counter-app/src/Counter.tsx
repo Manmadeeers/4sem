@@ -13,6 +13,7 @@ function Counter(){
 
     
     return(
+        
         <div className="counterComponent">
             <h1 style={{color:count>5?'red': ''}}>{count}</h1>
             <div className="buttons">
