@@ -53,6 +53,10 @@ internal class Program
                     throw new SaveException("/Celebrities error, amount of changes was less then 0");
                 }
                 return new Celebrity((int)id, celebrity.Firstname, celebrity.Surname, celebrity.PhotoPath);
+            }).AddEndpointFilter(async (context, next)=>
+            {
+
+                return await next(context);
             });
 
             app.MapDelete("/Celebrities/{id:int}", (int id) =>

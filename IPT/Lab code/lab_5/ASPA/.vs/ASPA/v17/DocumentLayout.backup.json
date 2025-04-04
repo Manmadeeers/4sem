@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_5\\ASPA\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F37967C4-314E-47CF-AD2C-EF9F8C9EFFE0}|ASPA_005_1\\ASPA_005_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_5\\aspa\\aspa_005_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37967C4-314E-47CF-AD2C-EF9F8C9EFFE0}|ASPA_005_1\\ASPA_005_1.csproj|solutionrelative:aspa_005_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37967C4-314E-47CF-AD2C-EF9F8C9EFFE0}|ASPA_005_1\\ASPA_005_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_5\\aspa\\aspa_005_1\\exceprions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37967C4-314E-47CF-AD2C-EF9F8C9EFFE0}|ASPA_005_1\\ASPA_005_1.csproj|solutionrelative:aspa_005_1\\exceprions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{362C7AFB-30C1-4E16-A745-7EF2BB41D09A}|DAL_004\\DAL_004.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_5\\aspa\\dal_004\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{362C7AFB-30C1-4E16-A745-7EF2BB41D09A}|DAL_004\\DAL_004.csproj|solutionrelative:dal_004\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Exceprions.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_5\\ASPA\\ASPA_005_1\\Exceprions.cs",
+              "RelativeDocumentMoniker": "ASPA_005_1\\Exceprions.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_5\\ASPA\\ASPA_005_1\\Exceprions.cs",
+              "RelativeToolTip": "ASPA_005_1\\Exceprions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T17:19:17.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_5\\ASPA\\DAL_004\\Repository.cs",
+              "RelativeDocumentMoniker": "DAL_004\\Repository.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_5\\ASPA\\DAL_004\\Repository.cs",
+              "RelativeToolTip": "DAL_004\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T17:17:29.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_5\\ASPA\\ASPA_005_1\\Program.cs",
+              "RelativeDocumentMoniker": "ASPA_005_1\\Program.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_5\\ASPA\\ASPA_005_1\\Program.cs",
+              "RelativeToolTip": "ASPA_005_1\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwHoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T17:16:42.807Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
