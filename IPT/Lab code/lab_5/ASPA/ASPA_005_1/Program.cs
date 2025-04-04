@@ -2,6 +2,7 @@
 using CustomExceptions;
 using DAL004;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.SignalR;
 
 internal class Program
@@ -43,10 +44,10 @@ internal class Program
                 //    throw new Exception($"Could not find file: {repository.BasePath}");
                 //}
 
-                if (!celebrity.PhotoPath.ToLower().Contains(celebrity.Surname.ToLower()))
-                {
-                    throw new Exception($"Could not find file: {repository.BasePath}");
-                }
+                //if (!celebrity.PhotoPath.ToLower().Contains(celebrity.Surname.ToLower()))
+                //{
+                //    throw new Exception($"Could not find file: {repository.BasePath}");
+                //}
 
                 if (repository.saveChanges() <= 0)
                 {
@@ -55,7 +56,43 @@ internal class Program
                 return new Celebrity((int)id, celebrity.Firstname, celebrity.Surname, celebrity.PhotoPath);
             }).AddEndpointFilter(async (context, next)=>
             {
+                Celebrity? celeb = context.GetArgument<Celebrity?>(0);
+            if (celeb == null || celeb.Id == null&&celeb.Firstname==null&&celeb.Surname==null&&celeb.PhotoPath==null)
+                {
+                    throw new CelebrityArgumentExeption("POST:Attempted to add a null celebrity", 500);
+                }
+                if(String.IsNullOrWhiteSpace(celeb.Surname)||celeb.Surname.Length<2)
+                {
+                    throw new CelebrityArgumentExeption("POST:Attempted to add a celebrity with null or too small surename", 409);
+                }
+                return await next(context);
+            }).AddEndpointFilter(async (context, next) =>
+            {
+                Celebrity?celeb = context.GetArgument<Celebrity?>(0);
+                if(celeb == null)
+                {
+                    throw new CelebrityArgumentExeption("POST:Attempted to add a null celebrity", 500);
 
+                }
+                if (repository.GetCelebritiesBySurename(celeb.Surname).Length != 0)
+                {
+                    throw new CelebrityArgumentExeption("POST:Attempted to add a celebrity with an already existing surename", 409);
+                }
+
+
+                return await next(context);
+            }).AddEndpointFilter(async (context, next) =>
+            {
+
+                Celebrity? celeb = context.GetArgument<Celebrity?>(0);
+                if (celeb == null)
+                {
+                    throw new CelebrityArgumentExeption("POST:Attempted to add a null celebrity", 500);
+                }
+                if (!File.Exists(Path.Combine(repository.BasePath,Path.GetFileName( celeb.PhotoPath))))
+                {
+                    context.HttpContext.Response.Headers["X-Celebrity"] = $"Not found: {Path.Combine(repository.BasePath, celeb.PhotoPath)}";
+                }
                 return await next(context);
             });
 
@@ -111,11 +148,17 @@ internal class Program
                     }
                     if (ex is SaveException)
                     {
-                        rc = Results.Problem(title: "ASP004/SaveChanges", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
+                        rc = Results.Problem(title: "ASP005/SaveChanges", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
                     }
                     if (ex is AddCelebrityException)
                     {
-                        rc = Results.Problem(title: "ASP004/AddCelebrity", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
+                        rc = Results.Problem(title: "ASP005/AddCelebrity", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
+                    }
+                    if(ex is CelebrityArgumentExeption)
+                    {
+                        CelebrityArgumentExeption celex = (CelebrityArgumentExeption)ex;
+                        rc = Results.Problem(title: "ASP005/AddCelebrity", detail: celex.Message, instance: app.Environment.EnvironmentName, statusCode: celex.Code);
+                        
                     }
                 }
                 return rc;

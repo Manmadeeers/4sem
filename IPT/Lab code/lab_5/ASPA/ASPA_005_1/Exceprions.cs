@@ -23,5 +23,22 @@
     {
         public PutException(string message) : base(message) { }
     }
+
+
+    public class CelebrityArgumentExeption:Exception
+    {
+        private int _code;
+        public int Code
+        {
+            get { return _code; }
+        }
+        public CelebrityArgumentExeption(string message,int code) : base(message) {
+            _code = code;
+        }
+    
+    }
+
 }
+
+
 

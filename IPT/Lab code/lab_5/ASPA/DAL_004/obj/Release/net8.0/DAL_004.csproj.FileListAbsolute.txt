@@ -1,0 +1,12 @@
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\bin\Release\net8.0\DAL_004.deps.json
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\bin\Release\net8.0\DAL_004.dll
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\bin\Release\net8.0\DAL_004.pdb
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\DAL_004.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\DAL_004.AssemblyInfoInputs.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\DAL_004.AssemblyInfo.cs
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\DAL_004.csproj.CoreCompileInputs.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\DAL_004.sourcelink.json
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\DAL_004.dll
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\refint\DAL_004.dll
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\DAL_004.pdb
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_5\ASPA\DAL_004\obj\Release\net8.0\ref\DAL_004.dll
