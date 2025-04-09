@@ -47,6 +47,76 @@ else 0
 end
 
 
-/*4 */
+/*4 Average notes for professions*/
 
-select FACULTY.FACULTY as Faculty, GROUPS.PROFESSION as Speciality, PROGRESS.NOTE , round(avg(cast(PROGRESS.NOTE as float(4))),2) as rounded
+select F.FACULTY_NAME as Faculty,
+		P.PROFESSION_NAME as Speciality,
+		round(avg(cast(PR.NOTE as float(4))),2)as [Average note]
+from
+	FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on P.PROFESSION = G.PROFESSION
+	inner join STUDENT S on G.IDGROUP = S.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+group by 
+	F.FACULTY_NAME,
+	P.PROFESSION_NAME
+order by
+	[Average note] desc
+
+
+/*5 Average note for specific discipline*/
+select F.FACULTY_NAME as Faculty,
+		P.PROFESSION_NAME as Speciality,
+		round(avg(cast(PR.NOTE as float(4))),2)as [Average note]
+from
+	FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on P.PROFESSION = G.PROFESSION
+	inner join STUDENT S on G.IDGROUP = S.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+where
+	PR.SUBJECT like 'ÎÀèÏ' or PR.SUBJECT like 'ÁÄ'
+group by 
+	F.FACULTY_NAME,
+	P.PROFESSION_NAME
+order by
+	[Average note] desc
+
+
+/*6 Average notes for TOV*/
+
+select 
+	F.FACULTY_NAME as Faculty,
+	P.PROFESSION_NAME as Profession,
+	PR.SUBJECT as Discipline,
+	round(avg(cast(PR.NOTE as float(4))),2)as [Average note]
+from FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on G.PROFESSION = P.PROFESSION
+	inner join STUDENT S on S.IDGROUP = G.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+where
+	F.FACULTY_NAME like 'ÒÎÂ'
+group by
+	F.FACULTY_NAME,
+	P.PROFESSION_NAME,
+	PR.SUBJECT
+
+
+/*7 count students with 8 and 9*/
+
+select
+	PROGRESS.SUBJECT as Discipline,
+	count(STUDENT.IDSTUDENT)as [Amount]
+from
+	PROGRESS inner join STUDENT on PROGRESS.IDSTUDENT = STUDENT.IDSTUDENT
+group by 
+	PROGRESS.NOTE,PROGRESS.SUBJECT
+having
+	PROGRESS.NOTE>=8 and PROGRESS.NOTE<=9
+order by 
+	[Amount] desc
+
+
+
