@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Display from "./Display";
 import ButtonComponent from "./Buttons";
+import exp from "constants";
 
 const buttons: string[] = [
     "C", "⌫", "/", "*",
