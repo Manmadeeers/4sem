@@ -2,10 +2,11 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f2f2f2;
+    color: #707070;
 }
 
 body.dark{
-    background-color: #121212;
+    background-color: #353535;
     color: #f2f2f2;
 }
 
