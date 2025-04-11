@@ -1,9 +1,6 @@
-
 using CustomExceptions;
 using DAL004;
 using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http.Features;
-using Microsoft.AspNetCore.SignalR;
 
 internal class Program
 {
@@ -57,7 +54,7 @@ internal class Program
             }).AddEndpointFilter(async (context, next)=>
             {
                 Celebrity? celeb = context.GetArgument<Celebrity?>(0);
-            if (celeb == null || celeb.Id == null&&celeb.Firstname==null&&celeb.Surname==null&&celeb.PhotoPath==null)
+            if (celeb == null || celeb.Id == 0&&celeb.Firstname==null&&celeb.Surname==null&&celeb.PhotoPath==null)
                 {
                     throw new CelebrityArgumentExeption("POST:Attempted to add a null celebrity", 500);
                 }

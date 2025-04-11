@@ -25,7 +25,7 @@ namespace DAL004
         public static string JSONFileName = "Celebrities.json";
         public string BasePath { get; }
         public string filePath { get; }
-        public List<Celebrity> _celebrities;
+        public List<Celebrity> _celebrities { get; set; }
 
         public Repository(string dirPath)
         {
@@ -55,6 +55,7 @@ namespace DAL004
 
         public Celebrity? GetCelebrityById(int id)
         {
+            
             return _celebrities.FirstOrDefault(c => c.Id == id);
         }
 

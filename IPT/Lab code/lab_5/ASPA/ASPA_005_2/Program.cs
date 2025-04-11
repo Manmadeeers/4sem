@@ -15,11 +15,22 @@ internal class Program
 
 
         Repository.JSONFileName = "Celebrities.json";
-        using (IRepository repository = Repository.Create("Celebrities"))
+        using (Repository repository = Repository.Create("Celebrities"))
         {
+            //----filters initialisation---//
+
+            SurenameFilter.rep = repository;
+            PhotoExistsFilter.rep = repository;
+            DeletionFilter.rep = repository;
+            PutFilter.rep = repository;
+
+            //------------//
+
             app.UseExceptionHandler("/Celebrities/Error");
 
             app.MapGet("/Celebrities", () => repository.GetAllCelebrities());
+
+            RouteGroupBuilder api = app.MapGroup("/Celebrities").AddEndpointFilter<SurenameFilter>().AddEndpointFilter<PhotoExistsFilter>().WithTags("Celebrities");
 
             app.MapGet("/Celebrities/{id:int}", (int id) =>
             {
@@ -31,8 +42,8 @@ internal class Program
                 return celebrity;
             });
 
-            
-            app.MapPost("/Celebrities", (Celebrity celebrity) =>
+
+            api.MapPost("", (Celebrity celebrity) =>
             {
                 int? id = repository.addCelebrity(celebrity);
                 if (id == null)
@@ -54,47 +65,7 @@ internal class Program
                     throw new SaveException("/Celebrities error, amount of changes was less then 0");
                 }
                 return new Celebrity((int)id, celebrity.Firstname, celebrity.Surname, celebrity.PhotoPath);
-            }).AddEndpointFilter(async (context, next) =>
-            {
-                Celebrity? celeb = context.GetArgument<Celebrity?>(0);
-                if (celeb == null || celeb.Id == null && celeb.Firstname == null && celeb.Surname == null && celeb.PhotoPath == null)
-                {
-                    throw new CelebrityArgumentExeption("POST:Attempted to add a null celebrity", 500);
-                }
-                if (String.IsNullOrWhiteSpace(celeb.Surname) || celeb.Surname.Length < 2)
-                {
-                    throw new CelebrityArgumentExeption("POST:Attempted to add a celebrity with null or too small surename", 409);
-                }
-                return await next(context);
-            }).AddEndpointFilter(async (context, next) =>
-            {
-                Celebrity? celeb = context.GetArgument<Celebrity?>(0);
-                if (celeb == null)
-                {
-                    throw new CelebrityArgumentExeption("POST:Attempted to add a null celebrity", 500);
-
-                }
-                if (repository.GetCelebritiesBySurename(celeb.Surname).Length != 0)
-                {
-                    throw new CelebrityArgumentExeption("POST:Attempted to add a celebrity with an already existing surename", 409);
-                }
-
-
-                return await next(context);
-            }).AddEndpointFilter(async (context, next) =>
-            {
-
-                Celebrity? celeb = context.GetArgument<Celebrity?>(0);
-                if (celeb == null)
-                {
-                    throw new CelebrityArgumentExeption("POST:Attempted to add a null celebrity", 500);
-                }
-                if (!File.Exists(Path.Combine(repository.BasePath, Path.GetFileName(celeb.PhotoPath))))
-                {
-                    context.HttpContext.Response.Headers["X-Celebrity"] = $"Not found: {Path.Combine(repository.BasePath, celeb.PhotoPath)}";
-                }
-                return await next(context);
-            });
+            }).AddEndpointFilter<SurenameFilter>().AddEndpointFilter<PhotoExistsFilter>();
 
             app.MapDelete("/Celebrities/{id:int}", (int id) =>
             {
@@ -106,7 +77,7 @@ internal class Program
 
                 return $"Celebrity with id {id} was deleted\n";
 
-            });
+            }).AddEndpointFilter<DeletionFilter>();
 
             app.MapPut("/Celebrities/{id:int}", (int id, Celebrity celebrity) =>
             {
@@ -120,7 +91,7 @@ internal class Program
                     return $"Celebrity with id {id} was updated";
                 }
 
-            });
+            }).AddEndpointFilter<PutFilter>();
 
             app.MapFallback((HttpContext ctx) => Results.NotFound(new { error = $"Path {ctx.Request.Path} not supported" }));
 
