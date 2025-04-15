@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{640246B9-2F93-4F3F-BED4-523AEDB57B54}|lab4-5\\lab4-5.csproj|solutionrelative:lab4-5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{640246B9-2F93-4F3F-BED4-523AEDB57B54}|lab4-5\\lab4-5.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\lab4-5\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{640246B9-2F93-4F3F-BED4-523AEDB57B54}|lab4-5\\lab4-5.csproj|solutionrelative:lab4-5\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{640246B9-2F93-4F3F-BED4-523AEDB57B54}|lab4-5\\lab4-5.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\lab4-5\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{640246B9-2F93-4F3F-BED4-523AEDB57B54}|lab4-5\\lab4-5.csproj|solutionrelative:lab4-5\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,8 +22,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\lab4-5\\App.xaml",
+              "RelativeDocumentMoniker": "lab4-5\\App.xaml",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\lab4-5\\App.xaml",
+              "RelativeToolTip": "lab4-5\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T13:52:12.252Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -34,13 +50,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\lab4-5\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "lab4-5\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\lab4-5\\MainWindow.xaml.cs",
               "RelativeToolTip": "lab4-5\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwCAAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T16:14:31.647Z",
               "EditorCaption": ""

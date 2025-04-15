@@ -18,13 +18,10 @@ namespace lab4_5
     {
         public MainWindow()
         {
+            
             InitializeComponent();
         }
 
 
-        public void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("FUCK");
-        }
     }
 }
