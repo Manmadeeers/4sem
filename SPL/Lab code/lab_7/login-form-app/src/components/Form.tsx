@@ -13,7 +13,7 @@ const Form:React.FC = ()=>{
             <InputComponent type="e-mail" placeHolder="e-mail"/>
             <InputComponent type="password" placeHolder="Password"/>
 
-            <ButtonComponent value="Sign In" onClick={handleClick}/>
+            <ButtonComponent value="Sign In" type="submit" onClick={handleClick}/>
         </form>
     )
 }

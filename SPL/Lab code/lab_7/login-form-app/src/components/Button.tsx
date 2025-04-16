@@ -2,6 +2,7 @@ import React from "react";
 interface IButtonComponent{
     value:string|number;
     onClick:()=>void;
+    type?:string;
 }
 
 
