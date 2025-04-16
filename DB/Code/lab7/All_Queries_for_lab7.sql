@@ -35,4 +35,116 @@ where
 group by cube(F.FACULTY_NAME,P.PROFESSION,PR.SUBJECT)
 
 
-/*3 */
+/*3 Exams results for TOV unioned with HTIT*/
+
+select
+	F.FACULTY_NAME as Faculty,
+	PR.SUBJECT as Subject,
+	G.PROFESSION as Profession,
+	round(avg(cast(PR.NOTE as float(4))),2) as [Average Note]
+from
+	FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on P.PROFESSION = G.PROFESSION
+	inner join STUDENT S on G.IDGROUP = S.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+where
+	F.FACULTY_NAME like '“Œ¬'
+group by
+	F.FACULTY_NAME,
+	PR.SUBJECT,
+	G.PROFESSION
+union
+select
+	F.FACULTY_NAME as Faculty,
+	PR.SUBJECT as Subject,
+	G.PROFESSION as Profession,
+	round(avg(cast(PR.NOTE as float(4))),2) as [Average Note]
+from
+	FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on P.PROFESSION = G.PROFESSION
+	inner join STUDENT S on G.IDGROUP = S.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+where
+	F.FACULTY_NAME like '’“Ë“'
+group by
+	F.FACULTY_NAME,
+	PR.SUBJECT,
+	G.PROFESSION
+
+
+/*4 intersection usage*/
+select
+	F.FACULTY_NAME as Faculty,
+	PR.SUBJECT as Subject,
+	G.PROFESSION as Profession,
+	round(avg(cast(PR.NOTE as float(4))),2) as [Average Note]
+from
+	FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on P.PROFESSION = G.PROFESSION
+	inner join STUDENT S on G.IDGROUP = S.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+where
+	F.FACULTY_NAME like '“Œ¬'
+group by
+	F.FACULTY_NAME,
+	PR.SUBJECT,
+	G.PROFESSION
+intersect
+select
+	F.FACULTY_NAME as Faculty,
+	PR.SUBJECT as Subject,
+	G.PROFESSION as Profession,
+	round(avg(cast(PR.NOTE as float(4))),2) as [Average Note]
+from
+	FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on P.PROFESSION = G.PROFESSION
+	inner join STUDENT S on G.IDGROUP = S.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+where
+	F.FACULTY_NAME like '’“Ë“'
+group by
+	F.FACULTY_NAME,
+	PR.SUBJECT,
+	G.PROFESSION
+
+
+/*5 exception usage*/
+select
+	F.FACULTY_NAME as Faculty,
+	PR.SUBJECT as Subject,
+	G.PROFESSION as Profession,
+	round(avg(cast(PR.NOTE as float(4))),2) as [Average Note]
+from
+	FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on P.PROFESSION = G.PROFESSION
+	inner join STUDENT S on G.IDGROUP = S.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+where
+	F.FACULTY_NAME like '“Œ¬'
+group by
+	F.FACULTY_NAME,
+	PR.SUBJECT,
+	G.PROFESSION
+except
+select
+	F.FACULTY_NAME as Faculty,
+	PR.SUBJECT as Subject,
+	G.PROFESSION as Profession,
+	round(avg(cast(PR.NOTE as float(4))),2) as [Average Note]
+from
+	FACULTY F
+	inner join PROFESSION P on F.FACULTY = P.FACULTY
+	inner join GROUPS G on P.PROFESSION = G.PROFESSION
+	inner join STUDENT S on G.IDGROUP = S.IDGROUP
+	inner join PROGRESS PR on PR.IDSTUDENT = S.IDSTUDENT
+where
+	F.FACULTY_NAME like '’“Ë“'
+group by
+	F.FACULTY_NAME,
+	PR.SUBJECT,
+	G.PROFESSION
