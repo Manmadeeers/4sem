@@ -48,34 +48,14 @@ const RegistrationForm = ()=>{
             break;
         }
     };
+    let hasErrors = false;
+    const handleSubmit = (e:any)=>{
+        e.preventDefault();
 
-    const handleSubmit = async(event:React.FormEvent)=>{
-        event.preventDefault();
-        let hasErrors = false;
-        const newErrors = {...errors};
         Object.keys(formData).forEach(key=>{
-            switch(key){
-                case 'name':
-                    newErrors.nameError = validateName(formData.name);
-                break;
-                case 'email':
-                    newErrors.nameError = validateEmail(formData.email);
-                break;
-                case 'password':
-                    newErrors.passwordError = validatePassword(formData.password);
-                break;
-                case 'confirmPassword':
-                    newErrors.confirmPasswordError = formData.confirmPassword!==formData.password?'Passwords are not equal':'';
-                break;
-            }
-            if(newErrors[key as keyof typeof newErrors]){
-                hasErrors = true;
-            }
+            const value = formData[key];
         })
-        setErrors(newErrors);
-        if(!hasErrors){
-            setSuccessMessage("Registration successful!");
-        }
+
 
     }
 
@@ -84,10 +64,10 @@ const RegistrationForm = ()=>{
         <div className="formContainer">
             <h2>Registration</h2>
             {successMessage&&(
-                <div className="success-message">{successMessage}</div>
+                <div className="success-message">{!hasErrors?'':`${successMessage}`}</div>
             )}
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>  
                 <div className="form-group">
                     <label htmlFor="name">Name:</label>
                     <input id="name"
