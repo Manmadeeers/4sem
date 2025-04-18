@@ -1,30 +1,34 @@
 ﻿namespace DAL_Celebrity
 {
-    public  class Celebrity
+    public interface IMix<T1, T2>
     {
-        public Celebrity() { this.FullName = string.Empty;this.Nationality = string.Empty; }
-        public int Id { get; set; }
-        public string FullName { get; set; }
-        public string Nationality { get; set; }
-
-        public string? ReqPhotoPath { get; set; }
-
-        //public  virtual bool Update(Celebrity celebrity);
+        List<T2>GetLifeEventsByCelebrityId(int celebrityId);
+        T1? GetCelebrityByLifeEventId(int lifeEventId);
     }
 
-    public class LifeEvent
+    public interface ICelebrity<T1>:IDisposable
     {
-        public LifeEvent() { }
+        List<T1> GetAllCelebrities();
+        T1? GetCelebrityById(int id);
+        bool DeleteCelebrity(int id);
+        bool AddCelebrity(T1 celebrity);
+        bool UpdateCelebrity(int id,T1 celebrity);
+        int GetCelebrityByName(string name);
+    }
 
-        public int Id { get; set; }
-        public int CelebrityId { get; set;}
-        public DateTime Date { get; set;}
+    public interface ILifeEvent<T2> 
+    {
+        List<T2> GetAllLifeEvents();
+        T2? GetLifeEventById(int lifeEventId);
+        bool DeleteLifeEvent(int lifeEventId);
+        bool AddLifeEvent(T2 lifeEvent);
+        bool UpdateLifeEvent(int id,T2 lifeEvent);
 
-        public string Description { get; set; }
+    }
 
-        public string? ReqPhotoPath { get; set; }
+    public interface IRepository<T1, T2> : IMix<T1, T2>, ICelebrity<T1>, ILifeEvent<T2>
+    {
 
-        //public virtual bool Update(LifeEvent lifeEvent);
     }
 
 }

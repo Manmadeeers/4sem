@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C139424-B8D9-4B67-8C21-CEBDDB9356BB}|DAL_Celebrity\\DAL_Celebrity.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_6\\aspa_006\\dal_celebrity\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C139424-B8D9-4B67-8C21-CEBDDB9356BB}|DAL_Celebrity\\DAL_Celebrity.csproj|solutionrelative:dal_celebrity\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C139424-B8D9-4B67-8C21-CEBDDB9356BB}|DAL_Celebrity\\DAL_Celebrity.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_6\\aspa_006\\dal_celebrity\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C139424-B8D9-4B67-8C21-CEBDDB9356BB}|DAL_Celebrity\\DAL_Celebrity.csproj|solutionrelative:dal_celebrity\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\DAL_Celebrity\\Class1.cs",
-              "RelativeDocumentMoniker": "DAL_Celebrity\\Class1.cs",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\DAL_Celebrity\\Class1.cs",
-              "RelativeToolTip": "DAL_Celebrity\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA4AAAAAAAAAA==",
+              "Title": "DAL.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\DAL_Celebrity\\DAL.cs",
+              "RelativeDocumentMoniker": "DAL_Celebrity\\DAL.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\DAL_Celebrity\\DAL.cs",
+              "RelativeToolTip": "DAL_Celebrity\\DAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T10:07:08.843Z",
               "EditorCaption": ""
