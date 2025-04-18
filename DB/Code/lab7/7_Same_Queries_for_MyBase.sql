@@ -5,24 +5,26 @@ use FIL_MyBase;
 select
 	Pr.Product_name as Product,
 	Pr.Price as Price,
+	Pr.Product_id as Id,
 	sum(Pr.Stock_quantity) as Quantity
 from 
 	Products Pr
 where 
 	Pr.Product_name like 'Laptop'
-group by rollup( Pr.Product_name, Pr.Price )
+group by rollup( Pr.Product_name,Pr.Price,Pr.Product_id )
 
 /*2 cube*/
 
 select
 	Pr.Product_name as Product,
 	Pr.Price as Price,
+	Pr.Product_id as Id,
 	sum(Pr.Stock_quantity) as Quantity
 from 
 	Products Pr
 where 
 	Pr.Product_name like 'Laptop'
-group by cube( Pr.Product_name, Pr.Price )
+group by cube( Pr.Product_name,Pr.Price,Pr.Product_id )
 
 /*3 union of two selects*/
 

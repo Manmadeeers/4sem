@@ -1,6 +1,6 @@
 ﻿namespace DAL_Celebrity
 {
-    public class Celebrity
+    public  class Celebrity
     {
         public Celebrity() { this.FullName = string.Empty;this.Nationality = string.Empty; }
         public int Id { get; set; }
@@ -9,7 +9,7 @@
 
         public string? ReqPhotoPath { get; set; }
 
-        public virtual bool Update(Celebrity celebrity);
+        //public  virtual bool Update(Celebrity celebrity);
     }
 
     public class LifeEvent
@@ -24,7 +24,7 @@
 
         public string? ReqPhotoPath { get; set; }
 
-        public virtual bool Update(LifeEvent lifeEvent);
+        //public virtual bool Update(LifeEvent lifeEvent);
     }
 
 }
