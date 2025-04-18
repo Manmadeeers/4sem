@@ -16,12 +16,14 @@ namespace DAL_Celebrity_MSSQL
         {
             if (this.context.Celebrities.Add(celebrity) is not null)
             {
+                context.SaveChanges();
                 return true;
             }
             else
             {
                 return false;
             }
+            
         }
 
         public bool DeleteCelebrity(int id)
@@ -30,6 +32,7 @@ namespace DAL_Celebrity_MSSQL
             if (celebrity is not null)
             {
                 this.context.Celebrities.Remove(celebrity);
+                context.SaveChanges();
                 return true;
 
             }
@@ -51,6 +54,7 @@ namespace DAL_Celebrity_MSSQL
             {
                 celeb = celebrity;
                 this.context.Celebrities.Update(celeb);
+                context.SaveChanges();
                 return true;
             }
             else
@@ -68,6 +72,7 @@ namespace DAL_Celebrity_MSSQL
         {
             if (this.context.LifeEvents.Add(lifeEvent) is not null)
             {
+                context.SaveChanges();
 
                 return true;
             }
@@ -83,6 +88,7 @@ namespace DAL_Celebrity_MSSQL
             if (lifeEvent != null)
             {
                 this.context.LifeEvents.Remove(lifeEvent);
+                context.SaveChanges();
                 return true;
             }
             else
@@ -103,6 +109,7 @@ namespace DAL_Celebrity_MSSQL
             {
                 lifeEv = lifeEvent;
                 this.context.LifeEvents.Update(lifeEv);
+                context.SaveChanges();
                 return true;
             }
             else

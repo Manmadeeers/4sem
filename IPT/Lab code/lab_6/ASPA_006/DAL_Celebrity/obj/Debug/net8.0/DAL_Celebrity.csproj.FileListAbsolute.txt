@@ -1,0 +1,12 @@
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\bin\Debug\net8.0\DAL_Celebrity.deps.json
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\bin\Debug\net8.0\DAL_Celebrity.dll
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\bin\Debug\net8.0\DAL_Celebrity.pdb
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.AssemblyInfoInputs.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.AssemblyInfo.cs
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.csproj.CoreCompileInputs.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.sourcelink.json
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.dll
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\refint\DAL_Celebrity.dll
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.pdb
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_6\ASPA_006\DAL_Celebrity\obj\Debug\net8.0\ref\DAL_Celebrity.dll
