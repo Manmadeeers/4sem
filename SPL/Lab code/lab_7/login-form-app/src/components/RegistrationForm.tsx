@@ -120,7 +120,7 @@ const RegistrationForm = () => {
         
     }
 
-    const {pending} = useFormStatus()
+  
 
     const handleChange = (e:keyof typeof formData) => (event:React.ChangeEvent<HTMLInputElement>)=>{
         switch(e){
