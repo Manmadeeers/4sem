@@ -77,5 +77,49 @@ print 'Fetch status: '+cast(@@fetch_status as varchar(20));
 print 'Procedure level: '+cast(@@nestlevel as varchar(3));
 
 
-/*4 some math*/
+/*4.1 some math*/
+
+declare @t int = 10;
+declare @x float = 8.2;
+declare @z float; 
+
+if (@t>@x) set @z = sin(@t)*sin(@t)
+else if(@t<@x) set @z = 4*(@t+@x)
+else if(@t=@x)set @z = 1-exp(@x-2)
+
+select @z as [Counted value]
+
+/*4.2 name split*/
+
+SELECT 
+    STUDENT.NAME AS [Full name],
+    LEFT( STUDENT.NAME, CHARINDEX(' ',  STUDENT.NAME) - 1) + ' ' +
+    SUBSTRING( SUBSTRING( STUDENT.NAME, CHARINDEX(' ',  STUDENT.NAME) + 1,LEN( STUDENT.NAME) - CHARINDEX(' ',  STUDENT.NAME)),1,1) 
+	+ '. ' +
+    SUBSTRING(SUBSTRING( STUDENT.NAME,CHARINDEX(' ',  STUDENT.NAME, CHARINDEX(' ',  STUDENT.NAME) + 1) + 1,LEN( STUDENT.NAME)),1,1)
+	+ '.' AS Initials
+FROM STUDENT;
+
+/*4.3 students bd search*/
+
+
+select
+	STUDENT.NAME as [Student's full name],
+	 year(getdate())- year(STUDENT.BDAY) as [Student's age]
+from
+	STUDENT
+where
+	month(STUDENT.BDAY)=month(getdate())+1
+/*4.4 Search for the exam day*/
+
+
+select
+	GROUPS.IDGROUP as [Group],
+	day(PROGRESS.PDATE) as [Exam Day],
+	PROGRESS.PDATE as [Exam date]
+from
+	GROUPS inner join STUDENT on GROUPS.IDGROUP = STUDENT.IDGROUP
+	inner join PROGRESS on PROGRESS.IDSTUDENT = STUDENT.IDSTUDENT
+where
+	PROGRESS.SUBJECT like 'ясад'
 
