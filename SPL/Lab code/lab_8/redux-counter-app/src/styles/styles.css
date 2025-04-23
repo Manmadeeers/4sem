@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+.counter{
+    border: 3px solid blue;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 200px;
+}
+span{
+    display:block;
+    flex:1 1 100%;
+    font-size: 25pt;
+    text-align: center;
+}
+button{
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+}
