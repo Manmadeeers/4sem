@@ -1,14 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { IResetPasswordForm ,IValidationErrors} from "./leadingComponentsInterfaces";
 
-interface IResetPasswordForm{
-    email:string;
-}
 
-interface IValidationErrors{
-    [key:string]:string|undefined;
-}
+
 
 const ResetPassword = ()=>{
     const [hasError,setHasError] = useState<boolean>(true);
@@ -55,6 +51,7 @@ const ResetPassword = ()=>{
         if(!hasError){
             setErrorMessage('');
             setSuccessMessage("Reset letter sent to your email");
+            setFormData({email:''});
 
         }
         else{
@@ -79,7 +76,7 @@ const ResetPassword = ()=>{
         <div className="form-container">
             <h2>Reset Password</h2>
             {successMessage&&(<div className="success-message">{successMessage}</div>)}
-            {errorMessage&&(<div className="error-message">{errorMessage}</div>)}
+            {errorMessage&&(<div className="error-message-text">{errorMessage}</div>)}
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>

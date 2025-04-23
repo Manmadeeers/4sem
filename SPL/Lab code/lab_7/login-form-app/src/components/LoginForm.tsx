@@ -1,16 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-interface ILoginForm{
-    email:string,
-    password:string;
-}
-
-interface IValidationErrors {
-    [key: string]: string | undefined;
-}
-
+import { ILoginForm,IValidationErrors } from "./leadingComponentsInterfaces";
 
 
 
@@ -46,7 +37,7 @@ const LoginForm = ()=>{
         if(!hasError){
             setErrorMessage('');
             setSuccessMessage("Log In completed");
-
+            setFormData({email:'',password:''})
         }
         else{
             setSuccessMessage('');
@@ -102,7 +93,7 @@ const LoginForm = ()=>{
         <div className="form-container">
             <h2>Log In</h2>
             {successMessage&&(<div className="success-message">{successMessage}</div>)}
-            {errorMessage&&(<div className="error-message">{errorMessage}</div>)}
+            {errorMessage&&(<div className="error-message-text">{errorMessage}</div>)}
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>

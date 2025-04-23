@@ -1,19 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-interface IRegistrationForm {
-    name: string;
-    email: string;
-    password: string;
-    confirmPassword: string;
-}
-
-interface IValidationErrors {
-    [key: string]: string | undefined;
-}
-
-//that's bullshit. don't do like this pls :))
+import { IRegistrationForm,IValidationErrors } from "./leadingComponentsInterfaces";
 
 
 
@@ -116,7 +104,7 @@ const RegistrationForm = () => {
         if(!hasError){
             setErrorMessage('');
             setSuccessMessage("Sign up completed");
-
+            setFormData({name:'',email:'',password:'',confirmPassword:''})
         }
         else{
             setSuccessMessage('');
