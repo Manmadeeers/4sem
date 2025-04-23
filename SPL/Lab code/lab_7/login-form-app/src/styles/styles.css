@@ -54,6 +54,13 @@
     text-align: center;
     margin-top: 20px;
   }
+
+  .forgot-pass{
+    text-align: left;
+    margin-top: 0;
+    color: rgb(161, 161, 161);
+    display: block;
+  }
   
   .form-links {
     display: flex;

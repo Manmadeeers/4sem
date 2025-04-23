@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useFormStatus } from "react-dom";
 
 interface IRegistrationForm {
     name: string;
@@ -48,6 +47,7 @@ const RegistrationForm = () => {
                 }
                 else {
                     setErrors(prev => ({ ...prev, name: undefined }));
+                    setHasError(false);
                 }
                 break;
             case 'email':
@@ -62,6 +62,7 @@ const RegistrationForm = () => {
                 }
                 else {
                     setErrors(prev => ({ ...prev, email: undefined }));
+                    setHasError(false);
                 }
                 break;
             case 'password':
@@ -83,6 +84,7 @@ const RegistrationForm = () => {
                 }
                 else {
                     setErrors(prev => ({ ...prev, password: undefined }));
+                    setHasError(false);
                 }
                 break;
             case 'confirmPassword':
@@ -90,8 +92,12 @@ const RegistrationForm = () => {
                     setErrors(prev => ({ ...prev, confirmPassword: 'Passwords should match!' }));
                     setHasError(true);
                 }
+                else if(value.length==0){
+                    setErrors(prev=>({...prev,confirmPassword:'You should confirm your password!'}))
+                }
                 else {
                     setErrors(prev => ({ ...prev, confirmPassword: undefined }));
+                    setHasError(false);
                 }
                 break;
         }

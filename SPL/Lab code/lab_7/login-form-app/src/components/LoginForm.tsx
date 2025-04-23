@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface ILoginForm{
     email:string,
@@ -23,8 +24,17 @@ const LoginForm = ()=>{
     const [hasError,setHasError] = useState<boolean>(true);
     const [errors,setErrors] = useState<IValidationErrors>({});
 
-    const handleChange = ()=>{
-
+    const handleChange = (e:keyof typeof formData)=>(event:React.ChangeEvent<HTMLInputElement>)=>{
+        switch(e){
+            case 'email':
+                setFormData(prev=>({...prev,email:event.target.value}));
+                validateField('email',event.target.value);
+            break;
+            case 'password':
+                setFormData(prev=>({...prev,password:event.target.value}));
+                validateField('password',event.target.value);
+            break;
+        }
     }
     const handleSubmit = (ev:React.FormEvent)=>{
         ev.preventDefault();
@@ -35,7 +45,7 @@ const LoginForm = ()=>{
         })
         if(!hasError){
             setErrorMessage('');
-            setSuccessMessage("Sign up completed");
+            setSuccessMessage("Log In completed");
 
         }
         else{
@@ -60,6 +70,7 @@ const LoginForm = ()=>{
                 }
                 else {
                     setErrors(prev => ({ ...prev, email: undefined }));
+                    setHasError(false);
                 }
                 break;
             case 'password':
@@ -81,25 +92,26 @@ const LoginForm = ()=>{
                 }
                 else {
                     setErrors(prev => ({ ...prev, password: undefined }));
+                    setHasError(false);
                 }
                 break;
         }
 
     }
     return(
-        <div className="formContainter">
+        <div className="form-container">
             <h2>Log In</h2>
             {successMessage&&(<div className="success-message">{successMessage}</div>)}
             {errorMessage&&(<div className="error-message">{errorMessage}</div>)}
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
                     <input
                     id="email"
                     type="email"
-                    onChange={handleChange}
+                    onChange={handleChange('email')}
                     value={formData.email}
-                    className={`from-input ${errors.email?'error':''}`}
+                    className={`form-input ${errors.email?'error':''}`}
                     ></input>
                     {errors.email&&(<p className="error-message">{errors.email}</p>)}
                 </div>
@@ -108,11 +120,15 @@ const LoginForm = ()=>{
                     <input
                     id="password"
                     type="password"
-                    onChange={handleChange}
+                    onChange={handleChange('password')}
                     value={formData.password}
                     className={`form-input ${errors.password?'error':''}`}
                     ></input>
+                    {errors.password&&(<p className="error-message">{errors.password}</p>)}
                 </div>
+                <p className="forgot-pass">Forgot password?<Link to="/reset-pass/">Reset</Link></p>
+                <button type="submit" className="btn-submit">Log in</button>
+                <p className="switch-form">Don't have an account?<Link to="/sign-up/">Sign Up</Link></p>
             </form>
         </div>
     )
