@@ -123,3 +123,87 @@ from
 where
 	PROGRESS.SUBJECT like 'ясад'
 
+
+/*5 if...else usage with data analysis*/
+
+declare @total_students int  = (select count(*) from STUDENT);
+select @total_students as [Total students]
+
+if(@total_students<100)
+begin
+	declare @average_note float = (select avg(PROGRESS.NOTE) from PROGRESS);
+	print 'There is less then 100 students. Average exam note is : ' + cast(@average_note as varchar(10));
+end
+else
+print 'There is 100 students or more. The exact amount of students: ' + cast( @total_students as varchar(10));
+
+
+/*6 exam marks analysis */
+
+select case
+	when PROGRESS.NOTE between 4 and 5 then 'Bad'
+	when PROGRESS.NOTE between 5 and 7 then 'Mid'
+	when PROGRESS.NOTE between 7 and 9 then 'Good'
+	when PROGRESS.NOTE between 9 and 10 then 'Excelent'
+	else 'What the hell is that?!'
+	end [Description], count(*)[Notes Quantity]
+from 
+	PROGRESS
+group by case
+	when PROGRESS.NOTE between 4 and 5 then 'Bad'
+	when PROGRESS.NOTE between 5 and 7 then 'Mid'
+	when PROGRESS.NOTE between 7 and 9 then 'Good'
+	when PROGRESS.NOTE between 9 and 10 then 'Excelent'
+	else 'What the hell is that?!'
+	end
+
+/*7 temp table creation*/
+
+
+create table #temp(
+id int ,
+name varchar(10),
+age int
+);
+
+
+set nocount on;
+declare @i int = 0;
+while @i<10
+	begin
+	insert #temp values (@i,'John',@i*10);
+	set @i = @i+1;
+	end
+
+select * from #temp
+
+/*8  return usage*/
+
+
+declare @F int = 1;
+
+print @F+1;
+print @F+2;
+print @F+3;
+return;
+print @F+4
+
+
+/*9 error handling*/
+
+
+begin try
+	update FACULTY set FACULTY = 'FIT' where FACULTY = 'урХр'
+end try
+
+begin catch
+	print 'Error number: ' + cast(error_number() as varchar(10));
+	print 'Error message: '+cast(error_message() as varchar(1000));
+	print 'Line where error occured: ' + cast(error_line() as varchar(3));
+	print 'Error procedure: ' + cast(error_procedure() as varchar(100));
+	print 'Level of severity: '+ cast(error_severity() as varchar(100));
+	print 'Error state: ' + cast(error_state() as varchar(3));
+end catch
+
+select * from FACULTY;
+
