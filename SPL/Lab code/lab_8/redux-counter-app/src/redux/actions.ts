@@ -1,14 +1,13 @@
-import { INCREMENT,DECREMENT,RESET } from "./types";
+import { INCREMENRT,DECREMENT,RESET } from "./types";
 
+export const increment = ()=>{
+    return {type: INCREMENRT};
+}
 
-export const increment = ():{type:typeof INCREMENT}=>({
-    type:INCREMENT
-})
+export const decrement = ()=>{
+    return {type: DECREMENT};
+}
 
-export const decrement = (): { type: typeof DECREMENT } => ({
-    type: DECREMENT
-  });
-  
-  export const reset = (): { type: typeof RESET } => ({
-    type: RESET
-  });
+export const reset = ()=>{
+    return {type: RESET};
+}

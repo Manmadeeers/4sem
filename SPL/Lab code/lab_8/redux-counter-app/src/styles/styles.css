@@ -6,7 +6,7 @@
 .counter{
     border: 3px solid blue;
     border-radius: 5px;
-    padding: 20px;
+    padding: 50px;
     display: flex;
     flex-flow: row wrap;
     height: 200px;
