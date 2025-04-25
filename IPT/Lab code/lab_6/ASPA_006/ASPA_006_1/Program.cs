@@ -30,7 +30,7 @@ internal class Program
 
         //get all celebrities
         celebrities.MapGet("/", (IRepository repo) => repo.GetAllCelebrities());
-
+            
         //get celebrity by it's id
 
         celebrities.MapGet("/{id:int:min(1)}", (IRepository repo, int id) =>
