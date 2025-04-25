@@ -9,8 +9,8 @@ fetch("/api/celebrities").then(reponse => reponse.json()).then(
             img.id = c.id;
             img.title = "Click to get more info";
             img.onload = function () { LoadPhoto(this,200,0)}
-            img.onclick = showInfo(c.id);
-            grid.appendChild(img)
+            img.onclick = () => showInfo(c.id);
+            grid.appendChild(img) 
         })
     }
 ).catch(err=>console.error("Failed to fetch",err))
@@ -36,19 +36,27 @@ function showInfo(id) {
         return;
     }
 
-    fetch(`/api/LifeEvents/Celebrities/${id}`).then(
-        reponse => response.json()
+    fetch(`/api/lifeEvents/Celebrities/${id}`).then(
+        response => response.json()
     ).then(data => {
+        if (!data) {
+            throw new Error("No data for this celebrity")
+        }
         const container = document.getElementById('celebrityInfo');
-        const text = document.createElement('p');
+        const Errtext = document.createElement('p');
         if (data.length === 0) {
-            text.innerHTML = "No data for this celebrity";
+            Errtext.innerHTML = "No data for this celebrity";
             container.appendChild(text);
         }
         data.forEach(l => {
-            text.innerHTML += `Full Name: ${celeb.fillName}\n`;
-            text.innerHTML+=`Event's date:'`
+            const text = document.createElement('p');
+            console.log(l);
+            console.log(celeb);
+            text.innerHTML += `Full Name: ${celeb.fullName}\n`;
+            text.innerHTML += `Event's date: ${l.date.split('T')[0]}\n`;
+            text.innerHTML+=`What happened: ${l.description}\n`
+            container.appendChild(text);
         })
-    })
+    }).catch(err => console.error(`No data for celebrity with id ${id}`));
 
 }

@@ -10,3 +10,11 @@
   border: 2px solid #007bff;
 
 }
+
+#celebrityInfo{
+    display:flex;
+    flex-flow:row wrap;
+}
+#celebrityInfo p{
+    flex:1 1 100%;
+}

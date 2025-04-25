@@ -75,7 +75,7 @@
                 context.LifeEvents.Add(l2);
             }
             {//7
-                Celebrity c = new Celebrity() { FullName = "Edsger Dijsktra", Nationality = "NL", ReqPhotoPath = puri("Dijsktra.jpg") };
+                Celebrity c = new Celebrity() { FullName = "Edsger Dijsktra", Nationality = "NL", ReqPhotoPath = puri("Dijkstra.jpg") };
                 LifeEvent l1 = new LifeEvent() { CelebrityId = 7, Date = new DateTime(1930, 5, 11), Description = "Дата Рождения", ReqPhotoPath = null };
                 LifeEvent l2 = new LifeEvent() { CelebrityId = 7, Date = new DateTime(2002, 8, 6), Description = "Pogib", ReqPhotoPath = null };
 

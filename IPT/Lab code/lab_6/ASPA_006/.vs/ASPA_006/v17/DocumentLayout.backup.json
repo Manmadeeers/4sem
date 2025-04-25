@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{C00BFA70-F087-4705-8D79-9EF7C55BE91D}|ASPA_006_1\\ASPA_006_1.csproj|solutionrelative:aspa_006_1\\wwwroot\\js\\celebrities.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C00BFA70-F087-4705-8D79-9EF7C55BE91D}|ASPA_006_1\\ASPA_006_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_6\\aspa_006\\aspa_006_1\\app.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{C00BFA70-F087-4705-8D79-9EF7C55BE91D}|ASPA_006_1\\ASPA_006_1.csproj|solutionrelative:aspa_006_1\\app.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C00BFA70-F087-4705-8D79-9EF7C55BE91D}|ASPA_006_1\\ASPA_006_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_6\\aspa_006\\aspa_006_1\\wwwroot\\styles\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C00BFA70-F087-4705-8D79-9EF7C55BE91D}|ASPA_006_1\\ASPA_006_1.csproj|solutionrelative:aspa_006_1\\wwwroot\\styles\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -17,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{C00BFA70-F087-4705-8D79-9EF7C55BE91D}|ASPA_006_1\\ASPA_006_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_6\\aspa_006\\aspa_006_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C00BFA70-F087-4705-8D79-9EF7C55BE91D}|ASPA_006_1\\ASPA_006_1.csproj|solutionrelative:aspa_006_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76F1077B-7AF2-405C-8EF5-9392C998D96D}|DAL_Celebrity_MSSQL\\DAL_Celebrity_MSSQL.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_6\\aspa_006\\dal_celebrity_mssql\\init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76F1077B-7AF2-405C-8EF5-9392C998D96D}|DAL_Celebrity_MSSQL\\DAL_Celebrity_MSSQL.csproj|solutionrelative:dal_celebrity_mssql\\init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76F1077B-7AF2-405C-8EF5-9392C998D96D}|DAL_Celebrity_MSSQL\\DAL_Celebrity_MSSQL.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_6\\aspa_006\\dal_celebrity_mssql\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,17 +38,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "app.http",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\app.http",
+              "RelativeDocumentMoniker": "ASPA_006_1\\app.http",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\app.http",
+              "RelativeToolTip": "ASPA_006_1\\app.http",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-04-25T16:17:13.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Init.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\DAL_Celebrity_MSSQL\\Init.cs",
+              "RelativeDocumentMoniker": "DAL_Celebrity_MSSQL\\Init.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\DAL_Celebrity_MSSQL\\Init.cs",
+              "RelativeToolTip": "DAL_Celebrity_MSSQL\\Init.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwE0AAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T15:51:18.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\styles\\style.css",
               "RelativeDocumentMoniker": "ASPA_006_1\\wwwroot\\styles\\style.css",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\styles\\style.css",
               "RelativeToolTip": "ASPA_006_1\\wwwroot\\styles\\style.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-25T14:34:08.971Z",
               "EditorCaption": ""
@@ -53,27 +87,27 @@
               "RelativeDocumentMoniker": "ASPA_006_1\\wwwroot\\js\\celebrities.js",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\js\\celebrities.js",
               "RelativeToolTip": "ASPA_006_1\\wwwroot\\js\\celebrities.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDsAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-25T14:17:09.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "ASPA_006_1\\wwwroot\\index.html",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\index.html",
               "RelativeToolTip": "ASPA_006_1\\wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-04-25T14:16:09.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\DAL_Celebrity_MSSQL\\Repository.cs",
               "RelativeDocumentMoniker": "DAL_Celebrity_MSSQL\\Repository.cs",
@@ -86,13 +120,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\Program.cs",
               "RelativeDocumentMoniker": "ASPA_006_1\\Program.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\Program.cs",
               "RelativeToolTip": "ASPA_006_1\\Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAQwJ0AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T17:24:33.379Z",
               "EditorCaption": ""
