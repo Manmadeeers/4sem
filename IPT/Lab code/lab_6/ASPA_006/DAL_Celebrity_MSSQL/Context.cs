@@ -24,8 +24,7 @@ namespace DAL_Celebrity_MSSQL
         {
             if (this.ConnectionString is null)
             {
-                this.ConnectionString = @"Data source = localhost;Database = Lab6_Db;" +
-            @"TrustServerCertificate = true;Trusted_Connection = true";
+                this.ConnectionString = "Server=DESKTOP-I\\SARVAR; Database=Lab6_Db; Trusted_Connection=true; TrustServerCertificate=Yes";
             }
 
             optionsBuilder.UseSqlServer(this.ConnectionString);

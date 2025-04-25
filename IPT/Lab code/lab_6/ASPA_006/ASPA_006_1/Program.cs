@@ -7,7 +7,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string CS = "Server=(LocalDb)\\MSSQLLocalDB; Database = Lab6_Db; TrustServerCertificate=True; Trusted_Connection=true";
+        string CS = "Server=DESKTOP-I\\SARVAR; Database=Lab6_Db; Trusted_Connection=true; TrustServerCertificate=Yes";
         Init init = new Init(CS);
         Init.Execute(create: true, delete: true);
         IConfiguration configuration = new ConfigurationBuilder().AddJsonFile("Celebrities.config.json").Build();
@@ -21,23 +21,35 @@ internal class Program
 
         var app = builder.Build();
 
+        app.UseDefaultFiles();
+        app.UseStaticFiles();
+
         app.UseExceptionHandler("/Errors");
-        app.MapGet("/", () => "Hello World!");
 
         var celebrities = app.MapGroup("/api/Celebrities");
 
         //get all celebrities
-        celebrities.MapGet("/", (IRepository repo) => repo.GetAllCelebrities);
+        celebrities.MapGet("/", (IRepository repo) => repo.GetAllCelebrities());
 
         //get celebrity by it's id
 
-        celebrities.MapGet("/{id:int:min(1)}", (IRepository repo, int id) => repo.GetCelebrityById(id));
+        celebrities.MapGet("/{id:int:min(1)}", (IRepository repo, int id) =>
+        {
+            if (repo.GetCelebrityById(id) != null)
+            {
+                return repo.GetCelebrityById(id);
+            }
+            else
+            {
+                throw new GetByIdException($"Failed to get celebrity by {id} id. Such id does not exist");
+            }
+        });
 
         //get celebrity by event's id
 
         celebrities.MapGet("/LifeEvents/{id:int:min(1)}", (IRepository repo, int id) =>
         {
-            Celebrity? celeb = repo.GetCelebrityById(id);
+            Celebrity? celeb = repo.GetCelebrityByLifeEventId(id);
             if(celeb != null)
             {
                 return celeb;

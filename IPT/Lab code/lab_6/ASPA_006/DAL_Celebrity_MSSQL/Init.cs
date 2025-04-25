@@ -2,8 +2,7 @@
 {
     public class Init
     {
-        static string connectionString = @"Data source = localhost;Database = Lab6_Db;" +
-            @"TrustServerCertificate = true;Trusted_Connection = true";
+        static string connectionString = "Server=DESKTOP-I\\SARVAR; Database=Lab6_Db; Trusted_Connection=true; TrustServerCertificate=Yes";
 
         public Init() { }
         public Init(string connStr) { connectionString = connStr; }

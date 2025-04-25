@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\js\\celebrities.js",
+      "PackagePath": "staticwebassets\\js\\celebrities.js"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\styles\\style.css",
+      "PackagePath": "staticwebassets\\styles\\style.css"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ASPA_006_1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.ASPA_006_1.props",
+      "PackagePath": "build\\ASPA_006_1.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ASPA_006_1.props",
+      "PackagePath": "buildMultiTargeting\\ASPA_006_1.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.ASPA_006_1.props",
+      "PackagePath": "buildTransitive\\ASPA_006_1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -45,14 +45,12 @@ namespace DAL_Celebrity_MSSQL
 
         public bool UpdateCelebrity(int id, Celebrity celebrity)
         {
-            if (id != celebrity.Id || id == 0 || celebrity.Id == 0)
-            {
-                return false;
-            }
             Celebrity? celeb = this.context.Celebrities.FirstOrDefault(c => c.Id == id);
             if (celeb != null)
             {
-                celeb = celebrity;
+                celeb.FullName = celebrity.FullName;
+                celeb.Nationality = celebrity.Nationality;
+                celeb.ReqPhotoPath = celebrity.ReqPhotoPath;
                 this.context.Celebrities.Update(celeb);
                 context.SaveChanges();
                 return true;
@@ -99,11 +97,6 @@ namespace DAL_Celebrity_MSSQL
 
         public bool UpdateLifeEvent(int id, LifeEvent lifeEvent)
         {
-            if (id != lifeEvent.Id || id == 0 || lifeEvent.Id == 0)
-            {
-                return false;
-            }
-
             LifeEvent? lifeEv = this.context.LifeEvents.FirstOrDefault(l => l.Id == id);
             if(lifeEv != null)
             {
@@ -126,7 +119,7 @@ namespace DAL_Celebrity_MSSQL
 
         public Celebrity? GetCelebrityByLifeEventId(int lifeEventId)
         {
-            LifeEvent? lifeEvent = this.context.LifeEvents.FirstOrDefault(l=>l.Id==lifeEventId);
+            LifeEvent? lifeEvent = this.context.LifeEvents.FirstOrDefault(l => l.Id == lifeEventId);
             if(lifeEvent != null)
             {
                 return this.context.Celebrities.FirstOrDefault(c => c.Id == lifeEvent.CelebrityId);

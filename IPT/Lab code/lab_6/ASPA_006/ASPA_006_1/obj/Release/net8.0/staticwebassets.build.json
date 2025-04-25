@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "/Yi9TW6nJa2NXbwUS0LUXuPq/t+Sj6nWheAGz+w1/8A=",
+  "Source": "ASPA_006_1",
+  "BasePath": "_content/ASPA_006_1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPA_006_1\\wwwroot",
+      "Source": "ASPA_006_1",
+      "ContentRoot": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA_006_1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\index.html",
+      "SourceId": "ASPA_006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA_006_1",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\js\\celebrities.js",
+      "SourceId": "ASPA_006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA_006_1",
+      "RelativePath": "js/celebrities.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\celebrities.js"
+    },
+    {
+      "Identity": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\styles\\style.css",
+      "SourceId": "ASPA_006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\ASPA_006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA_006_1",
+      "RelativePath": "styles/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\style.css"
+    }
+  ]
+}
