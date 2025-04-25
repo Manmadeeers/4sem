@@ -1,0 +1,7 @@
+﻿{
+  "Celebrities": {
+    "PhotosFolder": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_6\\ASPA_006\\Celebrities_Photos",
+    "ConnectionString": "Server=(LocalDb)\\MSSQLLocalDB; Database = Lab6_Db; TrustServerCertificate=True; Trusted_Connection=true"
+  }
+
+}

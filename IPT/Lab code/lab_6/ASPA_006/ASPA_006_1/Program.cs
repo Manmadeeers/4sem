@@ -1,6 +1,8 @@
 using ASPA_006_1;
 using DAL_Celebrity_MSSQL;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.Options;
+using Exceptions;
 internal class Program
 {
     private static void Main(string[] args)
@@ -33,19 +35,62 @@ internal class Program
 
         //get celebrity by event's id
 
-        celebrities.MapGet("/LifeEvents/{id:int:min(1)}", (IRepository repo, int id) => repo.GetCelebrityByLifeEventId(id));
+        celebrities.MapGet("/LifeEvents/{id:int:min(1)}", (IRepository repo, int id) =>
+        {
+            Celebrity? celeb = repo.GetCelebrityById(id);
+            if(celeb != null)
+            {
+                return celeb;
+            }
+            else
+            {
+                throw new GetByIdException($"Could not get a celebrity by {id} id . Such id does not exist");
+            }
+        });
 
         //delete celebrity by it's id
 
-        celebrities.MapDelete("/{id:int:min(1)}", (IRepository repo, int id) => repo.DeleteCelebrity(id));
+        celebrities.MapDelete("/{id:int:min(1)}", (IRepository repo, int id) =>
+        {
+            if (repo.DeleteCelebrity(id))
+            {
+                return $"Celebrity with id {id} was successfully deleted!";
+            }
+            else
+            {
+                throw new DeleteByIdException($"Failed to delete celebrity by {id} id. Celebrity with such id does not exist");
+            }
+        });
 
         //add a new celebrity
 
-        celebrities.MapPost("/", (IRepository repo, Celebrity celeb) => repo.AddCelebrity(celeb));
+        celebrities.MapPost("/", (IRepository repo, Celebrity celeb) =>
+        {
+            if (repo.AddCelebrity(celeb))
+            {
+                celeb.Id = repo.GetCelebrityByName(celeb.FullName);
+                return celeb;
+            }
+            else
+            {
+                throw new AddException("Failed to add celebrity");
+            }
+        });
 
         //change celebrity by it's id
 
-        celebrities.MapPut("/{id:int:min(1)}", (IRepository repo, int id, Celebrity newCeleb) => repo.UpdateCelebrity(id, newCeleb));
+        celebrities.MapPut("/{id:int:min(1)}", (IRepository repo, int id, Celebrity newCeleb) =>
+        {
+            if(repo.UpdateCelebrity(id, newCeleb))
+            {
+                newCeleb.Id = repo.GetCelebrityByName(newCeleb.FullName);
+                return newCeleb;
+            }
+            else
+            {
+                throw new UpdateException($"Failed to update celebrity with id {id}. Something went wrong");
+            }
+        });
 
         //get photo by filename
 
@@ -83,24 +128,103 @@ internal class Program
 
         //get lifeevent by it's id
 
-        lifeEvents.MapGet("/{id:int:min(1)}", (IRepository repo, int id) => repo.GetLifeEventById(id));
+        lifeEvents.MapGet("/{id:int:min(1)}", (IRepository repo, int id) =>
+        {
+            LifeEvent?lifeEvent = repo.GetLifeEventById(id);
+            if (lifeEvent != null)
+            {
+                return lifeEvent;
+            }
+            else
+            {
+                throw new GetByIdException($"Failed to get LifeEvent by {id} id");
+            }
+        });
 
         //get all lifeevents by elebritie's id
 
-        lifeEvents.MapGet("/Celebrities/{id:int:min(1)}", (IRepository repo, int id) => repo.GetLifeEventsByCelebrityId(id));
+        lifeEvents.MapGet("/Celebrities/{id:int:min(1)}", (IRepository repo, int id) =>
+        {
+            List<LifeEvent>lifeEventList = repo.GetLifeEventsByCelebrityId(id);
+            if (lifeEventList.Count == 0)
+            {
+                throw new GetByIdException("Failed to get life events by celebritie's id. Something went wrong");
+            }
+            else
+            {
+                return lifeEventList;
+            }
+        });
 
         //delete lifeevent by it's id
 
 
-        lifeEvents.MapDelete("/{id:int:min(1)}", (IRepository repo, int id) => repo.DeleteLifeEvent(id));
+        lifeEvents.MapDelete("/{id:int:min(1)}", (IRepository repo, int id) =>
+        {
+            if (repo.DeleteLifeEvent(id))
+            {
+                return $"Life Event with id {id} was deleted";
+            }
+            else
+            {
+                throw new DeleteByIdException($"Failed to delete life event by id {id} such id does not exist");
+            }
+        });
 
         //add new lifeevent
 
-        lifeEvents.MapPost("/",(IRepository repo,LifeEvent LifeEvent)=>repo.AddLifeEvent(LifeEvent));
+        lifeEvents.MapPost("/",(IRepository repo,LifeEvent LifeEvent) =>
+        {
+            if (repo.AddLifeEvent(LifeEvent))
+            {
+                return LifeEvent;
+            }
+            else
+            {
+                throw new AddException("Failed to add life event. Something went wrong");
+            }
+        });
 
         //change lifeevent by it's id
 
-        lifeEvents.MapPut("/{id:int:min(1)}", (IRepository repo, int id, LifeEvent newEvent) => repo.UpdateLifeEvent(id, newEvent));
+        lifeEvents.MapPut("/{id:int:min(1)}", (IRepository repo, int id, LifeEvent newEvent) =>
+        {
+            if(repo.UpdateLifeEvent(id, newEvent))
+            {
+                return newEvent;
+            }
+            else
+            {
+                throw new UpdateException($"Failed to update celebrity with id {id}. Something went wrong");
+            }
+        });
+
+
+        app.Map("/Errors", (HttpContext ctx) =>
+        {
+            Exception? ex = ctx.Features.Get<IExceptionHandlerFeature>()?.Error;
+            IResult rc = Results.Problem(detail: ex.Message, instance: app.Environment.EnvironmentName, title: "ASPA006", statusCode: 500);
+            if (ex != null)
+            {
+                if(ex is AddException )
+                {
+                    rc = Results.NotFound(ex.Message);
+                }
+                if(ex is DeleteByIdException)
+                {
+                    rc= Results.NotFound(ex.Message);
+                }
+                if(ex is UpdateException)
+                {
+                    rc = Results.NotFound(ex.Message);
+                }
+                if(ex is GetByIdException)
+                {
+                    rc = Results.NotFound(ex.Message);
+                }
+            }
+            return rc;
+        });
 
         app.Run();
     }

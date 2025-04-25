@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
+using Exceptions;
 namespace DAL_Celebrity_MSSQL
 {
     public interface IRepository : DAL_Celebrity.IRepository<Celebrity, LifeEvent> { }
