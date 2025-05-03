@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\views\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\views\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\views\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\views\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\viewmodels\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\viewmodels\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -11,24 +27,8 @@
       "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\viewmodels\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\viewmodels\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\views\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\views\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\helpers\\relaycomand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\helpers\\relaycomand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\views\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\views\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-5\\softwareshop\\softwareshop\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -46,33 +46,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LogInViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\ViewModels\\LogInViewModel.cs",
-              "RelativeDocumentMoniker": "SoftwareShop\\ViewModels\\LogInViewModel.cs",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\ViewModels\\LogInViewModel.cs",
-              "RelativeToolTip": "SoftwareShop\\ViewModels\\LogInViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T19:30:31.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "LogIn.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Views\\LogIn.xaml.cs",
               "RelativeDocumentMoniker": "SoftwareShop\\Views\\LogIn.xaml.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Views\\LogIn.xaml.cs",
               "RelativeToolTip": "SoftwareShop\\Views\\LogIn.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T19:29:28.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "LogIn.xaml",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Views\\LogIn.xaml",
               "RelativeDocumentMoniker": "SoftwareShop\\Views\\LogIn.xaml",
@@ -84,20 +71,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "SignUp.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Views\\SignUp.xaml.cs",
               "RelativeDocumentMoniker": "SoftwareShop\\Views\\SignUp.xaml.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Views\\SignUp.xaml.cs",
               "RelativeToolTip": "SoftwareShop\\Views\\SignUp.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwB4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T16:22:06.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "RelayComand.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Helpers\\RelayComand.cs",
               "RelativeDocumentMoniker": "SoftwareShop\\Helpers\\RelayComand.cs",
@@ -105,12 +92,11 @@
               "RelativeToolTip": "SoftwareShop\\Helpers\\RelayComand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAswBMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T16:20:51.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T16:20:51.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "SignUp.xaml",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Views\\SignUp.xaml",
               "RelativeDocumentMoniker": "SoftwareShop\\Views\\SignUp.xaml",
@@ -122,15 +108,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "SignUpViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\ViewModels\\SignUpViewModel.cs",
               "RelativeDocumentMoniker": "SoftwareShop\\ViewModels\\SignUpViewModel.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\ViewModels\\SignUpViewModel.cs",
               "RelativeToolTip": "SoftwareShop\\ViewModels\\SignUpViewModel.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowFcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAuwG8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T16:10:51.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LogInViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\ViewModels\\LogInViewModel.cs",
+              "RelativeDocumentMoniker": "SoftwareShop\\ViewModels\\LogInViewModel.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\ViewModels\\LogInViewModel.cs",
+              "RelativeToolTip": "SoftwareShop\\ViewModels\\LogInViewModel.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwBoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:30:31.188Z",
               "EditorCaption": ""
             },
             {

@@ -1,5 +1,6 @@
 ﻿using SoftwareShop.Helpers;
 using SoftwareShop.Models;
+using SoftwareShop.Views;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -58,6 +59,9 @@ namespace SoftwareShop.ViewModels
         private ICommand _signUpCommand;
         public ICommand SignUpCommand => _signUpCommand ??= new RelayCommand(SignUp, CanSignUp);
 
+        private ICommand _goToLoginCommand;
+        public ICommand GoToLoginCommand => _goToLoginCommand ??= new RelayCommand(GoToLogInPage,CanTransferToPage);
+
         private bool CanSignUp(object parameter)
         {
             return !string.IsNullOrWhiteSpace(Username)
@@ -92,6 +96,25 @@ namespace SoftwareShop.ViewModels
             Password = string.Empty;
 
             // Очистка PasswordBox в UI (Можно через событие, если потребуется)
+        }
+
+
+        private void GoToLogInPage(object sender)
+        {
+            var loginWindow = new LoginView
+            {
+                DataContext = new LoginViewModel()
+            };
+            loginWindow.BringIntoView();
+
+            MessageBox.Show("Go To Log in");
+            
+            
+        }
+
+        private bool CanTransferToPage(object parameter)
+        {
+            return true;
         }
 
         private bool IsValidEmail(string email)

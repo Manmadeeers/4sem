@@ -8,7 +8,7 @@ namespace SoftwareShop.Views
     {
         public LoginView()
         {
-            //InitializeComponent();
+            InitializeComponent();
             DataContext = new ViewModels.LoginViewModel();
         }
 

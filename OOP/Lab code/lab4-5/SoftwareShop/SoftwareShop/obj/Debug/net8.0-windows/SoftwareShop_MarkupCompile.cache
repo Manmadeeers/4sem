@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\App.xaml
-2563895627
+3-202221276
 
-81562582392
+10-1590490200
 1981124507420
-Views\MainWindow.xaml;Views\SignUp.xaml;
+Views\LogIn.xaml;Views\MainWindow.xaml;Views\SignUp.xaml;
 
 False
 

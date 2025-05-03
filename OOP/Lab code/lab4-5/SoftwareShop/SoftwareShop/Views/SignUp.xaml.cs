@@ -20,5 +20,15 @@ namespace SoftwareShop.Views
                 vm.Password = ((PasswordBox)sender).Password;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoginView loginView = new LoginView
+            {
+                DataContext = new LoginViewModel()
+            };
+
+            
+        }
     }
 }
