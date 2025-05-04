@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OuuvapH6lyo=",
+  "dgSpecHash": "tHCtZPyGhjM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\SoftwareShop.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Manmade\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

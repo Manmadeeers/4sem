@@ -100,8 +100,9 @@ namespace SoftwareShop.ViewModels
             Password = string.Empty;
 
             // Очистка PasswordBox в UI (Можно через событие, если потребуется)
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+           
+            ProductsView productsView = new ProductsView(freshlySignedUser);
+            productsView.Show();
             SignUpView.Close();
 
         }

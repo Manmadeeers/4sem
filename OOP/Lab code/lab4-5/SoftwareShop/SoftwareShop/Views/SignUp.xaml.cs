@@ -25,5 +25,22 @@ namespace SoftwareShop.Views
         {
            
         }
+
+        private void LangChangeClick(object sender, RoutedEventArgs e)
+        {
+            if(sender is Button btn)
+            {
+                if (btn.Content.ToString().ToLower() == "en")
+                {
+                    ((App)Application.Current).ChangeLanguage("ru");
+                    btn.Content = "Ru";
+                }
+                else if (btn.Content.ToString().ToLower() == "ru")
+                {
+                    ((App)Application.Current).ChangeLanguage("en");
+                    btn.Content = "En";
+                }
+            }
+        }
     }
 }

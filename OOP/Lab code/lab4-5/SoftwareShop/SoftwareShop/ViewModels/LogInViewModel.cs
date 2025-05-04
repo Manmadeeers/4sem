@@ -66,17 +66,18 @@ namespace SoftwareShop.ViewModels
         private void Login(object parameter)
         {
             bool success = true;
+            User loggedUser = new User() ;
             // Реальная логика авторизации должна быть здесь
             if (Username == "admin" && Password == "1234")
             {
                 success = true;
-                User adminUser = new User(666, Username, $"{Username}@gmail.com", Password, true);
+                loggedUser = new User(666, Username, $"{Username}@gmail.com", Password, true);
                 MessageBox.Show($"Welcome, {Username}!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else if (Username == "user" && Password == "0987")
             {
                 success = true;
-                User averageUser = new User(1, Username, $"{Username}@gmail.com", Password, false);
+                loggedUser = new User(1, Username, $"{Username}@gmail.com", Password, false);
                 MessageBox.Show($"Welcome, {Username}!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
@@ -92,8 +93,18 @@ namespace SoftwareShop.ViewModels
 
             if (success)
             {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                if (loggedUser.IsAdmin)
+                {
+                    loggedUser.Role = "Admin";
+                }
+                else
+                {
+                    loggedUser.Role = "User";
+                }
+                ProductsView productsView = new ProductsView(loggedUser);
+                
+                productsView.Show();
+
                 _loginView.Close();
             }
            

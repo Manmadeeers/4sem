@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<!--Sign Up and Log In-->
+    <sys:String x:Key="LoginTitle">Вход</sys:String>
+    <sys:String x:Key="LogInText">Войти</sys:String>
+    <sys:String x:Key="SignUpTitle">Создать аккаунт</sys:String>
+    <sys:String x:Key="UsernameLabel">Имя пользователя</sys:String>
+    <sys:String x:Key="EmailLabel">Почта</sys:String>
+    <sys:String x:Key="PasswordLabel">Пароль</sys:String>
+    <sys:String x:Key="DontHaveAccountText">Нет аккаунта?</sys:String>
+    <sys:String x:Key="AlreadyHaveAccount">Уже есть аккаунт?</sys:String>
+	<sys:String x:Key="SignUpText">Зарегистрироваться</sys:String>
+	<!--Product view-->
+	<sys:String x:Key="UserInfoText">Информация</sys:String>
+	<sys:String x:Key="ProductsNameText">Имя</sys:String>
+	<sys:String x:Key="ProductsEmailText">Почта</sys:String>
+	<sys:String x:Key="ProductsRoleText">Роль</sys:String>
+	<sys:String x:Key="ProductsPriceText">Цена</sys:String>
+	<sys:String x:Key="ProductsExitButtonText">Выход</sys:String>
+	<sys:String x:Key="ProductsCurrencySign">Br</sys:String>
+</ResourceDictionary>

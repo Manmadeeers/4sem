@@ -19,5 +19,22 @@ namespace SoftwareShop.Views
                 vm.Password = ((PasswordBox)sender).Password;
             }
         }
+
+        private void LangChngeClick(object sender, RoutedEventArgs e)
+        {
+            if(sender is Button btn)
+            {
+                if (btn.Content.ToString().ToLower() == "en")
+                {
+                    ((App)Application.Current).ChangeLanguage("ru");
+                    btn.Content = "Ru";
+                }
+                else if (btn.Content.ToString().ToLower() == "ru")
+                {
+                    ((App)Application.Current).ChangeLanguage("en");
+                    btn.Content = "En";
+                }
+            }
+        }
     }
 }

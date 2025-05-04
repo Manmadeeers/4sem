@@ -1,0 +1,38 @@
+﻿[
+  {
+    "Name": "PM system pro",
+    "Description": "Super puper duper cool project management system",
+    "Price": 10000,
+    "ImagePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\soft.jpg"
+  },
+  {
+    "Name": "PM system lite",
+    "Description": "Super puper duper but less cool project management system",
+    "Price": 5000,
+    "ImagePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\soft.jpg"
+  },
+  {
+    "Name": "PM system free",
+    "Description": "Super puper duper but almost not cool project management system",
+    "Price": 0,
+    "ImagePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\soft.jpg"
+  },
+  {
+    "Name": "PM system 2022",
+    "Description": "Super puper duper but old project management system",
+    "Price": 6000,
+    "ImagePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\soft.jpg"
+  },
+  {
+    "Name": "PM system 2025",
+    "Description": "Super puper duper but la bit old project management system",
+    "Price": 3000,
+    "ImagePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\soft.jpg"
+  },
+  {
+    "Name": "PM system 2024",
+    "Description": "Super puper duper but more old project management system",
+    "Price": 3000,
+    "ImagePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\soft.jpg"
+  }
+]

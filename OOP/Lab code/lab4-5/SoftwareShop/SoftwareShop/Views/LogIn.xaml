@@ -19,28 +19,28 @@
             </Border.Effect>
             <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                 <Button
-                    Content="Lang"
+                    Content="En"
                     Width="30"
                     HorizontalAlignment="Right"
                     Background="White"
                     BorderThickness="0.5"
-                    Cursor="Hand"
+                    Cursor="Hand" Click="LangChngeClick"
                     >
                     
                 </Button>
-                <TextBlock Text="Login" FontSize="28" FontWeight="SemiBold" Foreground="#333" HorizontalAlignment="Center" Margin="0,10"/>
+                <TextBlock Text="{DynamicResource LoginTitle}" FontSize="28" FontWeight="SemiBold" Foreground="#333" HorizontalAlignment="Center" Margin="0,10"/>
 
-                <TextBlock Text="Username" Margin="0,20,0,5" Foreground="#555"/>
+                <TextBlock Text="{DynamicResource UsernameLabel}" Margin="0,20,0,5" Foreground="#555"/>
                 <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
                          BorderBrush="#ccc" BorderThickness="0,0,0,1" Background="Transparent" Padding="0,5"/>
 
-                <TextBlock Text="Password" Margin="0,20,0,5" Foreground="#555"/>
+                <TextBlock Text="{DynamicResource PasswordLabel}" Margin="0,20,0,5" Foreground="#555"/>
                 <PasswordBox x:Name="PasswordBox"
                              PasswordChanged="PasswordBox_PasswordChanged"
                              BorderBrush="#ccc" BorderThickness="0,0,0,1"
                              Background="Transparent" Padding="0,5"/>
 
-                <Button Content="Log In"
+                <Button Content="{DynamicResource LogInText}"
                         Command="{Binding LoginCommand}"
                         Background="#2196F3"
                         Foreground="White"
@@ -71,9 +71,9 @@
                 </Button>
 
                 <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Cursor="Hand" Foreground="#2196F3">
-                    <Run Text="Don't have an account? "/>
+                    <Run Text="{DynamicResource DontHaveAccountText}"/>
                     <Button Command="{Binding GoToSignUpCommand}"
-                            Content="Sign Up"
+                            Content="{DynamicResource SignUpText}"
                             Background="White"
                             BorderThickness="0"
                             Foreground="#2196F3"

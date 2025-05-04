@@ -10,7 +10,7 @@
     <Compile Update="Views\LogIn.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\MainWindow.xaml.cs">
+    <Compile Update="Views\ProductsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\SignUp.xaml.cs">
@@ -21,7 +21,7 @@
     <Page Update="Views\LogIn.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\MainWindow.xaml">
+    <Page Update="Views\ProductsView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SignUp.xaml">
