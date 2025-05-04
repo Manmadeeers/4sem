@@ -14,6 +14,11 @@ namespace SoftwareShop.ViewModels
         private string _email;
         private string _password;
         public event PropertyChangedEventHandler PropertyChanged;
+        public SignUpView SignUpView { get; private set; }
+        public SignUpViewModel(SignUpView view)
+        {
+            SignUpView = view;
+        }
 
         public string Username
         {
@@ -75,20 +80,19 @@ namespace SoftwareShop.ViewModels
             // Логика регистрации
             if (!IsValidEmail(Email))
             {
-                MessageBox.Show("Введите корректный Email", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Incorrect email!", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
           
 
             // Здесь можно добавить вызов сервиса регистрации и т.п.
 
-            MessageBox.Show($"Пользователь {Username} зарегистрирован с Email {Email}", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Registration successfull!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
+            Random random = new Random();
 
-            User freshlySignedUser = new User();
-            freshlySignedUser.Email = Email;
-            freshlySignedUser.Password = Password;
-            freshlySignedUser.Name = Username;
+            User freshlySignedUser = new User(random.Next(1,101),Username,Email,Password,false);
+
 
             // Очистка формы
             Username = string.Empty;
@@ -96,19 +100,18 @@ namespace SoftwareShop.ViewModels
             Password = string.Empty;
 
             // Очистка PasswordBox в UI (Можно через событие, если потребуется)
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            SignUpView.Close();
+
         }
 
 
         private void GoToLogInPage(object sender)
         {
-            var loginWindow = new LoginView
-            {
-                DataContext = new LoginViewModel()
-            };
-            loginWindow.BringIntoView();
-
-            MessageBox.Show("Go To Log in");
-            
+            var loginWindow = new LoginView();
+            loginWindow.Show();
+            SignUpView.Close();
             
         }
 

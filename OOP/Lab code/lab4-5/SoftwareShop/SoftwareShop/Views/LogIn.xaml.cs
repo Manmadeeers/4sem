@@ -4,12 +4,12 @@ using SoftwareShop.ViewModels;
 
 namespace SoftwareShop.Views
 {
-    public partial class LoginView :UserControl
+    public partial class LoginView :Window
     {
         public LoginView()
         {
             InitializeComponent();
-            DataContext = new ViewModels.LoginViewModel();
+            DataContext = new LoginViewModel(this);
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)

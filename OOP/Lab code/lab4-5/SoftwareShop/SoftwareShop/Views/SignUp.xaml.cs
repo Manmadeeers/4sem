@@ -4,12 +4,12 @@ using SoftwareShop.ViewModels;
 
 namespace SoftwareShop.Views
 {
-    public partial class SignUpView : UserControl
+    public partial class SignUpView : Window
     {
         public SignUpView()
         {
             InitializeComponent();
-            DataContext = new SignUpViewModel();
+            DataContext = new SignUpViewModel(this);
         }
 
 
@@ -23,12 +23,7 @@ namespace SoftwareShop.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            LoginView loginView = new LoginView
-            {
-                DataContext = new LoginViewModel()
-            };
-
-            
+           
         }
     }
 }

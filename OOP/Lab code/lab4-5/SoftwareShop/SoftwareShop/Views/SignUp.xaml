@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="SoftwareShop.Views.SignUpView"
+﻿<Window x:Class="SoftwareShop.Views.SignUpView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -19,7 +19,16 @@
                 <DropShadowEffect BlurRadius="15" ShadowDepth="3" Color="#66000000"/>
             </Border.Effect>
             <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-
+                <Button
+                    Content="Lang"
+                    Width="30"
+                    Background="White"
+                    BorderThickness="0.5"
+                    Cursor="Hand"
+                    HorizontalAlignment="Right"
+                    >
+                    
+                </Button>
                 <TextBlock Text="Create Account" FontSize="28" FontWeight="SemiBold" Foreground="#333" HorizontalAlignment="Center" Margin="0,10"/>
 
                 <TextBlock Text="Username" Margin="0,20,0,5" Foreground="#555"/>
@@ -67,7 +76,7 @@
                     <Run Text="Already have an account? "/>
                     <Button 
                         Command="{Binding GoToLoginCommand}" Content="Login" Margin="0,0,0,-4"
-                        Background="White" BorderBrush="Snow" Foreground="#2196F3"
+                        Background="White" BorderThickness="0" Foreground="#2196F3"
                         HorizontalAlignment="Center" Cursor="Hand" Click="Button_Click" >
                         
                     </Button>
@@ -76,4 +85,4 @@
             </StackPanel>
         </Border>
     </Grid>
-</UserControl>
+</Window>
