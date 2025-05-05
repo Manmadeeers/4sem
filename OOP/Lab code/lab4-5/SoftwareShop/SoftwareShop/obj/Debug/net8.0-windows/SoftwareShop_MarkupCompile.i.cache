@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\App.xaml
-6188715063
+7-774253471
 
-16-844384235
+171287878444
 199-921640575
-Resources\Local.en.xaml;Resources\Local.ru.xaml;Views\LogIn.xaml;Views\MoreView.xaml;Views\ProductsView.xaml;Views\SignUp.xaml;
+Resources\Local.en.xaml;Resources\Local.ru.xaml;Views\AddView.xaml;Views\LogIn.xaml;Views\MoreView.xaml;Views\ProductsView.xaml;Views\SignUp.xaml;
 
-False
+True
 

@@ -22,4 +22,7 @@
 	<sys:String x:Key="ProductsSearchButtonText">Search</sys:String>
 	<sys:String x:Key="ProductsMorebuttonText">More</sys:String>
 	<sys:String x:Key="ProductsBuyButtonText">Buy</sys:String>
+	<sys:String x:Key="ProductsAddNewButtonText">Add New</sys:String>
+	<!--More window-->
+	<sys:String x:Key="MoreWindowTitle">Detailed Info</sys:String>
 </ResourceDictionary>

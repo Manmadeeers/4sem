@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
 using SoftwareShop.Helpers;
 using SoftwareShop.Models;
 using SoftwareShop.Views;
@@ -7,8 +8,10 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Input;
+using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace SoftwareShop.ViewModels
 {
@@ -20,6 +23,8 @@ namespace SoftwareShop.ViewModels
             get { return  _productsView; }
             set { _productsView = value; }
         }
+
+        public AddView AddView;
 
         private User _loggedUser;
 
@@ -48,6 +53,8 @@ namespace SoftwareShop.ViewModels
             Debug.WriteLine("MainViewModel created");
             LoadProducts();
             Debug.WriteLine($"Products loaded: {Products?.Count}");
+
+            
         }
 
         private ICommand _unloginCommand;
@@ -82,6 +89,7 @@ namespace SoftwareShop.ViewModels
                 Products = new ObservableCollection<Product>();
             }
             AllProducts = new ObservableCollection<Product>(Products);
+           
         }
 
 
@@ -131,24 +139,13 @@ namespace SoftwareShop.ViewModels
             }
             
         }
-
         private bool CanSearch(object parameter)
         {
 
             return true;
         }
 
-        private ICommand _moreCommand;
-        public ICommand MoreCommand => _moreCommand ??= new RelayCommand(More,CanShowMore);
-        private void More(object parameter)
-        {
-
-        }
-        private bool CanShowMore(object parameter)
-        {
-            return true;
-        }
-
+      
 
         private ICommand _buyCommand;
         public ICommand BuyCommand => _buyCommand ??= new RelayCommand(Buy,CanBuy);
@@ -171,6 +168,44 @@ namespace SoftwareShop.ViewModels
             return true;
         }
 
+
+        private ICommand _addCommand;
+        public ICommand AddCommand => _addCommand ??= new RelayCommand(Add,CanAdd);
+
+
+        private void Add(object parameter)
+        {
+            AddView addView = new AddView(this);
+            addView.ShowDialog();
+
+        }
+
+        private bool CanAdd(object parameter)
+        {
+            return true;
+        }
+
+
+        
+
+        public void SerializeProducts()
+        {
+
+            var jsonPath = "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Data\\products.json";
+            if (File.Exists(jsonPath))
+            {
+                var options = new JsonSerializerOptions { WriteIndented = true }; // Optional: formats JSON nicely
+
+                string jsonString = JsonConvert.SerializeObject(AllProducts, Formatting.Indented);
+
+                File.WriteAllText(jsonPath, jsonString);
+                MessageBox.Show("Success!");
+            }
+            else
+            {
+                MessageBox.Show("Nope!");
+            }
+        }
 
 
 

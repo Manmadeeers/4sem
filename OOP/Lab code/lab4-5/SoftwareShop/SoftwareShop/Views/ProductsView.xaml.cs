@@ -19,7 +19,11 @@ namespace SoftwareShop.Views
            
             context.LoggedUser = loggedUser;
             DataContext = context;
-            
+
+            if (loggedUser.IsAdmin)
+            {
+                this.AddNewButton.Visibility = Visibility.Visible;
+            }
         }
 
         private void ChangeLang(object sender, EventArgs e)

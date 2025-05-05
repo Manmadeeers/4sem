@@ -30,3 +30,7 @@ C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\obj\
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Software.07CA1878.Up2Date
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\ProductsView.g.cs
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\ProductsView.baml
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\MoreView.g.cs
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\MoreView.baml
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\AddView.g.cs
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-5\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\AddView.baml

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftwareShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,10 @@ namespace SoftwareShop.Views
     /// </summary>
     public partial class MoreView : Window
     {
-        public MoreView()
+        public MoreView(Product product)
         {
             InitializeComponent();
+            DataContext = product;
         }
     }
 }
