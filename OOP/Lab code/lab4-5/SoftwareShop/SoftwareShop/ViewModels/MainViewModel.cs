@@ -104,17 +104,25 @@ namespace SoftwareShop.ViewModels
 
             if (string.IsNullOrWhiteSpace(searchText))
             {
-                Products = new ObservableCollection<Product>(AllProducts);
+                Products.Clear();
+                foreach(var product in AllProducts)
+                {
+                    Products.Add(product);
+                }
                 Debug.WriteLine("Emptysearch field");
             }
             else
             {
                 var filtered = AllProducts.Where(p =>!string.IsNullOrEmpty(p.Name) &&p.Name.IndexOf(SearchText, StringComparison.OrdinalIgnoreCase) >= 0);
                 Debug.WriteLine($"found {filtered.Count()}");
-                Products = new ObservableCollection<Product>(filtered);
+                Products.Clear();
+                foreach (var product in filtered)
+                {
+                    Products.Add(product);
+                }
                 Debug.WriteLine($"{searchText} was entered");
                 Debug.WriteLine($"{Products.Count} was added as filtered");
-               
+                
             }
             
         }

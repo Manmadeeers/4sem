@@ -70,8 +70,7 @@
               "RelativeToolTip": "SoftwareShop\\Data\\products.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-04T20:22:37.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-04T20:22:37.075Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "SoftwareShop\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T20:11:48.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-04T20:11:48.364Z"
             },
             {
               "$type": "Document",
@@ -121,8 +119,7 @@
               "RelativeToolTip": "SoftwareShop\\Resources\\Local.ru.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-04T18:50:44.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-04T18:50:44.835Z"
             },
             {
               "$type": "Document",
@@ -132,7 +129,7 @@
               "RelativeDocumentMoniker": "SoftwareShop\\ViewModels\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\ViewModels\\MainViewModel.cs",
               "RelativeToolTip": "SoftwareShop\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAswJYAAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAUwG0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T11:42:26.622Z",
               "EditorCaption": ""
@@ -159,8 +156,7 @@
               "RelativeToolTip": "SoftwareShop\\ViewModels\\LogInViewModel.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAmwFUAAAB1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T12:41:52.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-04T12:41:52.519Z"
             },
             {
               "$type": "Document",
@@ -184,8 +180,7 @@
               "RelativeToolTip": "SoftwareShop\\Views\\ProductsView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T13:19:21.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-04T13:19:21.383Z"
             },
             {
               "$type": "Document",
