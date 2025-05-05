@@ -17,6 +17,7 @@ namespace SoftwareShop.ViewModels
         private ProductsView _productsView;
         public ProductsView ProductsView
         {
+            get { return  _productsView; }
             set { _productsView = value; }
         }
 
@@ -71,6 +72,10 @@ namespace SoftwareShop.ViewModels
                 var json = File.ReadAllText(jsonPath);
                 var list = JsonConvert.DeserializeObject<List<Product>>(json);
                 Products = new ObservableCollection<Product>(list);
+                foreach(var prod in Products)
+                {
+                    prod.model = this;
+                }
             }
             else
             {
@@ -150,7 +155,8 @@ namespace SoftwareShop.ViewModels
 
         private void Buy(object parameter)
         {
-            if (_productsView.LangButton.Content.ToString().ToLower() == "en")
+
+            if (ProductsView.LangButton.Content.ToString().ToLower() == "en")
             {
                 MessageBox.Show("Already yours and sent to you. Wait for delivery soon!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -158,7 +164,7 @@ namespace SoftwareShop.ViewModels
             {
                 MessageBox.Show("Куплено! Ожидайте доставку в ближайшее время!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            
+
         }
 
         private bool CanBuy(object parameter){

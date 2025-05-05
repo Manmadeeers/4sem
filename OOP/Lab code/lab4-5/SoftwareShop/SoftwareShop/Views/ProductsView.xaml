@@ -171,7 +171,7 @@
                                         Content="{DynamicResource ProductsBuyButtonText}"
                                         Margin="0,5,0,0"
                                         Cursor="Hand"
-                                        Command="{Binding BuyCommand}">
+                                        Command="{Binding model.BuyCommand}">
                                         
                                     </Button>
                                 </StackPanel>
