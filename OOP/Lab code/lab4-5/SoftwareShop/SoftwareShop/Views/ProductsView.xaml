@@ -83,6 +83,7 @@
         <Border Grid.Column="0" Background="#343a40" CornerRadius="5" Margin="0" >
             <StackPanel Margin="20">
                 <Button
+                    Name="LangButton"
                     Content="En"
                     Width="20"
                     HorizontalAlignment="Left"
@@ -130,7 +131,7 @@
 
                     <Button Content="{DynamicResource ProductsSearchButtonText}" 
                         Style="{StaticResource SearchButtonStyle}"
-                        Command="{Binding SearchCommand}" />
+                        Command="{Binding SearchCommand,UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
             </Border>
 
@@ -144,7 +145,7 @@
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate DataType="{x:Type models:Product}">
-                            <Border Width="200" Height="300" Margin="10" Background="White" CornerRadius="8" Padding="10" Cursor="Hand"
+                            <Border Width="200" Height="350" Margin="10" Background="White" CornerRadius="8" Padding="10" Cursor="Hand"
                                 BorderBrush="#ddd" BorderThickness="1" >
                                 <StackPanel>
                                     <Image Source="{Binding ImagePath}" Height="150" Stretch="UniformToFill" Margin="0,0,0,10"/>
@@ -160,6 +161,19 @@
                                     <Run Text="{Binding Price}"/>
                                     <Run Text="{DynamicResource ProductsCurrencySign}"/>
                                     </TextBlock>
+                                    <Button
+                                        Content="{DynamicResource ProductsMorebuttonText}"
+                                        Margin="0,5,0,0"
+                                        Command="{Binding MoreCommand}"
+                                        Cursor="Hand">
+                                    </Button>
+                                    <Button
+                                        Content="{DynamicResource ProductsBuyButtonText}"
+                                        Margin="0,5,0,0"
+                                        Cursor="Hand"
+                                        Command="{Binding BuyCommand}">
+                                        
+                                    </Button>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>

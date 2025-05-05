@@ -32,13 +32,13 @@ namespace SoftwareShop.ViewModels
         public ObservableCollection<Product> Products
         {
             get => _products;
-            set { _products = value; OnPropertyChanged();}
+            set { _products = value; OnPropertyChanged(nameof(Products));}
         }
         private ObservableCollection<Product> _allProducts;
         public ObservableCollection<Product> AllProducts
         {
             get => _allProducts;
-            set { _allProducts = value;OnPropertyChanged(); }
+            set { _allProducts = value;OnPropertyChanged(nameof(AllProducts)); }
         }
         
 
@@ -89,8 +89,7 @@ namespace SoftwareShop.ViewModels
                 if (searchText != value)
                 {
                     searchText = value;
-                    OnPropertyChanged();
-                    
+                    OnPropertyChanged(nameof(SearchText));
                 }
             }
         }
@@ -114,29 +113,57 @@ namespace SoftwareShop.ViewModels
                 Debug.WriteLine($"found {filtered.Count()}");
                 Products = new ObservableCollection<Product>(filtered);
                 Debug.WriteLine($"{searchText} was entered");
+                Debug.WriteLine($"{Products.Count} was added as filtered");
+               
             }
             
         }
 
         private bool CanSearch(object parameter)
         {
-            //if(string.IsNullOrWhiteSpace(searchText))
-            //{
-            //    return false;
-            //}
-            //else
-            //{
-            //    return true;
-            //}
+
+            return true;
+        }
+
+        private ICommand _moreCommand;
+        public ICommand MoreCommand => _moreCommand ??= new RelayCommand(More,CanShowMore);
+        private void More(object parameter)
+        {
+
+        }
+        private bool CanShowMore(object parameter)
+        {
+            return true;
+        }
+
+
+        private ICommand _buyCommand;
+        public ICommand BuyCommand => _buyCommand ??= new RelayCommand(Buy,CanBuy);
+
+        private void Buy(object parameter)
+        {
+            if (_productsView.LangButton.Content.ToString().ToLower() == "en")
+            {
+                MessageBox.Show("Already yours and sent to you. Wait for delivery soon!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Куплено! Ожидайте доставку в ближайшее время!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            
+        }
+
+        private bool CanBuy(object parameter){
             return true;
         }
 
 
 
+
+
+
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string propName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-        }
+        protected void OnPropertyChanged([CallerMemberName] string propName = null)
+             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
     }
 }
