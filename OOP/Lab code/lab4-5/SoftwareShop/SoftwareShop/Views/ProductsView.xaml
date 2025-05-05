@@ -4,16 +4,83 @@
         xmlns:vm="clr-namespace:SoftwareShop.ViewModels"
         xmlns:models="clr-namespace:SoftwareShop.Models"
         Title="Software Shop" Height="600" Width="900">
+
+    <Window.Resources>
+        <!-- textbox style for search bar -->
+        <Style x:Key="SearchTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#ddd"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- search button style -->
+        <Style x:Key="SearchButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#1976D2"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#1565C0"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="#90CAF9"/>
+                                <Setter Property="Foreground" Value="#E0E0E0"/>
+                                <Setter Property="Cursor" Value="Arrow"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="200"/>
+           
             <ColumnDefinition Width="*"/>
+           
         </Grid.ColumnDefinitions>
-        <!-- Sidebar -->
-        <Border Grid.Column="0" Width="200" Background="#343a40" CornerRadius="5">
+
+        <!-- sidebar -->
+        <Border Grid.Column="0" Background="#343a40" CornerRadius="5" Margin="0" >
             <StackPanel Margin="20">
                 <Button
                     Content="En"
@@ -22,68 +89,85 @@
                     Background="#343a35"
                     Cursor="Hand"
                     Foreground="White"
-                    Click="ChangeLang">
-                </Button>
+                    Click="ChangeLang"/>
                 <TextBlock Text="{DynamicResource UserInfoText}" FontWeight="Bold" FontSize="20" Margin="0,0,0,15" Foreground="White" TextAlignment="Center"/>
-
                 <Border Height="2" Background="#6c757d" Margin="0,0,0,15"/>
-
                 <TextBlock Text="{DynamicResource ProductsNameText}" FontSize="16" Margin="0,0,0,5" FontWeight="Bold" Foreground="#adb5bd"/>
                 <TextBlock Text="{Binding LoggedUser.Name}" FontSize="16" Margin="0,0,0,10" Foreground="White"/>
-
                 <TextBlock Text="{DynamicResource ProductsEmailText}" FontSize="16" Margin="0,0,0,5" FontWeight="Bold" Foreground="#adb5bd"/>
                 <TextBlock Text="{Binding LoggedUser.Email}" FontSize="16" Margin="0,0,0,10" Foreground="White"/>
-
                 <TextBlock Text="{DynamicResource ProductsRoleText}" FontSize="16" Margin="0,0,0,5" FontWeight="Bold" Foreground="#adb5bd"/>
                 <TextBlock Text="{Binding LoggedUser.Role}" FontSize="16" Margin="0,0,0,10" Foreground="White"/>
                 <Button
                     Content="{DynamicResource ProductsExitButtonText}"
                     Cursor="Hand"
-                    Command="{Binding UnloginCommand}">
-                    
-                </Button>
-                
+                    Command="{Binding UnloginCommand}"/>
             </StackPanel>
         </Border>
 
+    
+        <Grid Grid.Column="1">
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+               
+                <RowDefinition Height="*"/>
+               
+            </Grid.RowDefinitions>
 
-        <!-- Main Content -->
-        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
-            <ItemsControl ItemsSource="{Binding Products}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel IsItemsHost="True" Orientation="Horizontal" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate DataType="{x:Type models:Product}">
-                        <Border Width="200" Height="300" Margin="10" Background="White" CornerRadius="8" Padding="10" Cursor="Hand"
-                        BorderBrush="#ddd" BorderThickness="1" >
-                            <StackPanel>
-                                <Image Source="{Binding ImagePath}" Height="150" Stretch="UniformToFill" Margin="0,0,0,10"/>
-                                <TextBlock  FontWeight="Bold" FontSize="16" Margin="0,0,0,5">
+            <!-- searchbar -->
+            <Border Grid.Row="0" Background="#f5f5f5" Padding="5">
+                <DockPanel LastChildFill="False" VerticalAlignment="Center" HorizontalAlignment="Left" >
+
+                    <TextBox 
+                    Width="320" 
+                    Style="{StaticResource SearchTextBoxStyle}"
+                    Margin="0,0,10,0"
+                    Text="{Binding SearchText,UpdateSourceTrigger=PropertyChanged}" 
+                    x:Name="SearchTextBox"
+                    VerticalContentAlignment="Center"
+                    ToolTip="Введите для поиска продуктов" />
+
+                    <Button Content="{DynamicResource ProductsSearchButtonText}" 
+                        Style="{StaticResource SearchButtonStyle}"
+                        Command="{Binding SearchCommand}" />
+                </DockPanel>
+            </Border>
+
+            <!-- main content -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="5,10,10,10">
+                <ItemsControl ItemsSource="{Binding Products}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type models:Product}">
+                            <Border Width="200" Height="300" Margin="10" Background="White" CornerRadius="8" Padding="10" Cursor="Hand"
+                                BorderBrush="#ddd" BorderThickness="1" >
+                                <StackPanel>
+                                    <Image Source="{Binding ImagePath}" Height="150" Stretch="UniformToFill" Margin="0,0,0,10"/>
+                                    <TextBlock  FontWeight="Bold" FontSize="16" Margin="0,0,0,5">
                                     <Run Text="{Binding Name}"></Run>
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" Margin="0,0,0,10" Height="60">
+                                    </TextBlock>
+                                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,10" Height="60">
                                     <Run Text="{Binding Description}"></Run>
-                                </TextBlock>   
-                                <TextBlock  Foreground="#2196F3" FontWeight="SemiBold">
+                                    </TextBlock>
+                                    <TextBlock  Foreground="#2196F3" FontWeight="SemiBold">
                                     <Run Text="{DynamicResource ProductsPriceText}"/>
                                     <Run Text=": "/>
                                     <Run Text="{Binding Price}"/>
-                                    <Run Text="{DynamicResource ProductsCurrencySign}"/>  
-                                </TextBlock>
+                                    <Run Text="{DynamicResource ProductsCurrencySign}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
 
-
-                            </StackPanel>
-                        </Border>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
-
+        </Grid>
     </Grid>
-   
-    
+
 </Window>

@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Input;
 
 namespace SoftwareShop.ViewModels
@@ -31,8 +32,15 @@ namespace SoftwareShop.ViewModels
         public ObservableCollection<Product> Products
         {
             get => _products;
-            set { _products = value; OnPropertyChanged(); }
+            set { _products = value; OnPropertyChanged();}
         }
+        private ObservableCollection<Product> _allProducts;
+        public ObservableCollection<Product> AllProducts
+        {
+            get => _allProducts;
+            set { _allProducts = value;OnPropertyChanged(); }
+        }
+        
 
         public MainViewModel()
         {
@@ -68,8 +76,60 @@ namespace SoftwareShop.ViewModels
             {
                 Products = new ObservableCollection<Product>();
             }
+            AllProducts = new ObservableCollection<Product>(Products);
         }
 
+
+        private string searchText;
+        public string SearchText
+        {
+            get => searchText;
+            set
+            {
+                if (searchText != value)
+                {
+                    searchText = value;
+                    OnPropertyChanged();
+                    
+                }
+            }
+        }
+
+        private ICommand _searchCommand;
+        public ICommand SearchCommand => _searchCommand ??= new RelayCommand(Search,CanSearch);
+
+
+        private void Search(object parameter)
+        {
+
+
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                Products = new ObservableCollection<Product>(AllProducts);
+                Debug.WriteLine("Emptysearch field");
+            }
+            else
+            {
+                var filtered = AllProducts.Where(p =>!string.IsNullOrEmpty(p.Name) &&p.Name.IndexOf(SearchText, StringComparison.OrdinalIgnoreCase) >= 0);
+                Debug.WriteLine($"found {filtered.Count()}");
+                Products = new ObservableCollection<Product>(filtered);
+                Debug.WriteLine($"{searchText} was entered");
+            }
+            
+        }
+
+        private bool CanSearch(object parameter)
+        {
+            //if(string.IsNullOrWhiteSpace(searchText))
+            //{
+            //    return false;
+            //}
+            //else
+            //{
+            //    return true;
+            //}
+            return true;
+        }
 
 
 

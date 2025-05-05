@@ -19,4 +19,5 @@
 	<sys:String x:Key="ProductsPriceText">Цена</sys:String>
 	<sys:String x:Key="ProductsExitButtonText">Выход</sys:String>
 	<sys:String x:Key="ProductsCurrencySign">Br</sys:String>
+	<sys:String x:Key="ProductsSearchButtonText">Поиск</sys:String>
 </ResourceDictionary>
