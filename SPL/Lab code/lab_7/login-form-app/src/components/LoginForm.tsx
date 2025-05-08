@@ -1,11 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ILoginForm,IValidationErrors } from "./leadingComponentsInterfaces";
+import { ILoginForm,IValidationErrors} from "./leadingComponentsInterfaces";
+import { dataStorage } from "./personal";
 
+interface ILogin{
+    data:dataStorage[]
+}
 
-
-const LoginForm = ()=>{
+const LoginForm:React.FC<ILogin> = ({data})=>{
     const [formData,setFormData] = useState<ILoginForm>({
         email:'',
         password:''
@@ -14,6 +17,7 @@ const LoginForm = ()=>{
     const [successMessage,setSuccessMessage] = useState<string>('');
     const [hasError,setHasError] = useState<boolean>(true);
     const [errors,setErrors] = useState<IValidationErrors>({});
+   
 
     const handleChange = (e:keyof typeof formData)=>(event:React.ChangeEvent<HTMLInputElement>)=>{
         switch(e){
@@ -87,6 +91,24 @@ const LoginForm = ()=>{
                 }
                 break;
         }
+        let valid:boolean = true;
+        data.forEach(d=>{
+            if(d.email!=formData.email&&d.password!=formData.password){
+                valid = true;
+                
+            }
+        })
+        if(!valid){
+            //setErrors(prev=>({...prev,email:"error.doesn't suit already existing"}));
+            setHasError(true);
+            alert("Invalid data");
+            console.log(data);
+        }
+        else{
+            setHasError(false);
+            alert("Data match!");
+        }
+
 
     }
     return(

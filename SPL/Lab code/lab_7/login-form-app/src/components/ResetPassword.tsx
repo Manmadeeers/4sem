@@ -6,6 +6,8 @@ import { IResetPasswordForm ,IValidationErrors} from "./leadingComponentsInterfa
 
 
 
+
+
 const ResetPassword = ()=>{
     const [hasError,setHasError] = useState<boolean>(true);
     const [formData,setFormData] = useState<IResetPasswordForm>({
@@ -16,6 +18,8 @@ const ResetPassword = ()=>{
 
     const [successMessage,setSuccessMessage] = useState<string>('');
     const [errorMessage,setErrorMessage] = useState<string>('');
+
+    
 
     const validateField = (name: keyof IResetPasswordForm, value: string) => {
         switch (name) {

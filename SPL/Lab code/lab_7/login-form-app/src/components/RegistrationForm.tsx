@@ -2,10 +2,14 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IRegistrationForm,IValidationErrors } from "./leadingComponentsInterfaces";
+import { dataStorage} from "./personal";
 
+interface IRegister{
+    callback:(inp:dataStorage)=>void;
+    data:dataStorage[];
+}
 
-
-const RegistrationForm = () => {
+const RegistrationForm:React.FC<IRegister> = ({callback,data}) => {
 
     const [hasError,setHasError] = useState<boolean>(true);
 
@@ -89,7 +93,18 @@ const RegistrationForm = () => {
                 }
                 break;
         }
+        let valid:boolean = true;
+        data.forEach(d=>{
+            if(d.email===formData.email){
+                valid = false;
+            }
+        })
 
+        if(!valid){
+            setHasError(true);
+            alert("Such user already exists");
+            formData.email = '';
+        }
     }
 
    
@@ -105,6 +120,13 @@ const RegistrationForm = () => {
             setErrorMessage('');
             setSuccessMessage("Sign up completed");
             setFormData({name:'',email:'',password:'',confirmPassword:''})
+            const newEntry:dataStorage = {
+                name:formData.name,
+                email:formData.email,
+                password:formData.password
+            }
+            callback(newEntry);
+           
         }
         else{
             setSuccessMessage('');
