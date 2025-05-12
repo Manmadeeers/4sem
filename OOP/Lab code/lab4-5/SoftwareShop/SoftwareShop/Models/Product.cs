@@ -18,7 +18,7 @@ namespace SoftwareShop.Models
 
         [JsonIgnore]
         public MainViewModel model { get; set; }
-
+        [JsonIgnore]
         public ICommand MoreCommand { get; }
 
         public Product()

@@ -17,6 +17,8 @@ namespace SoftwareShop.ViewModels
 {
     public class MainViewModel
     {
+        public Visibility ItemsDeleteVisibility;
+        
         private ProductsView _productsView;
         public ProductsView ProductsView
         {
@@ -53,7 +55,7 @@ namespace SoftwareShop.ViewModels
             Debug.WriteLine("MainViewModel created");
             LoadProducts();
             Debug.WriteLine($"Products loaded: {Products?.Count}");
-
+           
             
         }
 
@@ -72,6 +74,14 @@ namespace SoftwareShop.ViewModels
         }
         private void LoadProducts()
         {
+            if (ProductsView.logged.IsAdmin)
+            {
+                this.ItemsDeleteVisibility = Visibility.Visible;
+            }
+            else
+            {
+                this.ItemsDeleteVisibility = Visibility.Hidden;
+            }
             // Путь к JSON в папке проекта
             var jsonPath = "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Data\\products.json";
             if (File.Exists(jsonPath))
@@ -185,6 +195,18 @@ namespace SoftwareShop.ViewModels
             return true;
         }
 
+        private ICommand _deleteCommand;
+        public ICommand DeleteCommand => _deleteCommand ??= new RelayCommand(Delete,CanDelete);
+            
+        private void Delete(object parameter)
+        {
+
+        }
+
+        private bool CanDelete(object parameter)
+        {
+            return true;
+        }
 
         
 

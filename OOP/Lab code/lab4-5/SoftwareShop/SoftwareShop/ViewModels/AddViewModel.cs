@@ -3,7 +3,9 @@
 using SoftwareShop.Helpers;
 using SoftwareShop.Models;
 using SoftwareShop.Views;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
@@ -94,11 +96,16 @@ namespace SoftwareShop.ViewModels
             product.Description = Description;
             product.Price = Price;
 
+            product.ImagePath = Path.Combine("C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\", ImagePath);
+
             MainModel.AllProducts.Add(product);
+            Serializer.SaveCollectionToFile(MainModel.AllProducts);
             MessageBox.Show("Added");
             AddView.Close();
         }
 
+
+        
         public bool CanAddNew(object parameter)
         {
             //if (string.IsNullOrWhiteSpace(_name) || string.IsNullOrWhiteSpace(_description) || _price == null || string.IsNullOrWhiteSpace(_imagePath))

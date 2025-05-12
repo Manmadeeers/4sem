@@ -23,6 +23,15 @@
 	<sys:String x:Key="ProductsMorebuttonText">Подробнее</sys:String>
 	<sys:String x:Key="ProductsBuyButtonText">Купить</sys:String>
 	<sys:String x:Key="ProductsAddNewButtonText">Добавить</sys:String>
+    <sys:String x:Key="ProductsDeleteButton">Удалить</sys:String>
 	<!--More window-->
 	<sys:String x:Key="MoreWindowTitle">Подробная информация</sys:String>
+    <!--AddWindow-->
+    <sys:String x:Key="AddWindowTitle">Добавить товар</sys:String>
+    <sys:String x:Key="AddProductName">Название:</sys:String>
+    <sys:String x:Key="AddProductDescription">Описание:</sys:String>
+    <sys:String x:Key="AddProductPrice">Цена:</sys:String>
+    <sys:String x:Key="AddProductImagePath">Путь к изображени.:</sys:String>
+    <sys:String x:Key="AddProductSaveButton">Сохранить</sys:String>
+    <sys:String x:Key="AddProductCancelButton">Отменить</sys:String>
 </ResourceDictionary>

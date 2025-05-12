@@ -11,18 +11,19 @@ namespace SoftwareShop.Views
     /// </summary>
     public partial class ProductsView : Window
     {
+        public User logged = new User();
         public ProductsView(User loggedUser)
         {
             InitializeComponent();
             MainViewModel context = new MainViewModel();
             context.ProductsView = this;
-           
             context.LoggedUser = loggedUser;
             DataContext = context;
 
             if (loggedUser.IsAdmin)
             {
                 this.AddNewButton.Visibility = Visibility.Visible;
+                
             }
         }
 

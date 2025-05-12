@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "Name": "PM system pro",
     "Description": "Super puper duper cool project management system",
@@ -34,5 +34,11 @@
     "Description": "Super puper duper but more old project management system",
     "Price": 3000,
     "ImagePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\soft.jpg"
+  },
+  {
+    "Name": "test",
+    "Description": "test",
+    "Price": 200,
+    "ImagePath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\test.jpg"
   }
 ]

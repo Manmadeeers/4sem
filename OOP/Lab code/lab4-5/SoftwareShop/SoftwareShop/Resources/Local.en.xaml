@@ -23,6 +23,15 @@
 	<sys:String x:Key="ProductsMorebuttonText">More</sys:String>
 	<sys:String x:Key="ProductsBuyButtonText">Buy</sys:String>
 	<sys:String x:Key="ProductsAddNewButtonText">Add New</sys:String>
+    <sys:String x:Key="ProductsDeleteButton">Delete</sys:String>
 	<!--More window-->
 	<sys:String x:Key="MoreWindowTitle">Detailed Info</sys:String>
+    <!--AddWindow-->
+    <sys:String x:Key="AddWindowTitle">Add Product</sys:String>
+    <sys:String x:Key="AddProductName">Product name:</sys:String>
+    <sys:String x:Key="AddProductDescription">Description:</sys:String>
+    <sys:String x:Key="AddProductPrice">Price:</sys:String>
+    <sys:String x:Key="AddProductImagePath">ImagePath:</sys:String>
+    <sys:String x:Key="AddProductSaveButton">Save</sys:String>
+    <sys:String x:Key="AddProductCancelButton">Cancel</sys:String>
 </ResourceDictionary>
