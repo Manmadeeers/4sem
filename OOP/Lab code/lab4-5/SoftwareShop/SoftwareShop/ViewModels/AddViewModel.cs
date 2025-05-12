@@ -42,7 +42,7 @@ namespace SoftwareShop.ViewModels
             get => _price;
             set
             {
-                _price = decimal.TryParse(value, out decimal );
+                _price = value;
           
             }
         }
