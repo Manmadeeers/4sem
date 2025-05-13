@@ -1,0 +1,12 @@
+﻿@page
+@model ASPA_007_1.Pages.CelebritiesModel
+@using DAL_Celebrity;
+@using DAL_Celebrity_MSSQL;
+@{
+    Layout = null;
+}
+<h1>Celebrity</h1>
+@foreach(Celebrity celebrity in Model.Celebrities)
+{
+    <p>@celebrity.Id @celebrity.FullName</p>
+}

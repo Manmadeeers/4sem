@@ -74,14 +74,14 @@ namespace SoftwareShop.ViewModels
         }
         private void LoadProducts()
         {
-            if (ProductsView.logged.IsAdmin)
-            {
-                this.ItemsDeleteVisibility = Visibility.Visible;
-            }
-            else
-            {
-                this.ItemsDeleteVisibility = Visibility.Hidden;
-            }
+            //if (ProductsView.logged.IsAdmin)
+            //{
+            //    this.ItemsDeleteVisibility = Visibility.Visible;
+            //}
+            //else
+            //{
+            //    this.ItemsDeleteVisibility = Visibility.Hidden;
+            //}
             // Путь к JSON в папке проекта
             var jsonPath = "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Data\\products.json";
             if (File.Exists(jsonPath))
