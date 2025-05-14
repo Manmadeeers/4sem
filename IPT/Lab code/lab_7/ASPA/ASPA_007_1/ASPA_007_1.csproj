@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Photos\Babbage.jpg" />
+    <None Include="wwwroot\Photos\Berners-Lee.jpg" />
+    <None Include="wwwroot\Photos\Chomsky.jpg" />
+    <None Include="wwwroot\Photos\Codd.jpg" />
+    <None Include="wwwroot\Photos\Dijkstra.jpg" />
+    <None Include="wwwroot\Photos\Einstein.jpg" />
+    <None Include="wwwroot\Photos\Ershov.jpg" />
+    <None Include="wwwroot\Photos\Huntington.jpg" />
+    <None Include="wwwroot\Photos\Knuth.jpg" />
+    <None Include="wwwroot\Photos\Linus.jpg" />
+    <None Include="wwwroot\Photos\Lovelace.jpg" />
+    <None Include="wwwroot\Photos\Neumann.jpg" />
+    <None Include="wwwroot\Photos\Tanenbaum.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DAL_Celebrity_MSSQL\DAL_Celebrity_MSSQL.csproj" />
   </ItemGroup>
 

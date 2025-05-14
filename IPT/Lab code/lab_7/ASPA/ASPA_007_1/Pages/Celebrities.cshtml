@@ -6,7 +6,62 @@
     Layout = null;
 }
 <h1>Celebrity</h1>
-@foreach(Celebrity celebrity in Model.Celebrities)
-{
-    <p>@celebrity.Id @celebrity.FullName</p>
-}
+<div class="container">
+
+    @foreach (Celebrity celebrity in Model.Celebrities)
+    {
+       
+        <img src="~/Photos/@celebrity.ReqPhotoPath" alt="@celebrity.FullName" onclick="showEventsOnClick(@celebrity.Id)" onload="LoadPhoto(this,200,0)">
+
+    }
+    <p id="events">
+
+    </p>
+</div>
+
+
+<style>
+    img {
+        cursor:pointer;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .container img 
+    {
+      flex: 1 1 10%;
+      margin: 0;
+    }
+    .container #events{
+        flex:1 1 100%;
+    }
+</style>
+<script>
+    function showEventsOnClick(CelId){
+
+        fetch(`/api/LifeEvents/Celebrities/${CelId}`).then(reponse => reponse.json()).then(dat => {
+            const container = document.getElementById("events");
+            container.innerHTML = `<h3>Events for Celebrity id ${CelId}</h3>`;
+            dat.forEach(d => {
+                container.innerHTML += `<p>${d.date} - ${d.description}</p>`;
+            });
+        }).catch();
+    }
+    function showPhotoOnClick(CelId){
+        window.location.search = `/api/Celebrities/`;
+    }
+
+    function LoadPhoto(obj, height, width) {
+        let ratio = obj.naturalWidth / obj.naturalHeight;
+
+        if (height != 0 && width == 0) {
+            obj.width = Math.round(ratio * height);
+        }
+        if (height == 0 && width != 0) {
+            obj.height = Math.round(width / ratio);
+        }
+    }
+</script>

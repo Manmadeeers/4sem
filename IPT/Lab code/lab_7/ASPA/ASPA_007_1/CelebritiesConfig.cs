@@ -4,5 +4,7 @@
     {
         public string PhotosFolder { get; set; }
         public string ConnectionString { get; set; }
+        
+        public string PhotosRequestPath { get; set; }
     }
 }

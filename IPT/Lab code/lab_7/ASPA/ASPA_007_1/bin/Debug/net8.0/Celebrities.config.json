@@ -1,7 +1,7 @@
 {
   "Celebrities": {
     "PhotosRequestPath": "/Photos",
-    "PhotosFolder": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\Photos",
+    "PhotosFolder": "\\Photos",
     "ConnectionString": "Server=DESKTOP-I\\SARVAR; Database=Lab6_Db; Trusted_Connection=true; TrustServerCertificate=Yes"
   }
 

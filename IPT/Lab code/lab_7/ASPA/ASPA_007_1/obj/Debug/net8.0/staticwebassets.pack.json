@@ -5,6 +5,62 @@
       "PackagePath": "staticwebassets\\ASPA_007_1.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Babbage.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Babbage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Berners-Lee.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Berners-Lee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Celeberities.json",
+      "PackagePath": "staticwebassets\\Photos\\Celeberities.json"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Chomsky.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Chomsky.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Codd.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Codd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Dijkstra.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Dijkstra.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Einstein.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Einstein.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Ershov.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Ershov.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Huntington.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Huntington.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Knuth.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Knuth.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Linus.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Linus.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Lovelace.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Lovelace.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Neumann.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Neumann.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\Photos\\Tanenbaum.jpg",
+      "PackagePath": "staticwebassets\\Photos\\Tanenbaum.jpg"
+    },
+    {
       "Id": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_7\\ASPA\\ASPA_007_1\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

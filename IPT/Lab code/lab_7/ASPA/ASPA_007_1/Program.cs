@@ -1,6 +1,5 @@
 using DAL_Celebrity_MSSQL;
-using Microsoft.Extensions.Options;
-using System.Runtime.CompilerServices;
+using Exceptions;
 namespace ASPA_007_1
 {
 
@@ -8,25 +7,28 @@ namespace ASPA_007_1
     {
         private static void Main(string[] args)
         {
-      
+
             var builder = WebApplication.CreateBuilder(args);
             builder.AddCelebritiesConfig();
             builder.AddCelebrityServices();
+           
             IConfiguration configuration = new ConfigurationBuilder().AddJsonFile("Celebrities.config.json").Build();
-            // Add services to the container.
-            builder.Services.AddRazorPages(
-                o =>
-                {
-                    o.Conventions.AddPageRoute("/Celebrities", "/");
-                });
+          
+           builder.Services.AddRazorPages(
+               o =>
+               {
+                   o.Conventions.AddPageRoute("/Celebrities", "/");
+               });
 
             var app = builder.Build();
 
-           
+
+
+
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Error");
-                
+
                 app.UseHsts();
             }
 
@@ -38,7 +40,7 @@ namespace ASPA_007_1
             app.UseAuthorization();
 
             app.MapRazorPages();
-
+            app.MapCelebrities(configuration);
             app.Run();
         }
     }
@@ -46,11 +48,11 @@ namespace ASPA_007_1
 
     static class BuilderHelper
     {
-        public static  IServiceCollection AddCelebritiesConfig(this WebApplicationBuilder builder, string JsonFileName = "Celebrities.config.json")
+        public static IServiceCollection AddCelebritiesConfig(this WebApplicationBuilder builder, string JsonFileName = "Celebrities.config.json")
         {
             builder.Configuration.AddJsonFile(JsonFileName);
-            return builder.Services.Configure<CelebritiesConfig>(builder.Configuration.GetSection("Celebrities"));    
-            
+            return builder.Services.Configure<CelebritiesConfig>(builder.Configuration.GetSection("Celebrities"));
+
         }
         public static IServiceCollection AddCelebrityServices(this WebApplicationBuilder builder, string JsonFileName = "Celebrities.config.json")
         {
@@ -59,6 +61,132 @@ namespace ASPA_007_1
                 return new Repository(builder.Configuration.GetSection("Celebrities").GetValue<string>("ConnectionString"));
             });
             return builder.Services;
+        }
+
+
+        public static RouteHandlerBuilder MapCelebrities(this IEndpointRouteBuilder routeBuilder, IConfiguration config, string prefix = "/api/Celebrities")
+        {
+            var cel = routeBuilder.MapGroup("/api/Celebrities");
+
+            var life = routeBuilder.MapGroup("/api/LifeEvents");
+            life.MapGet("/Celebrities/{id:int:min(1)}", (IRepository repo, int id) =>
+            {
+                List<LifeEvent> lifeEventList = repo.GetLifeEventsByCelebrityId(id);
+                if (lifeEventList.Count == 0)
+                {
+                    throw new GetByIdException("Failed to get life events by celebritie's id. Something went wrong");
+                }
+                else
+                {
+                    return lifeEventList;
+                }
+            });
+
+            cel.MapGet("/", (IRepository repo) => repo.GetAllCelebrities());
+
+            cel.MapGet("/{id:int:min(1)}", (IRepository repo, int id) =>
+            {
+                if (repo.GetCelebrityById(id) != null)
+                {
+                    return repo.GetCelebrityById(id);
+                }
+                else
+                {
+                    throw new GetByIdException($"Failed to get celebrity by {id} id. Such id does not exist");
+                    
+                }
+            });
+
+            cel.MapGet("/LifeEvents/{id:int:min(1)}", (IRepository repo, int id) =>
+            {
+                Celebrity? celeb = repo.GetCelebrityByLifeEventId(id);
+                if (celeb != null)
+                {
+                    return celeb;
+                }
+                else
+                {
+                    throw new GetByIdException($"Could not get a celebrity by {id} id . Such id does not exist");
+                }
+            });
+
+            cel.MapDelete("/{id:int:min(1)}", (IRepository repo, int id) =>
+            {
+                if (repo.DeleteCelebrity(id))
+                {
+                    return $"Celebrity with id {id} was successfully deleted!";
+                }
+                else
+                {
+                    throw new DeleteByIdException($"Failed to delete celebrity by {id} id. Celebrity with such id does not exist");
+                }
+            });
+
+            cel.MapPost("/", (IRepository repo, Celebrity celeb) =>
+            {
+                if (repo.AddCelebrity(celeb))
+                {
+                    celeb.Id = repo.GetCelebrityByName(celeb.FullName);
+                    return celeb;
+                }
+                else
+                {
+                    throw new AddException("Failed to add celebrity");
+                }
+            });
+
+            cel.MapPut("/{id:int:min(1)}", (IRepository repo, int id, Celebrity newCeleb) =>
+            {
+                if (repo.UpdateCelebrity(id, newCeleb))
+                {
+                    newCeleb.Id = repo.GetCelebrityByName(newCeleb.FullName);
+                    return newCeleb;
+                }
+                else
+                {
+                    throw new UpdateException($"Failed to update celebrity with id {id}. Something went wrong");
+                }
+            });
+
+            return cel.MapGet("/photo/{fname}", async (IRepository repo, string fname) =>
+            {
+                var photoFoler = config.GetSection("Celebrities").GetSection("PhotosFolder").Value;
+                var photoPath = Path.Combine(photoFoler, fname);
+                if (!File.Exists(photoPath))
+                {
+                    throw new FileNotFoundException($"Photo file was not found by requirement({fname})");
+                }
+                else
+                {
+                    try
+                    {
+                        var bytes = await File.ReadAllBytesAsync(photoPath);
+                        string contentType = GetContentTypeByExtension(Path.GetExtension(photoPath));
+                        return Results.File(bytes, contentType);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        return Results.Problem(ex.Message);
+                    }
+                }
+            });
+           
+          
+
+        }
+
+        public static string GetContentTypeByExtension(string extension)
+        {
+            return extension.ToLower() switch
+            {
+                ".jpg" => "image/jpeg",
+                ".jpeg" => "image/jpeg",
+                ".png" => "image/png",
+                ".gif" => "image/gif",
+                ".bmp" => "image/bmp",
+                _ => "application/octet-stream",
+            };
         }
     }
 
