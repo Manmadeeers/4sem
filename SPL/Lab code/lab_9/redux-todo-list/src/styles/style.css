@@ -1,63 +1,23 @@
-.todo-list{
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    margin: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1em;
-    font-weight: 500;
-}
-.todo-list p{
-    color:black;
+.AdditionFormComponent {
+    display: "flex";
+    gap: 8;
+    margin-bottom: 20
 }
 
-.addition-bar{
-    flex: 1 1 100%;
-    display:  flex;
-    flex-flow: row wrap;
-    width: 100%;
-    border-bottom:0.5px solid gainsboro;
-    place-items: center;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 30px;
+.AdditionFormComponent input {
+    flex: 1;
+    padding: "8px 12px";
+    border-radius: 4;
+    border: "1px solid #bbb";
+    font-size: 15;
 }
 
-.addition-bar input{
-    width: 50%;
-    height: 40px;
-    cursor: auto;
-    border: 2px solid #066ec3;
-    border-radius: 8px;
-    margin-right: 20px;
-    background-color: white;
-    color: black;
-}
-.addition-bar button{
-    height: 40px;
-    width: 10%;
-    border-radius: 8px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: border-color 0.25s;
-    background-color: #066ec3;
-
-    font-family: inherit;
-}
-.addition-bar button:focus,
-.addition-bar button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.addition-bar button:hover {
-    border-color: hwb(257 49% 2%);
-}
-
-.container{
-    margin-top: 20px;
-    flex:1 1 100%;
-    display: flex;
-    flex-flow: row wrap;
-    border:  1px solid gainsboro;
-    width: 100%;
+.AdditionFormComponent button {
+    padding: "8px 20px";
+    background: "#6236ff";
+    color: "#fff";
+    border: 0;
+    border-radius: 4;
+    font-weight: 600;
+    font-size: 15;
 }
