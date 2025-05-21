@@ -84,7 +84,7 @@ print 'absolute 10: ' + @dsc3 + @name3 + '	' + @pulpit3
 
 fetch relative 5 from dsc_cur3 into @dsc3, @name3, @pulpit3
 print 'relative 5 : ' + @dsc3 + @name3 + '	' + @pulpit3
-
+	
 fetch next from dsc_cur3 into @dsc3, @name3, @pulpit3
 print 'next : ' + @dsc3 + @name3 + '	' + @pulpit3
 
