@@ -1,8 +1,0 @@
-{
-  "Celebrities": {
-    "PhotosRequestPath": "/Photos",
-    "PhotosFolder": "\\Photos",
-    "ConnectionString": "Server=DESKTOP-I\\SARVAR; Database=Lab6_Db; Trusted_Connection=true; TrustServerCertificate=Yes"
-  }
-
-}

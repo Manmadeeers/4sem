@@ -6,7 +6,7 @@
         public DeleteByIdException(string message) : base(message) { }
     }
 
-    public class  GetByIdException:Exception
+    public class GetByIdException : Exception
     {
         public GetByIdException() { }
         public GetByIdException(string message) : base(message) { }

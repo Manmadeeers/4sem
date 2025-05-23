@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 
 namespace DAL_Celebrity_MSSQL
 {
@@ -9,7 +11,6 @@ namespace DAL_Celebrity_MSSQL
         {
             ConnectionString = connextionString;
         }
-
         public Context() : base()
         {
 

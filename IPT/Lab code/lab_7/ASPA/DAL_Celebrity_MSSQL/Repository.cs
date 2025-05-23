@@ -23,7 +23,7 @@ namespace DAL_Celebrity_MSSQL
             {
                 return false;
             }
-            
+
         }
 
         public bool DeleteCelebrity(int id)
@@ -98,7 +98,7 @@ namespace DAL_Celebrity_MSSQL
         public bool UpdateLifeEvent(int id, LifeEvent lifeEvent)
         {
             LifeEvent? lifeEv = this.context.LifeEvents.FirstOrDefault(l => l.Id == id);
-            if(lifeEv != null)
+            if (lifeEv != null)
             {
                 lifeEv = lifeEvent;
                 this.context.LifeEvents.Update(lifeEv);
@@ -107,20 +107,20 @@ namespace DAL_Celebrity_MSSQL
             }
             else
             {
-                return false;   
+                return false;
             }
         }
 
 
         public List<LifeEvent> GetLifeEventsByCelebrityId(int celebrityId)
         {
-            return this.context.LifeEvents.Where(l=>l.CelebrityId==celebrityId).ToList<LifeEvent>();
+            return this.context.LifeEvents.Where(l => l.CelebrityId == celebrityId).ToList<LifeEvent>();
         }
 
         public Celebrity? GetCelebrityByLifeEventId(int lifeEventId)
         {
             LifeEvent? lifeEvent = this.context.LifeEvents.FirstOrDefault(l => l.Id == lifeEventId);
-            if(lifeEvent != null)
+            if (lifeEvent != null)
             {
                 return this.context.Celebrities.FirstOrDefault(c => c.Id == lifeEvent.CelebrityId);
             }
