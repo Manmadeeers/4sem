@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-8\\softwareshop\\softwareshop\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-8\\softwareshop\\softwareshop\\app.config||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\app.config||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-8\\softwareshop\\softwareshop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-8\\softwareshop\\softwareshop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|c:\\users\\manmade\\desktop\\4sem\\oop\\lab code\\lab4-8\\softwareshop\\softwareshop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C5A553-E1AC-49E6-A929-84502DD760C0}|SoftwareShop\\SoftwareShop.csproj|solutionrelative:softwareshop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\Data\\UserRepository.cs",
+              "RelativeDocumentMoniker": "SoftwareShop\\Data\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\Data\\UserRepository.cs",
+              "RelativeToolTip": "SoftwareShop\\Data\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T14:30:11.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\App.config",
+              "RelativeDocumentMoniker": "SoftwareShop\\App.config",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\App.config",
+              "RelativeToolTip": "SoftwareShop\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-26T14:25:23.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "SoftwareShop\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\Models\\Order.cs",
+              "RelativeToolTip": "SoftwareShop\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:55:30.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "SoftwareShop\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\Models\\Product.cs",
+              "RelativeToolTip": "SoftwareShop\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:55:29.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\Models\\User.cs",
+              "RelativeDocumentMoniker": "SoftwareShop\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-8\\SoftwareShop\\SoftwareShop\\Models\\User.cs",
+              "RelativeToolTip": "SoftwareShop\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:55:28.86Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
