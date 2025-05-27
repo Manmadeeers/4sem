@@ -1,0 +1,55 @@
+﻿@page
+@model ASPA007_1.Pages.NewCelebrityModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Add New Celebrity";
+
+}
+
+<h2>Add New Celebrity</h2>
+<div class="celebrity-creator">
+    <img id="0"
+         src="@Model.pathToZero"
+         onload="onPhotoLoad(this,200,0)" />
+
+    <form action="api/Celebrities">
+        <input type="text" id="full-name" placeholder="Celebrity Name" required />
+        <input type="text" id=" nationality" placeholder="Nationality" required />
+        <input type="file" id="photo" placeholder="Upload Photo" required />
+    </form>
+</div>
+ 
+
+<style>
+
+    .celebrity-creator{
+        width:70%;
+        display:flex;
+        flex-flow:row wrap;
+        border: 1px solid;
+    }
+    form{
+        margin-left:20px;
+    }
+    form input{
+        height:30px;
+        width:100%;
+    }
+   
+</style>
+
+
+
+<script>
+
+    function onPhotoLoad(e, h, w) {
+        let ratio = e.naturalWidth / e.naturalHeight;
+
+        if (h != 0 && w == 0) {
+            e.width = Math.round(ratio * h);
+        }
+        if (h == 0 && w != 0) {
+            e.height = Math.round(w / ratio);
+        }
+    }
+</script>

@@ -5,46 +5,29 @@
 @{
     Layout = null;
 }
-<h1>Celebrity</h1>
-<div class="container">
-
-    @foreach (Celebrity celebrity in Model.Celebrities)
-    {
-       
-        <img 
-            src="api/Celebrities/photo/@celebrity.ReqPhotoPath" alt="@celebrity.FullName"
-            onload="onPhotoLoad(this,200,0)"
-            onclick="onPhotoClick(this,@celebrity.FullName)">
-
-    }
-    <p id="events">
-
-    </p>
-</div>
+<h1>Celebrities</h1>
 
 
-<style>
-    img {
-        cursor:pointer;
-    }
+<a href="/0">
+    <img 
+        id="0"
+        src="@Model.pathToZero"
+        onload="onPhotoLoad(this,200,0)"/>
+</a>
+@foreach(var celeb in Model.Celebrities)
+{
+    <a href="/@celeb.Id">
+        <img id="@celeb.Id" 
+        src="api/Celebrities/photo/@celeb.ReqPhotoPath" alt="@celeb.FullName"
+        onload="onPhotoLoad(this,200,0)"/>
+    </a>
 
-    .container {
-        display: flex;
-        flex-flow: row wrap;
-    }
+}
 
-    .container img 
-    {
-      
-      margin: 0;
-    }
-    .container #events{
-        flex:1 1 100%;
-    }
-</style>
+
 <script>
 
-     function onPhotoLoad(e, h, w) {
+    function onPhotoLoad(e, h, w) {
         let ratio = e.naturalWidth / e.naturalHeight;
 
         if (h != 0 && w == 0) {
@@ -53,9 +36,5 @@
         if (h == 0 && w != 0) {
             e.height = Math.round(w / ratio);
         }
-    }
-
-    function onPhotoClick(elem,fullName){
-
     }
 </script>

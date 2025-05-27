@@ -1,0 +1,67 @@
+﻿@page
+@using DAL_Celebrity_MSSQL;
+@model ASPA007_1.Pages.CelebrityModel
+@{
+    ViewData["Title"] = "Celebrity Info";
+    Layout = null;
+    int h = 200;
+    int w = 0;
+    Celebrity celebrity = (Model.celebrity is null) ?
+    new Celebrity() { Id = 0, FullName = "Celebrity Name", Nationality = "BY", ReqPhotoPath = null } :
+    Model.celebrity;
+    string photoPath = $"api/Celebrities/photo/{celebrity.ReqPhotoPath}";
+
+
+    Model.LifeEvents = Model.repo.GetLifeEventsByCelebrityId(celebrity.Id);
+}
+
+<h2>Celebrity @Model.celebrity.FullName Info</h2>
+
+<div>
+    <img id="@celebrity.Id"
+    src=@photoPath
+    onload="onPhotoLoad(this,@h,@w)"/>
+</div>
+
+<div class="LifeEvents-container">
+    @foreach(var ev in Model.LifeEvents)
+    {
+        <p>@ev.Date.Date - @ev.Description</p>
+    }
+</div>
+
+
+<style>
+    
+    .LifeEvents-container 
+    {
+        margin-top:50px;
+        width:50%;
+        display: flex;
+        flex-flow: row wrap;
+        border-top:1px solid grey;
+        border-bottom:1px solid grey;
+    }
+
+    .LifeEvents-container p
+    {
+       display: inline-block;
+       width:100%;
+       flex:1 1 100%;
+    }
+</style>
+
+
+<script>
+    function onPhotoLoad(e, h, w) {
+        let ratio = e.naturalWidth / e.naturalHeight;
+
+        if (h != 0 && w == 0) {
+            e.width = Math.round(ratio * h);
+        }
+        if (h == 0 && w != 0) {
+            e.height = Math.round(w / ratio);
+        }
+    }
+</script>
+

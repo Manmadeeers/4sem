@@ -19,13 +19,16 @@ namespace ASPA_007_1
                 o =>
                 {
                     o.Conventions.AddPageRoute("/Celebrities", "/");
+                    o.Conventions.AddPageRoute("/NewCelebrity", "/0");
+                    o.Conventions.AddPageRoute("/Celebrity", "/Celebrities/{id:int:min(1)}");
+                    o.Conventions.AddPageRoute("/Celebrity", "/{id:int:min(1)}");
                 });
 
             var app = builder.Build();
 
 
 
-
+            
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Error");

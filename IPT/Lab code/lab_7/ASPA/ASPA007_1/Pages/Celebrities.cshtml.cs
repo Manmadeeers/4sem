@@ -9,6 +9,7 @@ namespace ASPA_007_1.Pages
 
         public List<MSSQL.Celebrity> Celebrities { get; set; } = new List<MSSQL.Celebrity>();
 
+        public string pathToZero = "api/Celebrities/photo/ALMAZ.jpg";
         public MSSQL.IRepository repo;
 
         public CelebritiesModel(MSSQL.IRepository repo)
