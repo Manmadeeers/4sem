@@ -18,6 +18,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Manmade/Desktop/4sem/IPT/Lab code/lab_8/ASPA/ASPA008_1/Views/Celebrities/Human.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsZWJyaXRpZXNcSHVtYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Manmade/Desktop/4sem/IPT/Lab code/lab_8/ASPA/ASPA008_1/Views/Celebrities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsZWJyaXRpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Manmade/Desktop/4sem/IPT/Lab code/lab_8/ASPA/ASPA008_1/Views/Celebrities/NewHumanForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsZWJyaXRpZXNcTmV3SHVtYW5Gb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Manmade/Desktop/4sem/IPT/Lab code/lab_8/ASPA/ASPA008_1/Views/Celebrities/_CelebritiesLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsZWJyaXRpZXNcX0NlbGVicml0aWVzTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Manmade/Desktop/4sem/IPT/Lab code/lab_8/ASPA/ASPA008_1/Views/Celebrities/_InFormNewCelebrity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsZWJyaXRpZXNcX0luRm9ybU5ld0NlbGVicml0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Manmade/Desktop/4sem/IPT/Lab code/lab_8/ASPA/ASPA008_1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

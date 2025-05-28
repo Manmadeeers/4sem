@@ -1,27 +1,57 @@
-var builder = WebApplication.CreateBuilder(args);
+using DAL_Celebrity_MSSQL;
+using ASPA008_1.Helpers;
+using ASPA008_1.Filters;
+using Microsoft.AspNetCore.Mvc;
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+internal class Program
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    private static void Main(string[] args)
+    {
+      
+        var builder = WebApplication.CreateBuilder(args);
+        builder.AddCelebrityServices();
+        builder.AddCelebritiesConfig();
+
+        IConfiguration configuration = new ConfigurationBuilder().AddJsonFile("Celebrities.config.json").Build();
+        builder.Services.AddControllersWithViews();
+
+        var app = builder.Build();
+
+        
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseExceptionHandler("/Home/Error");
+          
+            app.UseHsts();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+
+        app.UseANCErrorHandler("ANC28");
+        app.MapCelebrities(configuration);
+
+
+        app.UseAuthorization();
+
+        app.MapControllerRoute(
+            name:"celebrity",
+            pattern:"/0",
+            defaults:new {Controller="Celebrities",Action="NewHumanForm"}
+            );
+
+        app.MapControllerRoute(
+            name: "celebrity",
+            pattern: "/{id:int:min(1)}",
+            defaults: new { Controller = "Celebrities", Action = "Human" }
+            );
+
+        app.MapControllerRoute(
+            name: "default",
+            pattern: "{controller=Celebrities}/{action=Index}/{id?}");
+
+        app.Run();
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.Run();

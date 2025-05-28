@@ -1,10 +1,77 @@
 ﻿using DAL_Celebrity_MSSQL;
 using Exceptions;
+using Microsoft.Extensions.Options;
+using System.Net;
 
 namespace ASPA008_1.Helpers
 {
     public static class BuilderHelper
     {
+        public class ANC25Exception : Exception
+        {
+
+            public HttpStatusCode StatusCode { get; }
+
+
+            public string ErrorCode { get; }
+
+            public ANC25Exception(int status, string code, string message, string detail)
+            : base(message)
+            {
+                StatusCode = (HttpStatusCode)status;
+                ErrorCode = code;
+                Detail = detail;
+            }
+
+            public string? Detail { get; }
+
+            public ANC25Exception(int status, string code, string detail)
+                : base(detail)
+            {
+                StatusCode = (HttpStatusCode)status;
+                ErrorCode = code;
+            }
+
+
+            public ANC25Exception(int status, string code, string format, params object[] args)
+                : this(status, code, string.Format(format, args))
+            {
+            }
+
+            public ANC25Exception(string errorCode, string message)
+                : this((int)HttpStatusCode.InternalServerError, errorCode, message)
+            {
+            }
+        }
+
+       
+        public static IApplicationBuilder UseANCErrorHandler(this IApplicationBuilder app, string prefix) =>
+                app.Use(async (ctx, next) =>
+                {
+                    try { await next(); }
+                    catch (Exception ex)
+                    {
+                        ctx.Response.StatusCode = ex is ANC25Exception e ? (int)e.StatusCode : 500;
+                        await ctx.Response.WriteAsJsonAsync(ex is ANC25Exception e2
+                            ? new
+                            {
+                                StatusCode = (int)e2.StatusCode,
+                                ErrorCode = $"{prefix}-{e2.ErrorCode}",
+                                e2.Message,
+                                e2.Detail,
+                                Timestamp = DateTime.UtcNow
+                            }
+                            : new
+                            {
+                                StatusCode = 500,
+                                ErrorCode = $"{prefix}-UNKNOWN",
+                                ex.Message,
+                                Detail = "Internal server error",
+                                Timestamp = DateTime.UtcNow
+                            });
+                    }
+                });
+
         public static IServiceCollection AddCelebritiesConfig(this WebApplicationBuilder builder, string JsonFileName = "Celebrities.config.json")
         {
             builder.Configuration.AddJsonFile(JsonFileName);
@@ -18,6 +85,7 @@ namespace ASPA008_1.Helpers
                 return new Repository(builder.Configuration.GetSection("Celebrities").GetValue<string>("ConnectionString"));
             });
             builder.Services.AddSingleton<CelebrityTitles>((p) => new CelebrityTitles());
+            builder.Services.AddSingleton<CountryCodes>((p) => new CountryCodes(p.GetRequiredService<IOptions<CelebritiesConfig>>().Value.CountryCodesPath));
             return builder.Services;
         }
 

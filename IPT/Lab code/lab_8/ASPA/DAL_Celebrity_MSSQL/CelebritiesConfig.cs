@@ -6,5 +6,7 @@
         public string ConnectionString { get; set; }
 
         public string PhotosRequestPath { get; set; }
+
+        public string CountryCodesPath { get; set; }
     }
 }

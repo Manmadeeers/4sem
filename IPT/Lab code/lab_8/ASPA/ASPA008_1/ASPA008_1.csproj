@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="CountryCodes\" />
     <Folder Include="Photos\" />
-    <Folder Include="Views\Celebrities\" />
   </ItemGroup>
 
   <ItemGroup>
