@@ -1,0 +1,9 @@
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.csproj.AssemblyReference.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.AssemblyInfoInputs.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.AssemblyInfo.cs
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.csproj.CoreCompileInputs.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.RazorAssemblyInfo.cache
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.RazorAssemblyInfo.cs
+C:\Users\Manmade\Desktop\4sem\IPT\Lab code\lab_8\ASPA\ASPA008_1\obj\Debug\net8.0\ASPA008_1.sourcelink.json
