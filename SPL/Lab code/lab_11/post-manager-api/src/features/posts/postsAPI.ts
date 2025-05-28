@@ -1,17 +1,7 @@
 import axios from "axios";
+import { type Post,type NewPost } from "./types";
 
 
-export interface Post{
-    id:number;
-    title:string;
-    body:string;
-}
-
-
-export interface NewPost{
-    title:string;
-    body:string;
-}
 
 const API_URL = "https://jsonplaceholder.typicode.com/posts";
 
