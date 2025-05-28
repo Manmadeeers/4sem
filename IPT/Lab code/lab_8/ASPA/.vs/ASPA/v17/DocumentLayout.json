@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\controllers\\celebritiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|solutionrelative:aspa008_1\\controllers\\celebritiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\helpers\\countrycodehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|solutionrelative:aspa008_1\\helpers\\countrycodehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\helpers\\celebrityhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|solutionrelative:aspa008_1\\helpers\\celebrityhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\helpers\\builderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|solutionrelative:aspa008_1\\helpers\\builderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\views\\celebrities\\_informnewcelebrity.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|solutionrelative:aspa008_1\\views\\celebrities\\_informnewcelebrity.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\views\\celebrities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|solutionrelative:aspa008_1\\views\\celebrities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\helpers\\countrycodehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|solutionrelative:aspa008_1\\helpers\\countrycodehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\helpers\\builderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|solutionrelative:aspa008_1\\helpers\\builderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2847618C-A321-41CA-97F5-EAC55DE5AB0F}|ASPA008_1\\ASPA008_1.csproj|c:\\users\\manmade\\desktop\\4sem\\ipt\\lab code\\lab_8\\aspa\\aspa008_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,6 +47,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CelebritiesController.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Controllers\\CelebritiesController.cs",
+              "RelativeDocumentMoniker": "ASPA008_1\\Controllers\\CelebritiesController.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Controllers\\CelebritiesController.cs",
+              "RelativeToolTip": "ASPA008_1\\Controllers\\CelebritiesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T10:41:14.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CelebrityHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Helpers\\CelebrityHelper.cs",
+              "RelativeDocumentMoniker": "ASPA008_1\\Helpers\\CelebrityHelper.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Helpers\\CelebrityHelper.cs",
+              "RelativeToolTip": "ASPA008_1\\Helpers\\CelebrityHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T10:39:53.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "_InFormNewCelebrity.cshtml",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Views\\Celebrities\\_InFormNewCelebrity.cshtml",
               "RelativeDocumentMoniker": "ASPA008_1\\Views\\Celebrities\\_InFormNewCelebrity.cshtml",
@@ -51,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CountryCodeHelper.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Helpers\\CountryCodeHelper.cs",
               "RelativeDocumentMoniker": "ASPA008_1\\Helpers\\CountryCodeHelper.cs",
@@ -64,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "NewHumanForm.cshtml",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Views\\Celebrities\\NewHumanForm.cshtml",
               "RelativeDocumentMoniker": "ASPA008_1\\Views\\Celebrities\\NewHumanForm.cshtml",
@@ -72,12 +106,11 @@
               "RelativeToolTip": "ASPA008_1\\Views\\Celebrities\\NewHumanForm.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T09:28:59.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T09:28:59.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Views\\Celebrities\\Index.cshtml",
               "RelativeDocumentMoniker": "ASPA008_1\\Views\\Celebrities\\Index.cshtml",
@@ -85,12 +118,11 @@
               "RelativeToolTip": "ASPA008_1\\Views\\Celebrities\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T09:13:27.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T09:13:27.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Program.cs",
               "RelativeDocumentMoniker": "ASPA008_1\\Program.cs",
@@ -98,18 +130,17 @@
               "RelativeToolTip": "ASPA008_1\\Program.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwDQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T08:56:34.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T08:56:34.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "BuilderHelper.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Helpers\\BuilderHelper.cs",
               "RelativeDocumentMoniker": "ASPA008_1\\Helpers\\BuilderHelper.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\4sem\\IPT\\Lab code\\lab_8\\ASPA\\ASPA008_1\\Helpers\\BuilderHelper.cs",
               "RelativeToolTip": "ASPA008_1\\Helpers\\BuilderHelper.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAIwFcAAACbAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAiwEQAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T06:45:38.728Z",
               "EditorCaption": ""

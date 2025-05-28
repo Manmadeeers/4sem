@@ -1,9 +1,11 @@
 use UNIVER;
+
 --1
 drop procedure PSUBJECT
 go
 create procedure PSUBJECT
-as begin
+as 
+begin
 	declare @amount int = (select count(*) from SUBJECT)
 	select SUBJECT [код],
 	SUBJECT_NAME [дисциплина],
@@ -18,8 +20,8 @@ print 'количество строк=' + cast(@output as varchar(5))
 --2
 go
 alter procedure PSUBJECT @p varchar(20), @c int output
-
-as begin
+as 
+begin
 	declare @k int = (select count(*) from SUBJECT)
 
 	select SUBJECT [код],
