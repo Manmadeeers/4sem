@@ -10,8 +10,6 @@
     new Celebrity() { Id = 0, FullName = "Celebrity Name", Nationality = "BY", ReqPhotoPath = null } :
     Model.celebrity;
     string photoPath = $"api/Celebrities/photo/{celebrity.ReqPhotoPath}";
-
-
     Model.LifeEvents = Model.repo.GetLifeEventsByCelebrityId(celebrity.Id);
 }
 
