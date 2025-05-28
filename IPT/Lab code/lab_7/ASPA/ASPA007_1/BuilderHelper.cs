@@ -18,6 +18,7 @@ namespace ASPA007_1
             {
                 return new Repository(builder.Configuration.GetSection("Celebrities").GetValue<string>("ConnectionString"));
             });
+            builder.Services.AddSingleton<CelebrityTitles>((p) => new CelebrityTitles());
             return builder.Services;
         }
 

@@ -1,0 +1,23 @@
+﻿@using DAL_Celebrity_MSSQL;
+@inject CelebrityTitles titles
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@titles.Title</title>
+</head>
+<body>
+    <h1>@titles.Head</h1>
+    <hr />
+    @RenderSection("subhead",false)
+    <div>
+        @RenderBody()
+    </div>
+
+    @RenderSection("foot",false)
+    <hr />
+    &#169; @titles.CopyRight
+</body>
+</html>

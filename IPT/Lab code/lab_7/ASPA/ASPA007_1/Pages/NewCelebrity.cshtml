@@ -1,23 +1,96 @@
 ﻿@page
+@using  DAL_Celebrity_MSSQL;
 @model ASPA007_1.Pages.NewCelebrityModel
 @{
     Layout = null;
     ViewData["Title"] = "Add New Celebrity";
-
+    bool confirm = (bool)(ViewData["Confirm"] ?? false);
+    Celebrity celebrity = Model.Celebrity ?? new Celebrity();
 }
 
 <h2>Add New Celebrity</h2>
 <div class="celebrity-creator">
-    <img id="0"
-         src="@Model.pathToZero"
-         onload="onPhotoLoad(this,200,0)" />
+   
+    @if (!confirm)
+    {
+        <img id="0"
+             src="@Model.pathToZero"
+             onload="onPhotoLoad(this,200,0)" />
+        <form method="post" enctype="multipart/form-data">
+            <input id="fullName"
+                   name="fullName"
+                   type="text"
+                   placeholder="Full Name"
+                   required />
 
-    <form action="api/Celebrities">
-        <input type="text" id="full-name" placeholder="Celebrity Name" required />
-        <input type="text" id=" nationality" placeholder="Nationality" required />
-        <input type="file" id="photo" placeholder="Upload Photo" required />
-    </form>
+            <input id="nationality"
+                   name="nationality"
+                   type="text"
+                   placeholder="Nationality"
+                   required />
+
+            <input id="upload"
+                   name="upload"
+                   type="file"
+                   accept="image/jpeg"
+                   onchange="onChange(this)"
+                   required />
+
+            <button id="button-load"
+                    type="button"
+                    onclick="document.getElementById('upload').click()">
+                Upload Photo
+            </button>
+            <button id="ok-button" type="submit">
+                OK
+            </button>
+            <button id="cancel-button" type="reset">
+                CANCEL
+            </button>
+        </form>
+    }
+    else
+    {
+        <img 
+            id="0"
+             src="api/Celebrities/photo/@celebrity.ReqPhotoPath"
+             title="New Celebrity"
+             onload="onPhotoLoad(this,200,0)"/>
+
+        <form method="post">
+            <input name="fullname"
+                   type="text"
+                   value="@celebrity.FullName"
+                   readonly />
+
+            <input name="nationality"
+                   type="text"
+                   value="@celebrity.Nationality"
+                   readonly />
+
+            <input name="filename"
+                   type="hidden"
+                   readonly
+                   value="@celebrity.ReqPhotoPath" />
+
+            <button name="press"
+                    type="submit"
+                    value="Confirm">
+                CONFIRM
+            </button>
+
+            <button type="reset">
+                CANCEL
+            </button>
+        </form>
+    }
+
 </div>
+
+@if (ViewData["ValidMessage"] != null)
+{
+
+}
  
 
 <style>
@@ -31,9 +104,17 @@
     form{
         margin-left:20px;
     }
-    form input{
+    form input,form button{
         height:30px;
         width:100%;
+        margin-top:20px; 
+    }
+    #ok-button,#cancel-button{
+        width:45%;
+        cursor:pointer;
+    }
+    #upload{
+        display:none;
     }
    
 </style>
@@ -52,4 +133,15 @@
             e.height = Math.round(w / ratio);
         }
     }
+
+    document.getElementById('upload').addEventListener('change', function (e) {
+        const button = document.getElementById('button-load');
+        const fileName = e.target.files[0]?.name || 'Upload Photo';
+        button.textContent = fileName;
+        if (fileName.length > 20) {
+            const extension = fileName.split('.').pop();
+            const shortName = fileName.substring(0, 15) + '...' + extension;
+            button.textContent = shortName;
+        }
+    });
 </script>
