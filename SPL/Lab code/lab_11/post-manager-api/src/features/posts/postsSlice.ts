@@ -1,94 +1,59 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { createPost, deletePost, editPost, fetchPosts } from "./postsAPI";
-import { type Post, type NewPost } from "./types";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { fetchPosts, createPost, updatePost, deletePost, type Post, type NewPost } from './postsAPI';
 
+// Load posts action configuration
+export const loadPosts = createAsyncThunk<Post[]>('posts/load', fetchPosts);
+// Add post action configuration
+export const addPost = createAsyncThunk<Post, NewPost>('posts/add', createPost);
+// Edit post action configuration
+export const editPost = createAsyncThunk<Post, Post>('posts/edit', updatePost);
+// Remove post action configuration
+export const removePost = createAsyncThunk<void, number>('posts/remove', deletePost);
 
-
-export interface PostsState {
-    posts: Post[];
-    loading: boolean;
-    error: string | null;
+// Define the initial state
+interface PostsState {
+  posts: Post[];
+  loading: boolean;
+  error: string | null;
 }
 
 const initialState: PostsState = {
-    posts: [],
-    loading: false,
-    error: null
-}
+  posts: [],
+  loading: false,
+  error: null,
+};
 
-//actions
-
-export const fetchPostsAsync = createAsyncThunk("posts/fetchPosts", async () => {
-    return await fetchPosts();
-})
-
-export const createPostAsync = createAsyncThunk("posts/createPost", async (newPost: NewPost) => {
-    return await createPost(newPost);
-})
-
-
-export const deletePostAsync = createAsyncThunk("posts/deletePost", async (id: number) => {
-    return await deletePost(id);
-})
-
-export const editPostAsync = createAsyncThunk("posts/editPost", async (updPost: Post) => {
-    return await editPost(updPost);
-})
-
-//slice
-
+// Create the posts slice
 const postsSlice = createSlice({
-
-    name: 'posts',
-
-    initialState,
-
-    reducers: {},
-
-    extraReducers: (builder) => {
-
-        builder
-
-            .addCase(fetchPostsAsync.pending, (state) => {
-
-                state.loading = true;
-
-            })
-
-            .addCase(fetchPostsAsync.fulfilled, (state, action) => {
-
-                state.loading = false;
-
-                state.posts = action.payload;
-
-            })
-
-            .addCase(createPostAsync.fulfilled, (state, action) => {
-
-                state.posts.push(action.payload);
-
-            })
-
-            .addCase(editPostAsync.fulfilled, (state, action) => {
-
-                const index = state.posts.findIndex(post => post.id === action.payload.id);
-
-                if (index !== -1) {
-
-                    state.posts[index] = action.payload;
-
-                }
-
-            })
-
-            .addCase(deletePostAsync.fulfilled, (state, action) => {
-
-                state.posts = state.posts.filter(post => post.id !== action.payload);
-
-            });
-
-    },
-
+  name: 'posts',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(loadPosts.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(loadPosts.fulfilled, (state, action) => {
+        state.loading = false;
+        state.posts = action.payload;
+      })
+      .addCase(loadPosts.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message || 'Something went wrong';
+      })
+      .addCase(addPost.fulfilled, (state, action) => {
+        state.posts.push(action.payload);
+      })
+      .addCase(editPost.fulfilled, (state, action) => {
+        const index = state.posts.findIndex(post => post.id === action.payload.id);
+        if (index !== -1) {
+          state.posts[index] = action.payload;
+        }
+      })
+      .addCase(removePost.fulfilled, (state, action) => {
+        state.posts = state.posts.filter(post => post.id !== action.meta.arg);
+      });
+  },
 });
 
 export default postsSlice.reducer;
