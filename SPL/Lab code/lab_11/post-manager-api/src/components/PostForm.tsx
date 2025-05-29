@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../styles/styles.css"
 
 interface PostFormProps {
   onAddPost: (post: { title: string; body: string; }) => void;
