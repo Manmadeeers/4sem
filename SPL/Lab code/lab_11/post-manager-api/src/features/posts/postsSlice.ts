@@ -1,16 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { fetchPosts, createPost, updatePost, deletePost, type Post, type NewPost } from './postsAPI';
 
-// Load posts action configuration
 export const loadPosts = createAsyncThunk<Post[]>('posts/load', fetchPosts);
-// Add post action configuration
 export const addPost = createAsyncThunk<Post, NewPost>('posts/add', createPost);
-// Edit post action configuration
 export const editPost = createAsyncThunk<Post, Post>('posts/edit', updatePost);
-// Remove post action configuration
 export const removePost = createAsyncThunk<void, number>('posts/remove', deletePost);
 
-// Define the initial state
 interface PostsState {
   posts: Post[];
   loading: boolean;
@@ -23,7 +18,8 @@ const initialState: PostsState = {
   error: null,
 };
 
-// Create the posts slice
+let  id_storage = 0;
+
 const postsSlice = createSlice({
   name: 'posts',
   initialState,
@@ -35,23 +31,28 @@ const postsSlice = createSlice({
       })
       .addCase(loadPosts.fulfilled, (state, action) => {
         state.loading = false;
-        state.posts = action.payload;
+        state.posts = action.payload; 
+        id_storage = state.posts.length;
+       // console.log(id_storage);
       })
       .addCase(loadPosts.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message || 'Something went wrong';
       })
       .addCase(addPost.fulfilled, (state, action) => {
-        state.posts.push(action.payload);
+        id_storage = id_storage+1;
+        console.log(id_storage);
+        action.payload.id = id_storage;
+        state.posts.push(action.payload); 
       })
       .addCase(editPost.fulfilled, (state, action) => {
         const index = state.posts.findIndex(post => post.id === action.payload.id);
         if (index !== -1) {
-          state.posts[index] = action.payload;
+          state.posts[index] = action.payload; 
         }
       })
       .addCase(removePost.fulfilled, (state, action) => {
-        state.posts = state.posts.filter(post => post.id !== action.meta.arg);
+        state.posts = state.posts.filter(post => post.id !== action.meta.arg); 
       });
   },
 });

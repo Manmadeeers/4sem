@@ -22,7 +22,7 @@ const Posts = () => {
   };
 
   const handleDeletePost = (id: number) => {
-    dispatch(removePost(id)); // Check that this dispatches the correct ID
+    dispatch(removePost(id)); 
   };
 
   return (
