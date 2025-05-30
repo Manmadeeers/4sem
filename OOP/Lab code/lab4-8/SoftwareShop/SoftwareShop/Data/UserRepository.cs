@@ -2,7 +2,7 @@
 using SoftwareShop.Models;
 
 
-namespace SoftwareShop.Data
+namespace SoftwareShop.Repositories
 {
     public class UserRepository
     {
@@ -21,44 +21,187 @@ namespace SoftwareShop.Data
 
 
         //-----Methods-----//
-        private void AddUser(User user)
+        public List<User> GetAllUsers()
+
         {
+
+            var users = new List<User>();
+
             using (SqlConnection connection = new SqlConnection(_connectionString))
+
             {
+
                 connection.Open();
-                using(SqlTransaction transaction = connection.BeginTransaction())
+
+                SqlCommand command = new SqlCommand("SELECT * FROM Users", connection);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+
                 {
-                    try
+
+                    users.Add(new User
+
                     {
-                        using (SqlCommand command = new SqlCommand(
-                            "INSERT INTO Users (Name, Email, Password, IsAdmin, Role) VALUES " +
-                            "(@Name, @Email, @Password, @IsAdmin, @Role)", 
-                            connection, transaction))
-                        {
-                            command.Parameters.AddWithValue("@Name", user.Name);
 
-                            command.Parameters.AddWithValue("@Email", user.Email);
+                        Id = reader.GetInt32(0),
 
-                            command.Parameters.AddWithValue("@Password", user.Password);
+                        Name = reader.GetString(1),
 
-                            command.Parameters.AddWithValue("@IsAdmin", user.IsAdmin);
+                        Email = reader.GetString(2),
 
-                            command.Parameters.AddWithValue("@Role", user.Role);
+                        Password = reader.GetString(3),
 
-                            command.ExecuteNonQuery();
-                        }
+                        IsAdmin = reader.GetBoolean(4),
 
-                        transaction.Commit();
-                    }
-                    catch
-                    {
-                        transaction.Rollback();
-                        throw;
-                    }
+                        Role = reader.GetString(5)
+
+                    });
+
                 }
-            }   
+
+            }
+
+            return users;
+
+        }
+        public void AddUser(User user)
+
+        {
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+
+            {
+
+                connection.Open();
+
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+
+                {
+
+                    SqlCommand command = new SqlCommand("INSERT INTO Users (Name, Email, Password, IsAdmin, Role) VALUES (@name, @email, @password, @isAdmin, @role)", connection, transaction);
+
+                    command.Parameters.AddWithValue("@name", user.Name);
+
+                    command.Parameters.AddWithValue("@email", user.Email);
+
+                    command.Parameters.AddWithValue("@password", user.Password);
+
+                    command.Parameters.AddWithValue("@isAdmin", user.IsAdmin);
+
+                    command.Parameters.AddWithValue("@role", user.Role);
+
+                    command.ExecuteNonQuery();
+
+                    transaction.Commit();
+
+                }
+
+                catch
+
+                {
+
+                    transaction.Rollback();
+
+                    throw;
+
+                }
+
+            }
+
         }
 
+        public void UpdateUser(User user)
+
+        {
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+
+            {
+
+                connection.Open();
+
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+
+                {
+
+                    SqlCommand command = new SqlCommand("UPDATE Users SET Name=@name, Email=@email, Password=@password, IsAdmin=@isAdmin, Role=@role WHERE Id=@id", connection, transaction);
+
+                    command.Parameters.AddWithValue("@id", user.Id);
+
+                    command.Parameters.AddWithValue("@name", user.Name);
+
+                    command.Parameters.AddWithValue("@email", user.Email);
+
+                    command.Parameters.AddWithValue("@password", user.Password);
+
+                    command.Parameters.AddWithValue("@isAdmin", user.IsAdmin);
+
+                    command.Parameters.AddWithValue("@role", user.Role);
+
+                    command.ExecuteNonQuery();
+
+                    transaction.Commit();
+
+                }
+
+                catch
+
+                {
+
+                    transaction.Rollback();
+
+                    throw;
+
+                }
+
+            }
+
+        }
+        public void DeleteUser(int id)
+
+        {
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+
+            {
+
+                connection.Open();
+
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+
+                {
+
+                    SqlCommand command = new SqlCommand("DELETE FROM Users WHERE Id=@id", connection, transaction);
+
+                    command.Parameters.AddWithValue("@id", id);
+
+                    command.ExecuteNonQuery();
+
+                    transaction.Commit();
+
+                }
+
+                catch
+
+                {
+
+                    transaction.Rollback();
+
+                    throw;
+
+                }
+
+            }
+
+        }
 
         //-----End of Methods-----//
 

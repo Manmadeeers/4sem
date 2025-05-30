@@ -39,7 +39,7 @@ const postsSlice = createSlice({
         state.loading = false;
         state.error = action.error.message || 'Something went wrong';
       })
-      .addCase(addPost.fulfilled, (state, action) => {
+      .addCase(addPost.fulfilled, (state, action) => { 
         id_storage = id_storage+1;
         console.log(id_storage);
         action.payload.id = id_storage;

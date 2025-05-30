@@ -15,13 +15,13 @@ const PostItem: React.FC<PostItemProps> = ({ post, onEdit, onDelete }) => {
   const handleEditToggle = () => {
     setIsEditing(!isEditing);
     if (isEditing) {
-      // If we are saving the edit, call onEdit with the updated values
+      
       onEdit({ id: post.id, title, body });
     }
   };
 
   const handleCancelEdit = () => {
-    // Resets the title and body to the original post details
+   
     setTitle(post.title);
     setBody(post.body);
     setIsEditing(false);
