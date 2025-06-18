@@ -3,21 +3,19 @@ using System.Windows;
 
 namespace SoftwareShop
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
+
     public partial class App : Application
     {
 
-        public void InitializeDatabase()
-        {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                connection.Open();
-                var command = new SqlCommand("IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'SoftwareShop') CREATE DATABASE SoftwareShop", connection);
-                command.ExecuteNonQuery();
-            }
-        }
+        //public void InitializeDatabase()
+        //{
+        //    using (SqlConnection connection = new SqlConnection(_connectionString))
+        //    {
+        //        connection.Open();
+        //        var command = new SqlCommand("IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'SoftwareShop') CREATE DATABASE SoftwareShop", connection);
+        //        command.ExecuteNonQuery();
+        //    }
+        //}
 
         public void ChangeLanguage(string lang)
         {
