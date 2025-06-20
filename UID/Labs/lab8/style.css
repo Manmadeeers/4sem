@@ -1,0 +1,29 @@
+.containter{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+}
+
+aside{
+    flex: 1 1 30%;
+    display: flex;
+    flex-flow: row wrap;
+    border:1px solid;
+}
+.profile{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 100%;
+}
+aside img{
+    border-radius: 100px;
+    flex: 1 1 20%;
+}
+aside .profile-info{
+    flex: 1 1 40%;
+}
+
+main{
+    flex: 1 1 50%;
+    border: 1px solid;
+}
