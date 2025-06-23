@@ -14,7 +14,7 @@ namespace SoftwareShop.ViewModels
     {
 
         //-----Fields and Properties-----//
-        public Visibility ItemsDeleteVisibility;
+        public Visibility ItemsDeleteVisibility = Visibility.Collapsed;
         private ProductsView _productsView;
         public AddView AddView;
         private User _loggedUser;
@@ -63,7 +63,6 @@ namespace SoftwareShop.ViewModels
             Debug.WriteLine("MainViewModel created");
             LoadProducts();
             Debug.WriteLine($"Products loaded: {Products?.Count}");
-           
             
         }
 
@@ -84,6 +83,9 @@ namespace SoftwareShop.ViewModels
         private ICommand _deleteCommand;
         public ICommand DeleteCommand => _deleteCommand ??= new RelayCommand(Delete, CanDelete);
 
+        private ICommand _viewAcc;
+        public ICommand ViewAcc => _viewAcc ??= new RelayCommand(ViAc, (object parameter) => true);
+
         //-----End of Commands-----//
 
 
@@ -96,6 +98,13 @@ namespace SoftwareShop.ViewModels
             loginView.Show();
             _productsView.Close();
         }
+
+        private void ViAc(object sender)
+        {
+            AccountView accountView = new AccountView(LoggedUser);
+            accountView.Show();
+
+        }
         private bool CanUnlogin(object sender)
         {
             return true;
@@ -103,6 +112,7 @@ namespace SoftwareShop.ViewModels
         private void LoadProducts()
         {
           //TODO - real load products logic here
+           _products = new ObservableCollection<Product>(Data.Repository.productRepository.GetAllProducts());
            
         }
 
@@ -145,8 +155,6 @@ namespace SoftwareShop.ViewModels
 
         private void Buy(object parameter)
         {
-            //TODO - real buy logic here
-
         }
 
         private bool CanBuy(object parameter){
@@ -172,12 +180,16 @@ namespace SoftwareShop.ViewModels
             
         private void Delete(object parameter)
         {
-            //TODO - real delete logic here
+            if (parameter is Product product)
+            {
+                _products.Remove(product);
+                Data.Repository.productRepository.DeleteProduct(product.Id);
+            }
         }
 
         private bool CanDelete(object parameter)
         {
-            return true;
+            return _loggedUser.IsAdmin;
         }
 
 

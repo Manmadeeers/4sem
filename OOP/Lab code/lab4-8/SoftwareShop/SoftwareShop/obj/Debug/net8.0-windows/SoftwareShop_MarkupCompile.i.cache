@@ -8,13 +8,13 @@ C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\
 SoftwareShop
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\App.xaml
-7-774253471
+121895686404
 
-221100682668
-216-206994652
-Resources\Local.en.xaml;Resources\Local.ru.xaml;Views\AddView.xaml;Views\LogIn.xaml;Views\MoreView.xaml;Views\ProductsView.xaml;Views\SignUp.xaml;
+291041062893
+216-983961757
+Resources\dark.xaml;Resources\light.xaml;Resources\Local.en.xaml;Resources\Local.ru.xaml;Themes\Generic.xaml;Views\AccountView.xaml;Views\AddView.xaml;Views\LogIn.xaml;Views\MoreView.xaml;Views\ProductsView.xaml;Views\SignUp.xaml;Views\UserControl1.xaml;
 
-False
+True
 

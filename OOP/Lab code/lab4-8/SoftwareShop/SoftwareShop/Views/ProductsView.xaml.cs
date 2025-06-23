@@ -23,6 +23,8 @@ namespace SoftwareShop.Views
             if (loggedUser.IsAdmin)
             {
                 this.AddNewButton.Visibility = Visibility.Visible;
+
+                context.ItemsDeleteVisibility = Visibility.Visible;
                 
             }
         }
@@ -43,5 +45,50 @@ namespace SoftwareShop.Views
                 }
             }
         }
+        private bool _isDark = false;
+        private void OnToggleTheme(object sender, RoutedEventArgs e)
+        {
+            var appDicts = Application.Current.Resources.MergedDictionaries;
+
+            // Ищем и удаляем существующий словарь темы (LightTheme или DarkTheme)
+            var existingTheme = appDicts
+                .FirstOrDefault(d =>
+                    d.Source.OriginalString.EndsWith("Light.xaml", StringComparison.OrdinalIgnoreCase) ||
+                    d.Source.OriginalString.EndsWith("Dark.xaml", StringComparison.OrdinalIgnoreCase));
+
+            if (existingTheme != null)
+                appDicts.Remove(existingTheme);
+
+            // Выбираем новую тему на смену
+            var themeFile = _isDark
+                ? "Resources/Light.xaml"
+                : "Resources/Dark.xaml";
+
+            appDicts.Add(new ResourceDictionary
+            {
+                Source = new Uri(themeFile, UriKind.Relative)
+            });
+
+            _isDark = !_isDark;
+        }
+
+        public bool IsFeatureOn { get; set; } = false;
+
+
+        private void Second_Tunnel(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Tunneling event");
+        }
+
+        private void Second_Bubble(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Bubbling event");
+        }
+
+        private void First_Direct(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Direct event fired!");
+        }
+
     }
 }

@@ -75,16 +75,28 @@ namespace SoftwareShop.ViewModels
         {
             bool success = true;
             User loggedUser = new User() ;
-            //TODO - real log in logic here
-            if (true)
+            
+            if (Data.Repository.userRepository.GetAllUsers().Any((ob) => this.Username == ob.Name))
             {
-
+                User maby = Data.Repository.userRepository.GetAllUsers().Find((ob) => this.Username == ob.Name);
+                if (maby.Password.Equals(Password))
+                {
+                    loggedUser = maby;
+                }
+                else
+                {
+                    success = false;
+                    MessageBox.Show("Incorrect username or password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Password = string.Empty;
+                    return;
+                }
             }
             else
             {
                 success = false;
                 MessageBox.Show("Incorrect username or password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 Password = string.Empty;
+                return;
             }
 
 

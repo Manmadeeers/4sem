@@ -70,3 +70,146 @@ C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.pdb
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.genruntimeconfig.cache
 C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\ref\SoftwareShop.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\SoftwareShop.exe
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\SoftwareShop.dll.config
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\SoftwareShop.deps.json
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\SoftwareShop.runtimeconfig.json
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\SoftwareShop.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\SoftwareShop.pdb
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.csproj.AssemblyReference.cache
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Resources\Local.en.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Resources\Local.ru.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\AddView.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\LogIn.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\MoreView.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\AddView.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\LogIn.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\MoreView.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\ProductsView.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\SignUp.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop_MarkupCompile.cache
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop_MarkupCompile.lref
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\App.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\ProductsView.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\SignUp.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.g.resources
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.AssemblyInfoInputs.cache
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.AssemblyInfo.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.csproj.CoreCompileInputs.cache
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Software.07CA1878.Up2Date
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\refint\SoftwareShop.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.pdb
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\SoftwareShop.genruntimeconfig.cache
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\ref\SoftwareShop.dll
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Resources\dark.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Resources\light.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\UserControl1.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\UserControl1.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Themes\Generic.baml
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\AccountView.g.cs
+C:\Users\litvi\Documents\Курсач2\lab4-8\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\AccountView.baml
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\SoftwareShop.dll.config
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Resources\dark.baml
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Resources\light.baml
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\AccountView.g.cs
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\UserControl1.g.cs
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Themes\Generic.baml
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\AccountView.baml
+C:\Users\Manmade\Desktop\4sem\OOP\Lab code\lab4-8\SoftwareShop\SoftwareShop\obj\Debug\net8.0-windows\Views\UserControl1.baml

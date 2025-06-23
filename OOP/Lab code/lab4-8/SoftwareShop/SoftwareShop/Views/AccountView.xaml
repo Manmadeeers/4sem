@@ -1,0 +1,96 @@
+﻿<Window x:Class="SoftwareShop.Views.AccountView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SoftwareShop.Views"
+        mc:Ignorable="d"
+        Title="AccountView" Height="450" Width="800">
+
+    <Grid Margin="20">
+        <!-- Определяем 6 строк по высоте контента + авто-маргин для кнопок -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Name -->
+            <RowDefinition Height="Auto"/>
+            <!-- Email -->
+            <RowDefinition Height="Auto"/>
+            <!-- Password -->
+            <RowDefinition Height="Auto"/>
+            <!-- Language -->
+            <RowDefinition Height="Auto"/>
+            <!-- Theme -->
+            <RowDefinition Height="*"/>
+            <!-- Spacer и кнопки внизу -->
+        </Grid.RowDefinitions>
+        <!-- Две колонки: метка и поле -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Name -->
+        <TextBlock Text="Name:" 
+                   Grid.Row="0" Grid.Column="0" 
+                   VerticalAlignment="Center" 
+                   Margin="0,5"/>
+        <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" 
+                 Grid.Row="0" Grid.Column="1" 
+                 Margin="5"/>
+
+        <!-- Email -->
+        <TextBlock Text="Email:" 
+                   Grid.Row="1" Grid.Column="0" 
+                   VerticalAlignment="Center" 
+                   Margin="0,5"/>
+        <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" 
+                 Grid.Row="1" Grid.Column="1" 
+                 Margin="5"/>
+
+        <!-- Password -->
+        <TextBlock Text="Password:" 
+                   Grid.Row="2" Grid.Column="0" 
+                   VerticalAlignment="Center" 
+                   Margin="0,5"/>
+        <PasswordBox Grid.Row="2" Grid.Column="1" 
+                     Margin="5"
+                     PasswordChanged="PasswordBox_PasswordChanged"/>
+
+        <!-- Language -->
+        <TextBlock Text="Language:" 
+                   Grid.Row="3" Grid.Column="0" 
+                   VerticalAlignment="Center" 
+                   Margin="0,5"/>
+        <ComboBox ItemsSource="{Binding Languages}" 
+                  SelectedItem="{Binding SelectedLanguage}"
+                  Grid.Row="3" Grid.Column="1" 
+                  Margin="5"/>
+
+        <!-- Theme -->
+        <TextBlock Text="Theme:" 
+                   Grid.Row="4" Grid.Column="0"
+                   VerticalAlignment="Center" 
+                   Margin="0,5"/>
+        <ComboBox ItemsSource="{Binding Themes}" 
+                  SelectedItem="{Binding SelectedTheme}"
+                  Grid.Row="4" Grid.Column="1" 
+                  Margin="5"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,20,0,0"
+                    >
+            <Button Content="Apply Language" 
+                    Command="{Binding ChangeLanguageCommand}" 
+                    Width="120"/>
+            <Button Content="Apply Theme"    
+                    Command="{Binding ChangeThemeCommand}"    
+                    Width="100"/>
+            <Button Content="Save"           
+                    Command="{Binding SaveCommand}"           
+                    Width="80"/>
+        </StackPanel>
+    </Grid>
+</Window>

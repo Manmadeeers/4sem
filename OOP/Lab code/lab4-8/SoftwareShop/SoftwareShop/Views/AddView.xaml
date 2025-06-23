@@ -1,11 +1,12 @@
 ﻿    <Window x:Class="SoftwareShop.Views.AddView"
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            Background="{DynamicResource WindowBackgroundBrush}"
+            Foreground="{DynamicResource PrimaryTextBrush}"
             Title="{DynamicResource AddWindowTitle}"
             Width="400" Height="400"
             ResizeMode="NoResize"
-            WindowStartupLocation="CenterOwner"
-            Background="White">
+            WindowStartupLocation="CenterOwner">
         <Grid Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />

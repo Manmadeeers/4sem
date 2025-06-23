@@ -1,5 +1,6 @@
 ﻿using SoftwareShop.Helpers;
 using SoftwareShop.Models;
+using SoftwareShop.Repositories;
 using SoftwareShop.Views;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -105,9 +106,9 @@ namespace SoftwareShop.ViewModels
 
             Random random = new Random();
 
-            User freshlySignedUser = new User(random.Next(1,101),Username,Email,Password,false);
+            User freshlySignedUser = new User(random.Next(1, 101), Username, Email, Password, false){ Role = "User"};
 
-
+            Data.Repository.userRepository.AddUser(freshlySignedUser);
             
             Username = string.Empty;
             Email = string.Empty;

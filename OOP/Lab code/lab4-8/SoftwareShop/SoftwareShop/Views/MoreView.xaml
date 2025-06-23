@@ -3,8 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Информация о товаре" Height="450" Width="400"
         ResizeMode="NoResize"
+                    Background="{DynamicResource WindowBackgroundBrush}"
+            Foreground="{DynamicResource PrimaryTextBrush}"
         WindowStartupLocation="CenterOwner"
-        Background="White"
         WindowStyle="SingleBorderWindow"
         >
 

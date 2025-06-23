@@ -110,10 +110,12 @@ namespace SoftwareShop.ViewModels
             product.Name = Name;
             product.Description = Description;
             product.Price = Price;
+            product.DetailedDescription = "";
 
             product.ImagePath = Path.Combine("C:\\Users\\Manmade\\Desktop\\4sem\\OOP\\Lab code\\lab4-5\\SoftwareShop\\SoftwareShop\\Images\\", ImagePath);
 
             MainModel.AllProducts.Add(product);
+            Data.Repository.productRepository.AddProduct(product);
             Serializer.SaveCollectionToFile(MainModel.AllProducts);
             MessageBox.Show("Added");
             AddView.Close();

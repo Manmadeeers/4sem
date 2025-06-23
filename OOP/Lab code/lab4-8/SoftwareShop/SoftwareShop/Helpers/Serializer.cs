@@ -14,13 +14,13 @@ namespace SoftwareShop.Helpers
         public static void SaveCollectionToFile<T>( ObservableCollection<T> collection)
         {
             // Сериализуем всю коллекцию в JSON
-            string jsonString = JsonSerializer.Serialize(collection, new JsonSerializerOptions
-            {
-                WriteIndented = true
-            });
+            //string jsonString = JsonSerializer.Serialize(collection, new JsonSerializerOptions
+            //{
+            //    WriteIndented = true
+            //});
 
-            // Перезаписываем файл новым содержимым
-            File.WriteAllText(jsonPath, jsonString);
+            //// Перезаписываем файл новым содержимым
+            //File.WriteAllText(jsonPath, jsonString);
         }
     }
 }

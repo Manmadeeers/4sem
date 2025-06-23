@@ -8,8 +8,10 @@ namespace SoftwareShop.Views
     {
         public SignUpView()
         {
+            Data.Repository.Init((string)Application.Current.Resources["Conn"]);
             InitializeComponent();
             DataContext = new SignUpViewModel(this);
+
         }
 
 
