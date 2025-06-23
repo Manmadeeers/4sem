@@ -1,0 +1,93 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+}
+
+aside{
+    flex: 1 1 15%;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #1986B4;
+    margin: 10px;
+    color: white;
+    /* height: 100vh; */
+}
+
+aside .profile{
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+.profile .profile-img{
+    flex: 1 1 20%;
+    /* border:1px solid; */
+}
+
+.profile .profile-info{
+    flex: 1 1 40%;
+    /* border: 1px solid; */
+}
+.profile-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.profile-img img:hover{
+    cursor: pointer;
+}
+
+nav{
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+    align-content:baseline;
+}
+nav .my-tasks-button, nav .all-tasks-button, .bottom-buttons .exit-button{
+    flex: 1 1 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 20px;
+    align-items:center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.my-tasks-button a{
+    font-weight: bold;
+}
+.exit-button{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.my-tasks-button:hover, .all-tasks-button:hover, .exit-button:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+.my-tasks-button img, .all-tasks-button img{
+    display: inline-block;
+}
+.my-tasks-button a, .all-tasks-button a{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+main{
+    flex:1 1 70%;
+    display: flex;
+    flex-flow: row wrap;
+}
