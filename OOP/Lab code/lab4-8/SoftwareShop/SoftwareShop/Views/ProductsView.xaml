@@ -1,59 +1,55 @@
 ﻿<Window x:Class="SoftwareShop.Views.ProductsView"
+
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+
         xmlns:vm="clr-namespace:SoftwareShop.ViewModels"
+
         xmlns:v="clr-namespace:SoftwareShop.Views"
+
         xmlns:models="clr-namespace:SoftwareShop.Models"
+
                     Background="{DynamicResource WindowBackgroundBrush}"
+
             Foreground="{DynamicResource PrimaryTextBrush}"
+
         Title="Software Shop" Height="600" Width="900">
 
     <Window.Resources>
-       
-        <!-- textbox style for search bar -->
+
+        <!-- Updated Search TextBox Style -->
         <Style x:Key="SearchTextBoxStyle" TargetType="TextBox">
             <Setter Property="Height" Value="30"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Padding" Value="8,4"/>
-            <Setter Property="Background" Value="White"/>
+            <Setter Property="Background" Value="#3A4B5D"/>
+            <!-- Match sidebar background -->
             <Setter Property="BorderBrush" Value="#ddd"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="Foreground" Value="White"/>
+            <!-- Match sidebar text color -->
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Border Background="{TemplateBinding Background}" 
-                                BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="5">
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        CornerRadius="5">
                             <ScrollViewer x:Name="PART_ContentHost"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding Text.Length, ElementName=SearchTextBox}" Value="0">
-                    <DataTrigger.EnterActions>
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <!-- мигание opacity -->
-                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                                                 From="1" To="0.5"
-                                                 Duration="0:0:0.3"
-                                                 AutoReverse="True"
-                                                 RepeatBehavior="3x"/>
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </DataTrigger.EnterActions>
-                </DataTrigger>
-            </Style.Triggers>
         </Style>
 
-        <!-- search button style -->
+        <!-- Updated Search Button Style -->
         <Style x:Key="SearchButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Background" Value="#3A4B5D"/>
+            <!-- Same as sidebar background -->
             <Setter Property="Foreground" Value="White"/>
+            <!-- Consistent text color -->
             <Setter Property="Padding" Value="8,4"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
@@ -64,8 +60,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                CornerRadius="5">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="5">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -88,154 +83,187 @@
     </Window.Resources>
 
     <Window.DataContext>
+
         <vm:MainViewModel/>
+
     </Window.DataContext>
 
     <Grid>
+
         <Grid.ColumnDefinitions>
+
             <ColumnDefinition Width="200"/>
-           
+
             <ColumnDefinition Width="*"/>
-           
+
         </Grid.ColumnDefinitions>
 
         <!-- sidebar -->
-        <Border Grid.Column="0" Background="#6C7885" CornerRadius="5" Margin="0" >
+
+        <Border Grid.Column="0" Background="#3A4B5D" CornerRadius="10" Margin="0">
             <StackPanel Margin="20">
                 <Button
-                    Name="LangButton"
-                    Content="En"
-                    Width="20"
-                    HorizontalAlignment="Left"
-                    Background="Transparent"
-                    Cursor="Hand"
-                    Foreground="White"
-                    Click="ChangeLang"/>
-                <TextBlock Text="{DynamicResource UserInfoText}" FontWeight="Bold" FontSize="20" Margin="0,0,0,15" Foreground="White" TextAlignment="Center"/>
-                <Border Height="2" Background="#6c757d" Margin="0,0,0,15"/>
-                <TextBlock Text="{DynamicResource ProductsNameText}" FontSize="16" Margin="0,0,0,5" FontWeight="Bold" Foreground="#adb5bd"/>
-                <TextBlock Text="{Binding LoggedUser.Name}" FontSize="16" Margin="0,0,0,10" Foreground="White"/>
-                <TextBlock Text="{DynamicResource ProductsEmailText}" FontSize="16" Margin="0,0,0,5" FontWeight="Bold" Foreground="#adb5bd"/>
-                <TextBlock Text="{Binding LoggedUser.Email}" FontSize="16" Margin="0,0,0,10" Foreground="White"/>
-                <TextBlock Text="{DynamicResource ProductsRoleText}" FontSize="16" Margin="0,0,0,5" FontWeight="Bold" Foreground="#adb5bd"/>
-                <TextBlock x:Name="RoleDisplay" Text="{Binding LoggedUser.Role}" FontSize="16" Margin="0,0,0,10" Foreground="White"/>
-                <Button
-                    Content="{DynamicResource ProductsExitButtonText}"
-                    Cursor="Hand"
-                    Command="{Binding UnloginCommand}"/>
-                <Button
-                    Content="ACC"
-                    Cursor="Hand"
-                    Command="{Binding ViewAcc}"/>
-                <Button
-                    Name="AddNewButton"
-                    Content="{DynamicResource ProductsAddNewButtonText}"
-                    Margin="0,10,0,0"
-                    Cursor="Hand"
-                    Command="{Binding AddCommand}"
-                    Visibility="Hidden"
-                    />
+            Name="LangButton"
+            Content="En"
+            Width="25"
+            HorizontalAlignment="Left"
+            Background="#005BBB"
+            Cursor="Hand"
+            Foreground="White"
+            BorderThickness="0" 
+            Click="ChangeLang"/>
 
-                <Button Content="Theme"
-            Width="120" Height="30"
-            Click="OnToggleTheme"
-            Background="{DynamicResource PrimaryTextBrush}"
-            Foreground="{DynamicResource WindowBackgroundBrush}"/>
-                <v:UserControl1 Width="50px"></v:UserControl1>
+                <TextBlock Text="{DynamicResource UserInfoText}" FontWeight="Bold" FontSize="24" Margin="0,0,0,15" Foreground="White" TextAlignment="Center"/>
 
+                <Border Height="2" Background="#B0BEC5" Margin="0,0,0,15"/>
 
+                <TextBlock Text="{DynamicResource ProductsNameText}" FontSize="18" Margin="0,0,0,5" FontWeight="Bold" Foreground="#B0BEC5"/>
+                <TextBlock Text="{Binding LoggedUser.Name}" FontSize="18" Margin="0,0,0,10" Foreground="White"/>
 
-                <!-- MyFirstControl: задаём  IntValue=80 → коэрсится в 50 -->
-                <v:MyFirstControl IntValue="80"
-                         Direct="First_Direct"/>
+                <TextBlock Text="{DynamicResource ProductsEmailText}" FontSize="18" Margin="0,0,0,5" FontWeight="Bold" Foreground="#B0BEC5"/>
+                <TextBlock Text="{Binding LoggedUser.Email}" FontSize="18" Margin="0,0,0,10" Foreground="White"/>
 
-                <!-- MySecondControl: задаём длинный Text → усекается до 10 -->
+                <TextBlock Text="{DynamicResource ProductsRoleText}" FontSize="18" Margin="0,0,0,5" FontWeight="Bold" Foreground="#B0BEC5"/>
+                <TextBlock x:Name="RoleDisplay" Text="{Binding LoggedUser.Role}" FontSize="18" Margin="0,0,0,10" Foreground="White"/>
 
-                <v:MySecondControl Text="5"
-                     Tunneling="Second_Tunnel"
-                     Bubbling="Second_Bubble"/>
+                <Button Content="{DynamicResource ProductsExitButtonText}" Cursor="Hand" Command="{Binding UnloginCommand}" Margin="0,10,0,0" Background="#D32F2F" Foreground="White" BorderThickness="0" Width="120"/>
+                <Button Content="View Account Data" Cursor="Hand" Command="{Binding ViewAcc}" Margin="0,5,0,0" Background="#FF9800" Foreground="White" BorderThickness="0" Width="120"/>
+                <Button Name="AddNewButton" Content="{DynamicResource ProductsAddNewButtonText}" Margin="0,10,0,0" Cursor="Hand" Command="{Binding AddCommand}" Visibility="Hidden" Background="#8BC34A" Foreground="White" BorderThickness="0" Width="120"/>
 
-                <!-- Кнопка команды -->
-                <Button Content="Do Something (Ctrl+D)"
-            Command="v:MyCommands.DoSomethingCommand"
-            Width="180" Height="30"/>
+                <Button Content="Theme Change" Width="120" Height="35" Click="OnToggleTheme" Background="#FBC02D" Foreground="#333333" Margin="0,10,0,0"/>
 
+                <!-- User controls -->
+               
+               
+
+              
             </StackPanel>
-
         </Border>
 
-    
         <Grid Grid.Column="1">
 
             <Grid.RowDefinitions>
+
                 <RowDefinition Height="40"/>
-               
+
                 <RowDefinition Height="*"/>
-               
+
             </Grid.RowDefinitions>
 
             <!-- searchbar -->
-            <Border Grid.Row="0" Background="#f5f5f5" Padding="5">
-                <DockPanel LastChildFill="False" VerticalAlignment="Center" HorizontalAlignment="Left" >
 
+            <Border Grid.Row="0" Background="#f5f5f5" Padding="5">
+
+                <DockPanel LastChildFill="False" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <v:UserControl1 Width="50px" Margin="10,0,100,0"/>
                     <TextBox 
-                    Width="320" 
-                    Style="{StaticResource SearchTextBoxStyle}"
-                    Margin="0,0,10,0"
-                    Text="{Binding SearchText,UpdateSourceTrigger=PropertyChanged}" 
+
+                        Width="320" 
+
+                        Style="{StaticResource SearchTextBoxStyle}"
+
+                        Margin="0,0,10,0"
+
+                        Text="{Binding SearchText,UpdateSourceTrigger=PropertyChanged}" 
+
                     x:Name="SearchTextBox"
+
                     VerticalContentAlignment="Center"
+
                     ToolTip="Введите для поиска продуктов" />
 
                     <Button Content="{DynamicResource ProductsSearchButtonText}" 
+
                         Style="{StaticResource SearchButtonStyle}"
-                        Command="{Binding SearchCommand,UpdateSourceTrigger=PropertyChanged}" />
+
+                        Command="{Binding SearchCommand,UpdateSourceTrigger=PropertyChanged}" Margin="0,0,20,0" />
+                    <v:MyFirstControl  IntValue="65" Direct="First_Direct" />
+                    <v:MySecondControl Text="f" Tunneling="Second_Tunnel" Bubbling="Second_Bubble"/>
+
                 </DockPanel>
+
             </Border>
 
             <!-- main content -->
+
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="5,10,10,10">
+
                 <ItemsControl ItemsSource="{Binding Products}" Name="Items">
+
                     <ItemsControl.ItemsPanel>
+
                         <ItemsPanelTemplate>
+
                             <WrapPanel IsItemsHost="True" Orientation="Horizontal" />
+
                         </ItemsPanelTemplate>
+
                     </ItemsControl.ItemsPanel>
+
                     <ItemsControl.ItemTemplate>
+
                         <DataTemplate DataType="{x:Type models:Product}">
+
                             <Border Width="200" Height="370" Margin="10" Background="White" CornerRadius="8" Padding="10" Cursor="Hand"
+
                                 BorderBrush="#ddd" BorderThickness="1" >
+
                                 <StackPanel>
+
                                     <Image Source="{Binding ImagePath}" Height="150" Stretch="UniformToFill" Margin="0,0,0,10"/>
+
                                     <TextBlock  FontWeight="Bold" FontSize="16" Margin="0,0,0,5">
+
                                     <Run Text="{Binding Name}"></Run>
-                                    </TextBlock>
-                                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,10" Height="60">
-                                    <Run Text="{Binding Description}"></Run>
-                                    </TextBlock>
-                                    <TextBlock  Foreground="#2196F3" FontWeight="SemiBold">
-                                    <Run Text="{DynamicResource ProductsPriceText}"/>
-                                    <Run Text=": "/>
-                                    <Run Text="{Binding Price}"/>
-                                    <Run Text="{DynamicResource ProductsCurrencySign}"/>
+
                                     </TextBlock>
 
+                                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,10" Height="60">
+
+                                    <Run Text="{Binding Description}"></Run>
+
+                                    </TextBlock>
+
+                                    <TextBlock  Foreground="#2196F3" FontWeight="SemiBold">
+
+                                    <Run Text="{DynamicResource ProductsPriceText}"/>
+
+                                    <Run Text=": "/>
+
+                                    <Run Text="{Binding Price}"/>
+
+                                    <Run Text="{DynamicResource ProductsCurrencySign}"/>
+
+                                    </TextBlock>
 
                                     <Button
+
     Content="{DynamicResource ProductsDeleteButton}"
+
     Cursor="Hand"
+
     Margin="0,10,0,0"
+
     Visibility="{Binding DataContext.ItemsDeleteVisibility, RelativeSource={RelativeSource AncestorType=Window}}"
+
     Command="{Binding DataContext.DeleteCommand,    RelativeSource={RelativeSource AncestorType=Window}}"
+
     CommandParameter="{Binding}" />
+
                                 </StackPanel>
+
                             </Border>
+
                         </DataTemplate>
+
                     </ItemsControl.ItemTemplate>
+
                 </ItemsControl>
+
             </ScrollViewer>
 
         </Grid>
+
     </Grid>
 
 </Window>

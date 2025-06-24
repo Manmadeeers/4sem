@@ -53,8 +53,8 @@ namespace SoftwareShop.Views
             // Ищем и удаляем существующий словарь темы (LightTheme или DarkTheme)
             var existingTheme = appDicts
                 .FirstOrDefault(d =>
-                    d.Source.OriginalString.EndsWith("Light.xaml", StringComparison.OrdinalIgnoreCase) ||
-                    d.Source.OriginalString.EndsWith("Dark.xaml", StringComparison.OrdinalIgnoreCase));
+                    d.Source.OriginalString.EndsWith("light.xaml", StringComparison.OrdinalIgnoreCase) ||
+                    d.Source.OriginalString.EndsWith("dark.xaml", StringComparison.OrdinalIgnoreCase));
 
             if (existingTheme != null)
                 appDicts.Remove(existingTheme);
@@ -77,17 +77,17 @@ namespace SoftwareShop.Views
 
         private void Second_Tunnel(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Tunneling event");
+            MessageBox.Show("Тунельный синдром штука такая...(ивент тунельный)");
         }
 
         private void Second_Bubble(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Bubbling event");
+            MessageBox.Show("Пузырики!!!(ну типа бабл ивент, тапа пузирики)");
         }
 
         private void First_Direct(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Direct event fired!");
+            MessageBox.Show("Прямо и без разговоров(ну типа директ ивент поняли да?). Артур Николаевич, поставьте 9 автоматом пожалуйста)))");
         }
 
     }

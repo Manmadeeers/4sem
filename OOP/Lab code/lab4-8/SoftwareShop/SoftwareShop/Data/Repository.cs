@@ -33,7 +33,7 @@ namespace SoftwareShop.Data
             // Разбираем строку подключения, чтобы получить имя БД и подключиться к master
             var builder = new SqlConnectionStringBuilder(connectionString);
             string databaseName = builder.InitialCatalog;
-            builder.InitialCatalog = "SoftDB";
+            builder.InitialCatalog = "master";
             string masterConnectionString = builder.ToString();
 
             // 1) Создаём БД, если её нет

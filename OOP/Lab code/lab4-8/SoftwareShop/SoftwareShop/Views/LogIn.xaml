@@ -1,125 +1,87 @@
 ﻿<Window x:Class="SoftwareShop.Views.LoginView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-                    Background="{DynamicResource WindowBackgroundBrush}"
-            Foreground="{DynamicResource PrimaryTextBrush}"
-             d:DesignHeight="500" d:DesignWidth="800">
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource PrimaryTextBrush}"
+        Title="Login" Height="500" Width="800">
+
     <Window.Resources>
         <Style x:Key="UsernameStyle" TargetType="TextBox">
-            <Setter Property="BorderBrush" Value="#ccc"/>
-            <Setter Property="BorderThickness" Value="0,0,0,1"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Padding" Value="0,5"/>
-            <Style.Triggers>
-                <MultiTrigger>
-                    <MultiTrigger.Conditions>
-                        <!-- текст пустой -->
-                        <Condition Property="Text" Value=""/>
-                        <!-- контрол в фокусе -->
-                        <Condition Property="IsKeyboardFocused" Value="True"/>
-                    </MultiTrigger.Conditions>
-                    <Setter Property="BorderBrush" Value="Red"/>
-                    <Setter Property="BorderThickness" Value="2"/>
-                </MultiTrigger>
-            </Style.Triggers>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Background" Value="#3A4B5D"/>
+            <Setter Property="BorderBrush" Value="#ddd"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="LoginButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3A4B5D"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="20" Height="40">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#1976D2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
 
     <Grid Background="#f0f2f5">
-        <Border Width="350"
-                Height="500"
-                Background="White"
-                CornerRadius="10"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Padding="20">
+        <Border Width="350" Height="500" Background="White" CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="15" ShadowDepth="3" Color="#66000000"/>
             </Border.Effect>
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-                <Button
-                    Content="En"
-                    Width="30"
-                    HorizontalAlignment="Right"
-                    Background="White"
-                    BorderThickness="0.5"
-                    Cursor="Hand" Click="LangChngeClick"
-                    >
-                    
-                </Button>
-                <TextBlock Text="{DynamicResource LoginTitle}" FontSize="28" FontWeight="SemiBold" Foreground="#333" HorizontalAlignment="Center" Margin="0,10"/>
 
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <Button Content="En" Width="30" HorizontalAlignment="Right" Background="White" BorderThickness="0.5" Cursor="Hand" Click="LangChngeClick"/>
+
+                <TextBlock Text="{DynamicResource LoginTitle}" FontSize="28" FontWeight="SemiBold" Foreground="#333" HorizontalAlignment="Center" Margin="0,10"/>
                 <TextBlock Text="{DynamicResource UsernameLabel}" Margin="0,20,0,5" Foreground="#555"/>
-                <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
-                         Style="{StaticResource UsernameStyle}"/>
+
+                <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource UsernameStyle}"/>
 
                 <TextBlock Text="{DynamicResource PasswordLabel}" Margin="0,20,0,5" Foreground="#555"/>
-                <PasswordBox x:Name="PasswordBox"
-                     PasswordChanged="PasswordBox_PasswordChanged"
-                     BorderBrush="#ccc" BorderThickness="0,0,0,1"
-                     Background="Transparent" Padding="0,5">
-                    <PasswordBox.Triggers>
-                        <EventTrigger RoutedEvent="PasswordBox.PasswordChanged">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <!-- подсветка рамки в зелёный на 0.3 сек -->
-                                    <ColorAnimation
-                                Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                                To="Green"
-                                Duration="0:0:0.3"
-                                AutoReverse="True"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </PasswordBox.Triggers>
-                </PasswordBox>
 
-                <Button Content="{DynamicResource LogInText}"
-                        Command="{Binding LoginCommand}"
-                        Background="#2196F3"
-                        Foreground="White"
-                        Margin="0,30,0,10"
-                        Height="40"
-                        BorderThickness="0"
-                        Cursor="Hand"
-                        Width="250"
-                        HorizontalAlignment="Center">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="20" Height="40" Width="250">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Border>
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter TargetName="border" Property="Background" Value="#1976D2"/>
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
+                <PasswordBox x:Name="PasswordBox" 
+                             PasswordChanged="PasswordBox_PasswordChanged" 
+                             />
+
+                <Button Content="{DynamicResource LogInText}" Command="{Binding LoginCommand}" Style="{StaticResource LoginButtonStyle}" Margin="0,30,0,10"/>
 
                 <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Cursor="Hand" Foreground="#2196F3">
                     <Run Text="{DynamicResource DontHaveAccountText}"/>
-                    <Button Command="{Binding GoToSignUpCommand}"
-                            Content="{DynamicResource SignUpText}"
-                            Background="White"
-                            BorderThickness="0"
-                            Foreground="#2196F3"
-                            Margin="0,0,0,-4"
-                            Cursor="Hand"
-                            >
-                    </Button>
+                    <Button Command="{Binding GoToSignUpCommand}" Content="{DynamicResource SignUpText}" Background="White" BorderThickness="0" Foreground="#2196F3" Margin="0,0,0,-4" Cursor="Hand"/>
                 </TextBlock>
-
             </StackPanel>
         </Border>
     </Grid>

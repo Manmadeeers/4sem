@@ -18,8 +18,8 @@ namespace SoftwareShop.ViewModels
         private ProductsView _productsView;
         public AddView AddView;
         private User _loggedUser;
-        private ObservableCollection<Product> _products;
-        private ObservableCollection<Product> _allProducts;
+        private ObservableCollection<Product> _products = new ObservableCollection<Product>();
+        private ObservableCollection<Product> _allProducts = new ObservableCollection<Product>();
         private string searchText;
         public ProductsView ProductsView
         {
@@ -125,6 +125,7 @@ namespace SoftwareShop.ViewModels
             if (string.IsNullOrWhiteSpace(searchText))
             {
                 Products.Clear();
+                
                 foreach(var product in AllProducts)
                 {
                     Products.Add(product);

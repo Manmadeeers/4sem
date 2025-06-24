@@ -1,54 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SoftwareShop.Views
 {
-    /// <summary>
-    /// Выполните шаги 1a или 1b, а затем 2, чтобы использовать этот пользовательский элемент управления в файле XAML.
-    ///
-    /// Шаг 1a. Использование пользовательского элемента управления в файле XAML, существующем в текущем проекте.
-    /// Добавьте атрибут XmlNamespace в корневой элемент файла разметки, где он 
-    /// будет использоваться:
-    ///
-    ///     xmlns:MyNamespace="clr-namespace:SoftwareShop.Views"
-    ///
-    ///
-    /// Шаг 1б. Использование пользовательского элемента управления в файле XAML, существующем в другом проекте.
-    /// Добавьте атрибут XmlNamespace в корневой элемент файла разметки, где он 
-    /// будет использоваться:
-    ///
-    ///     xmlns:MyNamespace="clr-namespace:SoftwareShop.Views;assembly=SoftwareShop.Views"
-    ///
-    /// Потребуется также добавить ссылку из проекта, в котором находится файл XAML,
-    /// на данный проект и пересобрать во избежание ошибок компиляции:
-    ///
-    ///     Щелкните правой кнопкой мыши нужный проект в обозревателе решений и выберите
-    ///     "Добавить ссылку"->"Проекты"->[Поиск и выбор проекта]
-    ///
-    ///
-    /// Шаг 2)
-    /// Теперь можно использовать элемент управления в файле XAML.
-    ///
-    ///     <MyNamespace:MyFirstControl/>
-    ///
-    /// </summary>
+    
     public class MyFirstControl : Control
     {
-        // 1) Регистрация DP с валидацией и коэрсингом:
-        //    - ValidateValueCallback проверяет 0 ≤ value ≤ 100
-        //    - CoerceValueCallback обрезает значение к 50, если > 50
+      
         public static readonly DependencyProperty IntValueProperty;
 
         // 2) Direct‑событие
@@ -73,10 +31,15 @@ namespace SoftwareShop.Views
                 /* coerceValueCallback: */ CoerceIntValue);
 
             IntValueProperty = DependencyProperty.Register(
+
                 nameof(IntValue),
+
                 typeof(int),
+
                 typeof(MyFirstControl),
+
                 meta,
+
                 ValidateIntValue);
         }
 
@@ -109,7 +72,7 @@ namespace SoftwareShop.Views
             base.OnApplyTemplate();
 
             // Ищем named-часть шаблона и вешаем генерацию DirectEvent по клику
-            if (GetTemplateChild("PART_Border") is FrameworkElement fe)
+            if (GetTemplateChild("PART_Border") is FrameworkElement fe) 
             {
                 fe.MouseLeftButtonDown += (s, e) =>
                 {
