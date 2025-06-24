@@ -12,7 +12,7 @@ body {
 }
 
 aside {
-    flex: 1 1 15%;
+    flex: 1 1 12%;
     display: flex;
     flex-flow: row wrap;
     background-color: #1986B4;
@@ -92,6 +92,7 @@ nav .all-tasks-button,
     flex-flow: row wrap;
     margin-bottom: 5px;
     margin-left: 0;
+    padding-left: 10px;
 }
 
 .my-tasks-button:hover,
@@ -348,7 +349,9 @@ input {
     align-items: center;
     margin-right: 10px;
 }
-
+.filter-item:hover{
+    cursor: pointer;
+}
 .filter-item img {
     margin-left: 10px;
     margin-right: 10px;
