@@ -132,9 +132,10 @@
 
                 <Button Content="Theme Change" Width="120" Height="35" Click="OnToggleTheme" Background="#FBC02D" Foreground="#333333" Margin="0,10,0,0"/>
 
-                <!-- User controls -->
-               
-               
+                <!-- Undo/redo -->
+
+                <Button Command="{Binding UndoCommand}" Margin="0,20,0,0" Cursor="Hand">Undo</Button>
+                <Button Command="{Binding RedoCommand}" Margin="0,20,0,0" Cursor="Hand">Redo</Button>
 
               
             </StackPanel>

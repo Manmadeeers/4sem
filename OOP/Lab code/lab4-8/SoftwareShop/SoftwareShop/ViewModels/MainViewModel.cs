@@ -7,6 +7,8 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
+using SoftwareShop.Data;
+using SoftwareShop.Repositories;
 
 namespace SoftwareShop.ViewModels
 {
@@ -20,7 +22,29 @@ namespace SoftwareShop.ViewModels
         private User _loggedUser;
         private ObservableCollection<Product> _products = new ObservableCollection<Product>();
         private ObservableCollection<Product> _allProducts = new ObservableCollection<Product>();
+        private Stack<ObservableCollection<Product>> _history = new Stack<ObservableCollection<Product>>();
+        private Stack<ObservableCollection<Product>> _redoHistory = new Stack<ObservableCollection<Product>>();
         private string searchText;
+
+
+        public Stack<ObservableCollection<Product>> History
+        {
+            get => _history;
+            set
+            {
+                _history = value;
+                OnPropertyChanged(nameof(History));
+            }
+        }
+        public Stack<ObservableCollection<Product>> RedoHistory
+        {
+            get => _redoHistory;
+            set
+            {
+                _redoHistory = value;
+                OnPropertyChanged(nameof(RedoHistory));
+            }
+        }
         public ProductsView ProductsView
         {
             get { return  _productsView; }
@@ -86,12 +110,85 @@ namespace SoftwareShop.ViewModels
         private ICommand _viewAcc;
         public ICommand ViewAcc => _viewAcc ??= new RelayCommand(ViAc, (object parameter) => true);
 
+
+        private ICommand _undoCommand;
+        public ICommand UndoCommand => _undoCommand ??= new RelayCommand(Undo, CanUndo);
+
+        private ICommand _redoCommand;
+        public ICommand RedoCommand => _redoCommand ??= new RelayCommand(Redo, CanRedo);
+
         //-----End of Commands-----//
 
 
 
 
         //-----Methods-----//
+        private void Redo(object sender)
+        {
+            if (_redoHistory.Any())
+            {
+                // Save current state to undo history before redoing
+                History.Push(new ObservableCollection<Product>(AllProducts));
+
+                ObservableCollection<Product> nextState = _redoHistory.Pop();
+                AllProducts = nextState; // Restore AllProducts from redo history
+
+                // Refresh Products based on the restored AllProducts
+                Products.Clear();
+                foreach (var prod in AllProducts)
+                {
+                    Products.Add(prod);
+                }
+
+                // Reapply search filter if necessary
+                if (!string.IsNullOrWhiteSpace(SearchText))
+                {
+                    Search(null);
+                }
+
+                OnPropertyChanged(nameof(AllProducts));
+                OnPropertyChanged(nameof(Products));
+                CommandManager.InvalidateRequerySuggested(); // Re-evaluate CanUndo/CanRedo
+            }
+        }
+        private bool CanRedo(object sender)
+        {
+            return true;
+        }
+        private void Undo(object sender)
+        {
+
+            if (History.Any())
+            {
+                // Save current state to redo history before undoing
+                _redoHistory.Push(new ObservableCollection<Product>(AllProducts));
+
+                ObservableCollection<Product> previousState = History.Pop();
+                AllProducts = previousState; // Restore AllProducts from history
+
+                // Refresh Products based on the restored AllProducts
+                Products.Clear();
+                foreach (var prod in AllProducts)
+                {
+                    Products.Add(prod);
+                }
+
+               
+                if (!string.IsNullOrWhiteSpace(SearchText))
+                {
+                    Search(null);
+                }
+
+                OnPropertyChanged(nameof(AllProducts));
+                OnPropertyChanged(nameof(Products));
+                CommandManager.InvalidateRequerySuggested(); 
+            }
+
+        }
+        private bool CanUndo(object sender)
+        {
+            return true;
+        }
         private void Unlogin(object sender)
         {
             LoginView loginView = new LoginView();
@@ -167,9 +264,24 @@ namespace SoftwareShop.ViewModels
 
         private void Add(object parameter)
         {
-            AddView addView = new AddView(this);
-            addView.ShowDialog();
+            History.Push(new ObservableCollection<Product>(AllProducts));
+            _redoHistory.Clear(); 
 
+            AddView addView = new AddView(this);
+            bool? result = addView.ShowDialog(); 
+
+           
+            if (result == true) 
+            {
+                LoadProducts(); 
+
+                
+                if (!string.IsNullOrWhiteSpace(SearchText))
+                {
+                    Search(null);
+                }
+            }
+            CommandManager.InvalidateRequerySuggested();
         }
 
         private bool CanAdd(object parameter)
@@ -183,8 +295,15 @@ namespace SoftwareShop.ViewModels
         {
             if (parameter is Product product)
             {
-                _products.Remove(product);
-                Data.Repository.productRepository.DeleteProduct(product.Id);
+                
+                History.Push(new ObservableCollection<Product>(AllProducts));
+                _redoHistory.Clear(); 
+                _products.Remove(product); 
+                AllProducts.Remove(product); 
+
+                Data.Repository.productRepository.DeleteProduct(product.Id); 
+                
+                CommandManager.InvalidateRequerySuggested();
             }
         }
 
