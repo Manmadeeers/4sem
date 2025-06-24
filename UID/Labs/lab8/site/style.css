@@ -82,9 +82,10 @@ nav .all-tasks-button,
     font-weight: bold;
 }
 
-.bottom-buttons{
+.bottom-buttons {
     padding-left: 0;
 }
+
 .exit-button {
     flex: 1 1 100%;
     width: 100%;
@@ -103,8 +104,7 @@ nav .all-tasks-button,
 
 .my-tasks-button img,
 .all-tasks-button img,
-.exit-button img 
-{
+.exit-button img {
     display: inline-block;
     width: 30px;
     height: 35px;
@@ -136,22 +136,56 @@ main {
     height: max-content;
     width: 100%;
     flex-direction: row;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 100%;
+    align-items: baseline;
+    justify-content: left;
+}
+.poisk p{
+    display: flex;
+    flex: 1 1 20%;
+    margin-right: -70%;
 }
 
 input {
-    width: 500px;
     height: 30px;
     margin-left: 70px;
     margin-right: auto;
-    background-color: #D4F0FE87;
+    background-color: transparent;
     stroke: darkcyan;
     stroke-width: 1px;
     border-radius: 25;
     font-size: large;
     border-radius: 15px;
     border: 1px solid #1986B4;
+    float: left;
+    border: none;
+}
 
-    background: rgba(212, 240, 254, 0.53);
+.input-containter {
+    /* flex: 1 1 40%; */
+    padding: 5px;
+    width: 520px;
+    height: 30px;
+    border: 1px solid #1986B4;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: #D4F0FE87;
+    float: left;
+    margin-right: 500px;
+}
+
+.input-container img {
+    display: inline-block;
+    height: 30px;
+}
+
+.input-container input {
+    display: inline-block;
 }
 
 .ganeral {
@@ -349,9 +383,11 @@ input {
     align-items: center;
     margin-right: 10px;
 }
-.filter-item:hover{
+
+.filter-item:hover {
     cursor: pointer;
 }
+
 .filter-item img {
     margin-left: 10px;
     margin-right: 10px;
